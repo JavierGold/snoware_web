@@ -180,3 +180,9 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Solo el tercero entra por letras de izquierda a derecha, con escala 3 a 1 y desenfoque 14 a 0; 700 ms por letra y 360 ms de escalonamiento total. La fase de entrada espera 1060 ms antes de comenzar la pausa.
 - Letras agrupadas por palabra para mantener envoltura móvil; h1 mantiene nombre accesible completo. Respeta pausa y reduced motion; no se repite al scroll.
 - Build y diff --check correctos; prueba de tiempos y orden/escalonamiento ES/EN, límite de última letra y guardas de accesibilidad. Validación visual real pendiente por bloqueo de Chromium del entorno; no se afirma reproducción exacta ni rendimiento medido.
+
+## Corrección solicitada · Entrada por palabras, no letras
+- Revisado video de referencia 14-11-53 entre 9.8 y 12.55 s; Javier aclara que la unidad de animación debe ser cada palabra completa.
+- Sustituido el efecto por letras por palabras, de izquierda a derecha: escala y enfoque intactos, duración 1000 ms por palabra y separación de 450 ms entre las tres palabras. Entrada completa 1900 ms; pausa del tercero comienza después.
+- Se mantiene la pausa del segundo en 1400 ms, resto de tiempos y contenidos sin cambios. Reduced motion y pausa por visibilidad/manual permanecen; agrupación por palabras conserva adaptación móvil.
+- Build, diff --check y pruebas de tiempos y escalonamiento ES/EN correctos. Video inspeccionado; validación visual del sitio pendiente por bloqueo de Chromium.

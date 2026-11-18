@@ -144,5 +144,5 @@ Conservar contenido. Pie en azul oscuro #0E0A42 y cursiva; ejemplo del placehold
 ### Modal de soluciones · transición
 Entrada del panel 700 ms y fondo 600 ms; salida del panel 500 ms y fondo 450 ms. Mantener el diálogo nativo abierto hasta terminar la salida, incluso con Escape. Reduced motion elimina transiciones. Si se interrumpe la entrada, partir de opacidad actual para evitar destellos.
 
-### Tercer titular · letras enfocadas
-Solo «Transforma tu operación» / «Transform your operations»: letras de izquierda a derecha entran ampliadas y desenfocadas, se reducen y enfocan en su posición. Stagger total 360 ms, animación por letra 700 ms; sin mecanografiado ni cambio de tamaño final. Conservar palabras completas al envolver en móvil y texto accesible sin fragmentar. Segundo titular permanece 1400 ms (antes 2000); primero y tercero mantienen 2000 ms. Reduced motion elimina el efecto.
+### Tercer titular · palabras enfocadas
+Solo «Transforma tu operación» / «Transform your operations»: cada palabra completa entra ampliada y desenfocada, se reduce y enfoca en su posición, de izquierda a derecha. No es letra por letra ni mecanografiado. Escalonamiento total 900 ms (450 ms entre las tres palabras), animación por palabra 1000 ms. Conservar tamaño final, envoltura por palabras en móvil y texto accesible sin fragmentar. Segundo titular permanece 1400 ms; primero y tercero mantienen 2000 ms. Reduced motion elimina el efecto.
