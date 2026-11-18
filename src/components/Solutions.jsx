@@ -1,5 +1,5 @@
 import { Reveal } from './Reveal.jsx';
-import { useId, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import { useAnimate, useReducedMotion } from 'motion/react';
 import { flushSync } from 'react-dom';
 import { PendingLink } from './PendingLink.jsx';
@@ -10,6 +10,18 @@ const figures = Object.entries(import.meta.glob('../assets/solutions/*.webp', {
   import: 'default',
 })).sort(([left], [right]) => left.localeCompare(right)).map(([, url]) => url);
 
+// Warm only the figure the visitor points to or focuses, never all 12 on mount.
+const warmedFigures = new Map();
+function warmFigure(index) {
+  const url = figures[index];
+  if (!url || warmedFigures.has(url)) return;
+  const image = new Image();
+  image.fetchPriority = 'low';
+  image.src = url;
+  warmedFigures.set(url, image);
+  image.decode().catch(() => warmedFigures.delete(url));
+}
+
 export function Solutions({ content }) {
   const id = useId();
   const [dialog, animate] = useAnimate();
@@ -17,13 +29,34 @@ export function Solutions({ content }) {
   const closing = useRef(false);
   const animation = useRef(null);
   const trigger = useRef(null);
+  const figure = useRef(null);
+  const opening = useRef(0);
+  const [figureReady, setFigureReady] = useState(false);
+  useEffect(() => () => { opening.current += 1; }, []);
   const [selected, setSelected] = useState(null);
   const solution = content.items[selected];
 
-  function openSolution(index, button) {
+  async function openSolution(index, button) {
     if (dialog.current?.open) return;
+    const request = ++opening.current;
     trigger.current = button;
-    flushSync(() => setSelected(index));
+    flushSync(() => {
+      setFigureReady(false);
+      setSelected(index);
+    });
+    // Decode the actual rendered image before revealing it, including cache hits.
+    const decoded = figure.current.decode().then(() => {
+      if (request === opening.current && !closing.current) setFigureReady(true);
+    }).catch(() => {
+      // Decorative image failures must not block the solution or show a broken icon.
+    });
+    let timeout;
+    await Promise.race([
+      decoded,
+      new Promise((resolve) => { timeout = window.setTimeout(resolve, 250); }),
+    ]);
+    window.clearTimeout(timeout);
+    if (request !== opening.current || !dialog.current || dialog.current.open) return;
     const element = dialog.current;
     closing.current = false;
     element.style.opacity = reduceMotion ? '1' : '0';
@@ -41,6 +74,7 @@ export function Solutions({ content }) {
     const element = dialog.current;
     if (closing.current || !element?.open) return;
     closing.current = true;
+    opening.current += 1;
     // Capture the current backdrop opacity if Escape interrupts its entrance.
     const backdropOpacity = getComputedStyle(element, '::backdrop').opacity;
     element.style.setProperty('--backdrop-exit-opacity', backdropOpacity);
@@ -58,6 +92,7 @@ export function Solutions({ content }) {
   }
 
   function handleClose() {
+    opening.current += 1;
     animation.current?.stop();
     closing.current = false;
     setSelected(null);
@@ -75,6 +110,8 @@ export function Solutions({ content }) {
               type="button"
               className="solution-trigger"
               aria-haspopup="dialog"
+              onPointerEnter={() => warmFigure(index)}
+              onFocus={() => warmFigure(index)}
               onClick={(event) => openSolution(index, event.currentTarget)}
             >
               {item.title}
@@ -98,7 +135,7 @@ export function Solutions({ content }) {
           <h3 id={`${id}-dialog-title`}>{solution?.title}</h3>
           <p id={`${id}-description`}>{solution?.description}</p>
           <div className="solution-contact"><PendingLink>{content.contact}</PendingLink></div>
-          {solution && <img className="solution-figure" src={figures[selected]} alt="" width="460" height="460" />}
+          {solution && <img ref={figure} key={selected} className="solution-figure" data-ready={figureReady} decoding="async" src={figures[selected]} alt="" width="460" height="460" />}
         </div>
       </dialog>
     </section>

@@ -146,3 +146,6 @@ Entrada del panel 700 ms y fondo 600 ms; salida del panel 500 ms y fondo 450 ms.
 
 ### Tercer titular · palabras enfocadas
 Solo «Transforma tu operación» / «Transform your operations»: cada palabra completa entra ampliada y desenfocada, se reduce y enfoca en su posición, de izquierda a derecha. No es letra por letra ni mecanografiado. Escalonamiento total 900 ms (450 ms entre las tres palabras), animación por palabra 1000 ms. Conservar tamaño final, envoltura por palabras en móvil y texto accesible sin fragmentar. Segundo titular permanece 1400 ms; primero y tercero mantienen 2000 ms. Reduced motion elimina el efecto.
+
+### Figura de soluciones · carga coordinada
+Preparar solo la figura señalada/enfocada; esperar su decodificación hasta 250 ms antes de abrir. Si tarda más, abrir contenido sin bloquear y revelar figura decodificada mediante opacidad 500 ms, sin cambio de posición/tamaño. Reduced motion sin fundido; imagen decorativa fallida permanece oculta.

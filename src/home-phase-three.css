@@ -257,3 +257,11 @@ body:has(.solution-dialog[open]) { overflow: hidden; }
 @media (height < 520px) {
   .solution-dialog-layout { min-height: 0; }
 }
+
+
+/* Only reveal a decoded figure; fixed dimensions keep the approved layout stable. */
+.solution-figure[data-ready='false'] { opacity: 0; }
+.solution-figure[data-ready='true'] { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .solution-figure { transition: opacity 500ms cubic-bezier(.22, 1, .36, 1); }
+}

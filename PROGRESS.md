@@ -186,3 +186,10 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Sustituido el efecto por letras por palabras, de izquierda a derecha: escala y enfoque intactos, duración 1000 ms por palabra y separación de 450 ms entre las tres palabras. Entrada completa 1900 ms; pausa del tercero comienza después.
 - Se mantiene la pausa del segundo en 1400 ms, resto de tiempos y contenidos sin cambios. Reduced motion y pausa por visibilidad/manual permanecen; agrupación por palabras conserva adaptación móvil.
 - Build, diff --check y pruebas de tiempos y escalonamiento ES/EN correctos. Video inspeccionado; validación visual del sitio pendiente por bloqueo de Chromium.
+
+## Ajuste solicitado · Figura del modal sin aparición brusca
+- Causa identificada: las URLs están importadas, pero la imagen solo se monta al pulsar y antes no se esperaba su descarga/decodificación.
+- Precarga exclusivamente por intención (puntero/foco en una solución), sin descargar las 12 en el inicio. Se decodifica también el elemento real antes de mostrarlo.
+- Espera máxima de 250 ms para coordinar imagen y apertura del modal; en conexión lenta el contenido abre igualmente y la figura entra con fundido de 500 ms al quedar lista. Dimensiones, diseños y textos intactos.
+- Fallos de imagen no bloquean el diálogo ni muestran icono roto. Solicitudes antiguas se invalidan al cerrar/desmontar o seleccionar otra opción; reduced motion evita fundido.
+- Build y diff --check correctos; pruebas de lógica real con caché/carga rápida, carga lenta, error, cierre antes de terminar y selección repetida. Revisión visual y red real pendiente por bloqueo de Chromium.
