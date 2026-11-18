@@ -198,3 +198,10 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Reducida pausa del tercer titular de 2000 a 100 ms y retirado delay adicional de 200 ms del cuadro. El cuadro comienza a aparecer 100 ms después de completar la última palabra, manteniendo su entrada suave de 650 ms.
 - Animación por palabras, otros titulares, contenido y controles intactos. Reduced motion continúa mostrando el cuadro directamente.
 - Build, diff --check y prueba de tiempos correctos. Revisión visual real pendiente por bloqueo de Chromium.
+
+## Ajuste solicitado · Evitar cruce de título/cuadro y mover niebla
+- Eliminada competencia entre layout transform del título y entrada independiente del cuadro. Ahora el cuadro expande altura en flujo (700 ms), elevando físicamente el título mientras aparece, con margen real entre ambos.
+- Retirado desplazamiento heredado de 3.5svh del h1 de escritorio que tampoco participaba del flujo. El título inicial queda centrado; tamaño y ubicación final aprobados se conservan. Padding del conjunto se anima en paralelo.
+- Niebla antes: gradientes con opacidad .16 y desplazamiento apenas ±2% en 36 s. Ahora dos capas tenues con recorridos opuestos ±10%/±8%, ciclos 16/23 s y variación leve de opacidad, independientes del zoom. Solo transform/opacity, sin imágenes ni video adicionales.
+- Respeta reduced motion y pausas; copy, secuencia por palabras y espera de 100 ms intactos.
+- Build, diff --check y comprobaciones estáticas de flujo/ausencia de transform independiente, capas y guardas correctos. No se afirma prueba visual en dispositivos ni rendimiento medido: Chromium sigue bloqueado en este entorno.

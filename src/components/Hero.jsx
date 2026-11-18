@@ -91,12 +91,14 @@ export function Hero({ headline, content }) {
       <div className="hero-scenery" aria-hidden="true" />
       <div className="hero-scenery hero-scenery-next" aria-hidden="true" />
       <div className="hero-mist" aria-hidden="true" />
-      <div className="hero-content">
-        <motion.div
-          className="hero-title-shell"
-          layout="position"
-          transition={{ duration: reduceMotion ? 0 : 0.7, ease: [0.22, 1, 0.36, 1] }}
-        >
+      <div className="hero-mist hero-mist-back" aria-hidden="true" />
+      <motion.div
+        className="hero-content"
+        initial={false}
+        animate={{ paddingTop: ready ? '2rem' : '0rem', paddingBottom: ready ? '4rem' : '0rem' }}
+        transition={{ duration: reduceMotion ? 0 : 0.7, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div className="hero-title-shell">
           <h1 id={titleId} aria-label={headline}>
             <span
               key={index}
@@ -107,15 +109,16 @@ export function Hero({ headline, content }) {
               aria-hidden="true"
             >{index === 2 ? <WordTitle text={titles[index]} /> : titles[index]}</span>
           </h1>
-        </motion.div>
+        </div>
 
         {ready && (
           <motion.div
-            className="hero-message"
-            initial={reduceMotion ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: reduceMotion ? 0 : 0.65 }}
+            className="hero-message-reveal"
+            initial={reduceMotion ? false : { height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            transition={{ duration: reduceMotion ? 0 : 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
+            <div className="hero-message">
             <span className="hero-message-icon" aria-hidden="true">
               <img src={envelope} alt="" width="26" height="26" />
             </span>
@@ -149,9 +152,10 @@ export function Hero({ headline, content }) {
               >{content.send}</button>
             </div>
             <p id={inputId + '-status'} className="hero-send-status" role="status">{sendAttempted ? content.sendUnavailable : ''}</p>
+            </div>
           </motion.div>
         )}
-      </div>
+      </motion.div>
 
       <div className="hero-playback">
         {!ready && <button type="button" onClick={showMessage}>{content.skip}</button>}

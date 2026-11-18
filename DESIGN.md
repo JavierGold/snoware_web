@@ -149,3 +149,6 @@ Solo «Transforma tu operación» / «Transform your operations»: cada palabra 
 
 ### Figura de soluciones · carga coordinada
 Preparar solo la figura señalada/enfocada; esperar su decodificación hasta 250 ms antes de abrir. Si tarda más, abrir contenido sin bloquear y revelar figura decodificada mediante opacidad 500 ms, sin cambio de posición/tamaño. Reduced motion sin fundido; imagen decorativa fallida permanece oculta.
+
+### Hero · separación durante aparición del cuadro
+El cuadro expande su altura en flujo durante 700 ms y el título sube con ese mismo flujo, sin transform independiente del título ni desplazamiento vertical del cuadro que los cruce. Mantener margen entre ambos y dimensiones finales; padding del conjunto coordinado con la expansión. Humo en dos capas de gradientes de baja opacidad, desplazamientos opuestos de 16/23 s independientes del zoom; sin recursos adicionales. Reduced motion deja una capa tenue estática.
