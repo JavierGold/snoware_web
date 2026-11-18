@@ -8,6 +8,7 @@ const wordDuration = 1000;
 
 function sceneDuration(scene) {
   if (scene.index === 1 && scene.phase === 'hold') return 1400;
+  if (scene.index === 2 && scene.phase === 'hold') return 100;
   if (scene.index === 2 && scene.phase === 'enter') return wordDuration + wordStagger;
   return durations[scene.phase];
 }
@@ -113,7 +114,7 @@ export function Hero({ headline, content }) {
             className="hero-message"
             initial={reduceMotion ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: reduceMotion ? 0 : 0.65, delay: reduceMotion ? 0 : 0.2 }}
+            transition={{ duration: reduceMotion ? 0 : 0.65 }}
           >
             <span className="hero-message-icon" aria-hidden="true">
               <img src={envelope} alt="" width="26" height="26" />

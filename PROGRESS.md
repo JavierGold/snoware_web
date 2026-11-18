@@ -193,3 +193,8 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Espera máxima de 250 ms para coordinar imagen y apertura del modal; en conexión lenta el contenido abre igualmente y la figura entra con fundido de 500 ms al quedar lista. Dimensiones, diseños y textos intactos.
 - Fallos de imagen no bloquean el diálogo ni muestran icono roto. Solicitudes antiguas se invalidan al cerrar/desmontar o seleccionar otra opción; reduced motion evita fundido.
 - Build y diff --check correctos; pruebas de lógica real con caché/carga rápida, carga lenta, error, cierre antes de terminar y selección repetida. Revisión visual y red real pendiente por bloqueo de Chromium.
+
+## Ajuste solicitado · Cuadro inmediatamente después del titular
+- Reducida pausa del tercer titular de 2000 a 100 ms y retirado delay adicional de 200 ms del cuadro. El cuadro comienza a aparecer 100 ms después de completar la última palabra, manteniendo su entrada suave de 650 ms.
+- Animación por palabras, otros titulares, contenido y controles intactos. Reduced motion continúa mostrando el cuadro directamente.
+- Build, diff --check y prueba de tiempos correctos. Revisión visual real pendiente por bloqueo de Chromium.
