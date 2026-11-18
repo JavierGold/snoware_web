@@ -95,3 +95,10 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - El span interior pasa de escala 1.45 y blur 8 px a escala 1 y blur 0 durante 900 ms. El h1 conserva su posición y tamaño final aprobados; el hero recorta la expansión para no crear scroll horizontal.
 - Se ejecuta al montar la página, no al volver por scroll. Movimiento reducido no aplica animación; texto visible por defecto y sin temporizadores ni estados que puedan dejarlo oculto.
 - Build y diff --check correctos después de este cambio. Verificación visual del efecto implementado pendiente por la limitación de Chromium descrita arriba; no confundir revisión del video de referencia con validación del sitio.
+
+## Refinamiento solicitado · Ritmo y escala del hero (18 de noviembre de 2026)
+- Tras probar la entrada, Javier pidió más tiempo y un titular mayor. Se conserva el zoom/enfoque observado en el video, pero se amplía de 900 a 2000 ms y se suaviza la desaceleración para que no llegue casi al estado final al principio.
+- Escritorio pasa de 3.5vw (máximo 6rem) a 4.25vw (máximo 7rem), conservando un renglón. Móvil pasa de 8.7vw (máximo 3.75rem) a 9.8vw (máximo 4.25rem), con saltos naturales.
+- Sin cambios en Geist, contenido, colores, resto de secciones o reduced motion.
+- Build y diff --check correctos. Estimación de anchos ES/EN con métricas del WOFF2 latino de Geist instalado a peso 300: caben en el ancho disponible a 761, 820, 1024, 1280, 1440, 1920, 2560 y 3840 px. Esta estimación no sustituye la revisión visual del texto renderizado en navegador.
+- Validación visual en PC/móvil sigue pendiente por el bloqueo de Chromium registrado arriba; no se repitieron intentos de navegador ni pruebas ajenas al cambio.

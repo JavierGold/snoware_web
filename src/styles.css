@@ -108,7 +108,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (width > 760px) {
   .hero h1 {
-    font-size: clamp(1.65rem, 3.5vw, 6rem);
+    font-size: clamp(1.9rem, 4.25vw, 7rem);
     white-space: nowrap;
     text-wrap: nowrap;
     transform: translateY(3.5svh);
@@ -189,7 +189,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero h1 {
     max-width: 19ch;
     line-height: 1.12;
-    font-size: clamp(1.75rem, 8.7vw, 3.75rem);
+    font-size: clamp(2rem, 9.8vw, 4.25rem);
   }
 }
 
@@ -217,7 +217,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-title-text {
-    animation: hero-title-focus 900ms cubic-bezier(.16, 1, .3, 1) both;
+    animation: hero-title-focus 2000ms cubic-bezier(.22, .61, .36, 1) both;
     transform-origin: center;
   }
 }

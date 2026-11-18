@@ -118,3 +118,7 @@ Incorporar animaciones elegantes y suaves al hacer scroll y al seleccionar o int
 
 ## Entrada del hero · referencia de video
 Titular completo con zoom de mayor a menor y enfoque (sin fade de opacidad ni escritura), una sola entrada al cargar. Animar el span interior, no la posición aprobada del h1. Mantener el texto visible sin animación cuando se solicita movimiento reducido; no reiniciar al hacer scroll.
+
+
+### Refinamiento del hero tras revisión
+Entrada de enfoque/zoom durante 2000 ms con desaceleración menos abrupta. Titular escritorio: clamp(1.9rem, 4.25vw, 7rem), siempre en un renglón; móvil: clamp(2rem, 9.8vw, 4.25rem), con varias líneas. No modificar los demás titulares.
