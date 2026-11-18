@@ -137,3 +137,6 @@ Servicios: swipe táctil horizontal avanza/retrocede un servicio. Conservar flec
 
 ### Controles del hero · ajuste visual
 «Escribir mensaje» y «Pausar animación» no aparecen en la vista normal. Se conservan exclusivamente como accesos de teclado/lector de pantalla y aparecen al recibir foco para evitar controles enfocados invisibles. No cambiar secuencia ni tiempos; respetar movimiento reducido y pausa fuera de vista.
+
+### Cuadro del hero · tratamiento tipográfico
+Conservar contenido. Pie en azul oscuro #0E0A42 y cursiva; ejemplo del placeholder en 0.875rem y cursiva. El mensaje introducido conserva tamaño 1rem y estilo normal.

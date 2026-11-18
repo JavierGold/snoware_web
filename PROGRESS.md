@@ -161,3 +161,8 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - El salto de escala ocurre exclusivamente con la capa transparente; las capas se cruzan durante 2.8 s. Se reutiliza el mismo recurso, animando solo transform/opacity, sin video ni red adicional.
 - Movimiento reducido muestra una única capa estática; pausas por visibilidad/manual intactas. Títulos, textos y cuadro no cambian.
 - Build, diff --check y comprobaciones de keyframes/desfase correctos. No se afirma verificación visual del fundido ni medición de rendimiento real por limitación del navegador.
+
+## Ajuste solicitado · Cursiva y contraste del cuadro
+- Texto inferior sin cambios de contenido, ahora azul oscuro #0E0A42 y cursiva. Placeholder sin cambios de contenido, en cursiva y ligeramente menor (0.875rem); texto escrito permanece normal a 1rem.
+- Sin cambios de JSX, secuencia, accesibilidad, comportamiento de envío ni demás secciones.
+- Build y diff --check correctos; reglas específicas inspeccionadas y contenido comparado sin cambios. Revisión visual real pendiente por limitación de navegador.

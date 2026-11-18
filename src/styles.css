@@ -314,10 +314,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-size: 1rem;
   line-height: 1.5;
 }
-.hero-message textarea::placeholder { color: #62697a; opacity: 1; }
+.hero-message textarea::placeholder { color: #62697a; opacity: 1; font-size: .875rem; font-style: italic; }
 .hero-message :focus-visible { outline-color: #6b48cf; }
 .hero-message-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: .8rem; }
-.hero-message-footer p { max-width: 65ch; font-size: .8rem; color: #52596b; line-height: 1.4; }
+.hero-message-footer p { max-width: 65ch; font-size: .8rem; color: #0e0a42; font-style: italic; line-height: 1.4; }
 
 .hero-message-footer button { min-height: 44px; padding: .5rem 1rem; border-radius: .3rem; background: #6b48cf; color: #fff; cursor: pointer; }
 .hero-message-footer button:disabled { background: #e1e4ee; color: #5c6072; cursor: not-allowed; }
