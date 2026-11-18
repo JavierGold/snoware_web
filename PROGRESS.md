@@ -155,3 +155,9 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Build y diff --check correctos; verificada asociación label/htmlFor con id del textarea. Revisión visual real pendiente por limitación del entorno.
 
 - Aprobación adicional: tercer titular grande ahora «Transforma tu operación» / «Transform your operations». No se modifican ejemplo ni texto inferior. Ambos textos son más cortos que los anteriores y conservan tamaños y responsive.
+
+## Ajuste solicitado · Acercamiento de montaña con reinicio
+- Cambiado el vaivén por zoom progresivo 1.03–1.54; al alcanzar el acercamiento se cruza con una segunda capa que comienza abierta. Ciclo de 28 s por capa y desfase de medio ciclo: nuevo recorrido cada 14 s.
+- El salto de escala ocurre exclusivamente con la capa transparente; las capas se cruzan durante 2.8 s. Se reutiliza el mismo recurso, animando solo transform/opacity, sin video ni red adicional.
+- Movimiento reducido muestra una única capa estática; pausas por visibilidad/manual intactas. Títulos, textos y cuadro no cambian.
+- Build, diff --check y comprobaciones de keyframes/desfase correctos. No se afirma verificación visual del fundido ni medición de rendimiento real por limitación del navegador.

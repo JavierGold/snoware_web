@@ -67,6 +67,7 @@ export function Hero({ headline, content }) {
       data-motion-paused={stopped}
     >
       <div className="hero-scenery" aria-hidden="true" />
+      <div className="hero-scenery hero-scenery-next" aria-hidden="true" />
       <div className="hero-mist" aria-hidden="true" />
       <div className="hero-content">
         <motion.div
