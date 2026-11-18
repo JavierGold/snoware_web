@@ -125,3 +125,9 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Botón Enviar habilitado al escribir texto no vacío. Por no existir backend aprobado, muestra un aviso accesible de envío no conectado y conserva el mensaje. No se envía, guarda, redirige ni simula respuesta.
 - Verificación: build de Vite y diff --check; pruebas de función real de secuencia (orden y estado terminal), copy exacto ES, contenido ES/EN, tres sugerencias y foco, condición de botón, ausencia de red/almacenamiento y limpieza de temporizadores/listener. Sin cambios en footer, carrusel ni otras secciones.
 - Limitación: revisión visual, comportamiento real de foco/teclado y medición de rendimiento en PC/móvil pendientes porque Chromium sigue bloqueado. Las pruebas estáticas no prueban la apariencia ni el gesto real. No hay scripts lint/tests configurados ni despliegue AWS.
+
+## Copy aprobado · Tercer titular del hero (18 de noviembre de 2026)
+- Sustituido por el texto exacto aprobado: «Cuéntanos qué desafío enfrenta tu negocio». Inglés natural: «Tell us about your business challenge».
+- No se cambian tamaños, secuencia, tiempos, cuadro de mensaje ni otras secciones.
+- Build y diff --check correctos. Estimación con Geist peso 300: ambos titulares caben en una línea a 761, 820, 1024, 1280, 1440, 1920, 2560 y 3840 px. En móvil se conserva el salto de línea y se comprueba que la palabra más ancha cabe desde 320 px.
+- Comprobación por métricas del recurso Geist.ttf, no por navegador: revisión visual de desktop/móvil sigue pendiente por limitación del entorno.

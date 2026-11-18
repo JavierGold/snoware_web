@@ -6,7 +6,7 @@ export const translations = {
     contact: 'Contacto',
     headline: 'Soluciones Digitales que impulsan tu crecimiento',
     hero: {
-      titles: ['Lleva un mejor control de tu negocio', 'Mejoremos juntos'],
+      titles: ['Lleva un mejor control de tu negocio', 'Cuéntanos qué desafío enfrenta tu negocio'],
       messageLabel: 'Cuéntanos qué necesitas mejorar.',
       messageExample: 'Ejemplo: Quiero tener un mejor control de mi flujo de efectivo y cobranza',
       footer: 'Cuéntanos tu necesidad y encontremos la mejor solución.',
@@ -34,7 +34,7 @@ export const translations = {
     contact: 'Contact',
     headline: 'Digital solutions that drive your growth',
     hero: {
-      titles: ['Take greater control of your business', 'Let’s move forward together'],
+      titles: ['Take greater control of your business', 'Tell us about your business challenge'],
       messageLabel: 'Tell us what you’d like to improve.',
       messageExample: 'For example: I want better visibility and control over my cash flow and collections',
       footer: 'Tell us what you need, and let’s find the right solution together.',
