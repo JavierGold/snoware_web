@@ -102,3 +102,12 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Sin cambios en Geist, contenido, colores, resto de secciones o reduced motion.
 - Build y diff --check correctos. Estimación de anchos ES/EN con métricas del WOFF2 latino de Geist instalado a peso 300: caben en el ancho disponible a 761, 820, 1024, 1280, 1440, 1920, 2560 y 3840 px. Esta estimación no sustituye la revisión visual del texto renderizado en navegador.
 - Validación visual en PC/móvil sigue pendiente por el bloqueo de Chromium registrado arriba; no se repitieron intentos de navegador ni pruebas ajenas al cambio.
+
+
+## Corrección de referencia · Zoom del segundo 9 (18 de noviembre de 2026)
+- Revisada la transición 8.85–9.92 s a 15 cuadros/s: el texto entra muy ampliado, fuera de ambos bordes, y se contrae/enfoca rápidamente; no es un zoom moderado sostenido.
+- Sustituye el ajuste anterior de 2 s: escala inicial 3× y blur 16 px, hasta tamaño final 1× y blur 0, en 700 ms con cubic-bezier(.16, 1, .3, 1). Sin cambios de opacidad.
+- Se mantienen exactamente tamaños finales PC/móvil, Geist, posiciones y contenido. El recorte corresponde solo a la expansión inicial; el estado final recupera todo el titular. Sin cambios en soporte reduced motion ni repetición al scroll.
+- Build, git diff --check y comparación estática con commit anterior correctos: solo cambia la amplitud y tiempo del efecto, además de documentación. Revisión visual de referencia realizada; revisión visual del sitio implementado sigue bloqueada por Chromium. No se afirma equivalencia exacta renderizada.
+
+- Petición adicional: retirado Reveal únicamente del footer y sustituido por div con las mismas clases. CTA y demás animaciones intactos. Build final y diff --check correctos tras este ajuste.

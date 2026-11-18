@@ -1,4 +1,3 @@
-import { Reveal } from './Reveal.jsx';
 import facebook from 'bootstrap-icons/icons/facebook.svg';
 import instagram from 'bootstrap-icons/icons/instagram.svg';
 import linkedin from 'bootstrap-icons/icons/linkedin.svg';
@@ -21,7 +20,7 @@ export function SiteFooter({ content, navigation, homeUrl }) {
   return (
     <footer className="site-footer">
       <div className="site-footer-inner mx-auto">
-        <Reveal className="site-footer-grid grid">
+        <div className="site-footer-grid grid">
           <div className="footer-brand">
             <img src={mark} alt="Snoware" width="604" height="109" loading="lazy" />
             <p>{content.tagline}</p>
@@ -57,7 +56,7 @@ export function SiteFooter({ content, navigation, homeUrl }) {
               ))}
             </ul>
           </div>
-        </Reveal>
+        </div>
         <p className="footer-copyright">© Snoware</p>
       </div>
     </footer>
