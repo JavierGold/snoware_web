@@ -81,3 +81,17 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Retirado contador visible de rango. El anuncio de rango se conserva solo para lectores de pantalla.
 - Indicadores de posición se rellenan acumulativamente y se vacían al retroceder; todos están llenos en la última posición. Se conserva un único indicador actual accesible y botones con etiquetas ES/EN.
 - Comprobados límites, avance/retroceso, acceso a los 8 servicios y progreso para 1/2/3 tarjetas mediante prueba de la lógica real extraída del componente. Build y diff --check correctos. No se completó validación visual en navegador (limitación de Chromium ya registrada).
+
+## Ajuste solicitado · Tipografía (18 de noviembre de 2026)
+- Se conserva Geist Variable en toda la interfaz. Titulares principales en peso 300; títulos de presentación, tarjetas y modal en 500. No cambian textos, colores, imágenes, tamaños, navegación ni composición.
+- Unificados peso, tracking e interlineado mediante tokens. El espaciado entre letras no supera −1 px; interlineado 1.05 en grandes titulares, 1.2 en títulos secundarios y 1.12 en hero móvil/CTA para lectura.
+- Se mantiene hero en una línea a partir de 761 px, saltos adaptables en móvil y controles del header sin cambios. La animación de entrada del hero se documenta abajo.
+- Comprobados build de producción, recursos WOFF2 de Geist, reglas CSS resultantes y git diff --check. No hay scripts de lint ni tests en package.json.
+- Revisión visual y de fuente efectivamente renderizada pendiente: Chromium disponible no inicia porque el entorno bloquea socket() (Operation not permitted), incluso en el intento autorizado fuera del sandbox. No se afirma validación visual en escritorio/móvil ni en el ordenador de Javier.
+
+
+## Ajuste solicitado · Entrada del hero según video (18 de noviembre de 2026)
+- Revisada la referencia de video: texto inicialmente ampliado y desenfocado que reduce escala y se enfoca. Aplicada esa entrada al titular completo, sin escritura letra a letra ni desvanecimiento de opacidad.
+- El span interior pasa de escala 1.45 y blur 8 px a escala 1 y blur 0 durante 900 ms. El h1 conserva su posición y tamaño final aprobados; el hero recorta la expansión para no crear scroll horizontal.
+- Se ejecuta al montar la página, no al volver por scroll. Movimiento reducido no aplica animación; texto visible por defecto y sin temporizadores ni estados que puedan dejarlo oculto.
+- Build y diff --check correctos después de este cambio. Verificación visual del efecto implementado pendiente por la limitación de Chromium descrita arriba; no confundir revisión del video de referencia con validación del sitio.

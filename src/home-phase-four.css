@@ -10,9 +10,9 @@
 .contact-callout h2 {
   max-width: 77%;
   font-size: clamp(2rem, 2.77vw, 3.125rem);
-  font-weight: 550;
-  line-height: 1.18;
-  letter-spacing: -.026em;
+  font-weight: var(--heading-weight-display);
+  line-height: 1.12;
+  letter-spacing: var(--heading-tracking);
   text-wrap: pretty;
 }
 

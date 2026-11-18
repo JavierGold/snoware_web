@@ -5,7 +5,7 @@ export function Hero({ headline }) {
 
   return (
     <section className="hero relative grid place-items-center text-center" aria-labelledby={titleId}>
-      <h1 id={titleId}>{headline}</h1>
+      <h1 id={titleId}><span className="hero-title-text">{headline}</span></h1>
     </section>
   );
 }

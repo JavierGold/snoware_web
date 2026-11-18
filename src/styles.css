@@ -8,6 +8,10 @@
 }
 
 :root {
+  --heading-weight-display: 300;
+  --heading-weight-detail: 500;
+  --heading-tracking: max(-1px, -.025em);
+  --heading-leading: 1.05;
   line-height: normal;
   color: #fff;
   background: #314452;
@@ -85,6 +89,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .menu-toggle { display: none; }
 
 .hero {
+  overflow: clip;
   min-height: 100vh;
   min-height: 100svh;
   padding: 6.5rem 2.7vw 1rem;
@@ -95,9 +100,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .hero h1 {
   font-size: clamp(1.75rem, 4.35vw, 7rem);
-  line-height: 1.08;
-  letter-spacing: -.024em;
-  font-weight: 450;
+  line-height: var(--heading-leading);
+  letter-spacing: var(--heading-tracking);
+  font-weight: var(--heading-weight-display);
   text-wrap: balance;
 }
 
@@ -183,7 +188,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
   .hero h1 {
     max-width: 19ch;
-    letter-spacing: -.038em;
+    line-height: 1.12;
     font-size: clamp(1.75rem, 8.7vw, 3.75rem);
   }
 }
@@ -199,4 +204,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* The inner span keeps the approved heading position independent of its entrance.
+   Visible by default: reduced motion or unsupported animation never hides copy. */
+.hero-title-text { display: block; }
+
+@keyframes hero-title-focus {
+  from { transform: scale(1.45); filter: blur(8px); }
+  to { transform: scale(1); filter: blur(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-title-text {
+    animation: hero-title-focus 900ms cubic-bezier(.16, 1, .3, 1) both;
+    transform-origin: center;
+  }
 }

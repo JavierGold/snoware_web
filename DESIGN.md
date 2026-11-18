@@ -6,7 +6,8 @@ Estado: borrador documental. Referencias visuales finales identificadas y empaqu
 Consultoría high-tech profesional, inspirada en Infosys pero con identidad propia. Conservar las composiciones aprobadas, sin introducir plantillas genéricas, diagramas de presentación o cambios decorativos no pedidos.
 
 ## Tipografía y color
-- Geist real: toda la web, controles, textos y tarjetas. Hay un archivo Geist.ttf en los recursos de trabajo; validar licencia y preparar formatos web adecuados antes de integrarlo.
+- Geist Variable real en toda la web, controles, textos y tarjetas, cargada localmente mediante `@fontsource-variable/geist`. No sustituir el cuerpo por Inter.
+- Ajuste tipográfico solicitado: titulares principales (hero, Servicios, Metodología, Soluciones y CTA) en peso 300; títulos de presentación, tarjetas y modal en peso 500. Tracking proporcional limitado a −1 px; interlineado compacto en titulares grandes y 1.2 en títulos de lectura. Conservar tamaños fluidos, espacios y composición aprobados, hero de una línea en escritorio y saltos naturales en móvil.
 - #E9EEF7: fondo claro verificado en la última sección Soluciones.
 - #0E0A42: azul marino de texto/fondo, verificado en Soluciones y referencias de footer.
 - #EEF5FE: fondo del último ejemplo modal.
@@ -113,3 +114,7 @@ Las doce figuras aparecen como archivos separados. Esto no implica doce modales 
 
 ## Movimiento e interacciones
 Incorporar animaciones elegantes y suaves al hacer scroll y al seleccionar o interactuar con elementos. Deben acompañar la jerarquía y el diseño aprobado, sin alterar distribución, espacios ni identidad; evitar efectos exagerados, desplazamientos innecesarios y bloqueos de interacción. Respetar `prefers-reduced-motion`, mantener navegación por teclado y foco visible, y no depender de animaciones para mostrar información esencial. Verificar las interacciones afectadas y su alternativa de movimiento reducido, sin repetir pruebas que no corresponden al cambio.
+
+
+## Entrada del hero · referencia de video
+Titular completo con zoom de mayor a menor y enfoque (sin fade de opacidad ni escritura), una sola entrada al cargar. Animar el span interior, no la posición aprobada del h1. Mantener el texto visible sin animación cuando se solicita movimiento reducido; no reiniciar al hacer scroll.
