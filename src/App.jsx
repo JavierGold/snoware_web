@@ -46,7 +46,7 @@ export function App() {
     <>
       <SiteHeader text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} />
       <main>
-        <Hero headline={text.headline} />
+        <Hero headline={text.headline} content={text.hero} />
         <AboutSnoware content={content.about} />
         <Services content={content.services} />
         <Methodology content={phaseThree.methodology} />

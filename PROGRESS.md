@@ -117,3 +117,11 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Umbral de 48 px y predominio horizontal; cancela al detectar scroll vertical, pointercancel o un segundo puntero. touch-action permite pan vertical y pinch zoom sin preventDefault durante el gesto.
 - Evita activar accidentalmente un enlace tras deslizar; no suprime activación por teclado. Límites de primera/última posición se mantienen.
 - Build y diff --check correctos. Prueba de lógica con umbral, dirección, diagonales y límites para 1/2/3 servicios visibles. Prueba táctil real pendiente por limitación de navegador.
+
+## Ajuste solicitado · Hero cinematográfico y cuadro de mensaje (18 de noviembre de 2026)
+- Incorporadas las tres frases solicitadas con la entrada/salida de zoom-enfoque basada en el video; lectura entre frases y paso terminal al cuadro. Conservados tamaños finales del hero y Geist.
+- Cámara continua sutil sobre la imagen existente y capa ligera de niebla; sin video, librerías nuevas ni filtros de fondo animados. Se pausa fuera del viewport, al ocultar pestaña y mediante botón. Movimiento reducido presenta directamente el estado final estático.
+- El título sube y aparece el cuadro inspirado en la referencia, con correo en vez de micrófono. Copy ES exacto aprobado y adaptación EN; tres sugerencias rellenan texto editable.
+- Botón Enviar habilitado al escribir texto no vacío. Por no existir backend aprobado, muestra un aviso accesible de envío no conectado y conserva el mensaje. No se envía, guarda, redirige ni simula respuesta.
+- Verificación: build de Vite y diff --check; pruebas de función real de secuencia (orden y estado terminal), copy exacto ES, contenido ES/EN, tres sugerencias y foco, condición de botón, ausencia de red/almacenamiento y limpieza de temporizadores/listener. Sin cambios en footer, carrusel ni otras secciones.
+- Limitación: revisión visual, comportamiento real de foco/teclado y medición de rendimiento en PC/móvil pendientes porque Chromium sigue bloqueado. Las pruebas estáticas no prueban la apariencia ni el gesto real. No hay scripts lint/tests configurados ni despliegue AWS.
