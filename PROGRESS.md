@@ -166,3 +166,11 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Texto inferior sin cambios de contenido, ahora azul oscuro #0E0A42 y cursiva. Placeholder sin cambios de contenido, en cursiva y ligeramente menor (0.875rem); texto escrito permanece normal a 1rem.
 - Sin cambios de JSX, secuencia, accesibilidad, comportamiento de envío ni demás secciones.
 - Build y diff --check correctos; reglas específicas inspeccionadas y contenido comparado sin cambios. Revisión visual real pendiente por limitación de navegador.
+
+## Ajuste solicitado · Suavizar modales de soluciones
+- Entrada del panel ampliada a 700 ms con desplazamiento discreto/escala leve; salida 500 ms con desaceleración suave en vez de 180 ms acelerada.
+- El backdrop ahora tiene entrada 600 ms y salida 450 ms; antes aparecía/desaparecía de golpe. Si se pulsa Escape durante la entrada, captura opacidad actual del fondo y detiene animación previa del panel.
+- El diálogo nativo solo se cierra después de terminar salida; conserva Escape, botón X, bloqueo del fondo y devolución del foco. Ignora cierres duplicados/aperturas mientras sigue abierto. Reduced motion cierra directamente sin transición.
+- Build y diff --check correctos; prueba de lógica real de requestClose con cierre normal/repetido, movimiento reducido e interrupción de entrada. Revisión visual/teclado real pendiente por limitación del navegador; no se afirma animación visualmente validada.
+
+- Petición adicional: pausa entre titulares del hero de 2200 a 2000 ms; cuadro a unos 8.8 s en vez de 9.4 s si no se pausa. No cambia entrada/salida ni demás elementos.

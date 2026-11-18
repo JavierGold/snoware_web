@@ -15,35 +15,53 @@ export function Solutions({ content }) {
   const [dialog, animate] = useAnimate();
   const reduceMotion = useReducedMotion();
   const closing = useRef(false);
+  const animation = useRef(null);
   const trigger = useRef(null);
   const [selected, setSelected] = useState(null);
   const solution = content.items[selected];
 
   function openSolution(index, button) {
+    if (dialog.current?.open) return;
     trigger.current = button;
     flushSync(() => setSelected(index));
+    const element = dialog.current;
     closing.current = false;
-    dialog.current.showModal();
-    animate(dialog.current, {
-      opacity: [0, 1],
-      y: [reduceMotion ? 0 : 14, 0],
-      scale: [reduceMotion ? 1 : 0.975, 1],
-    }, { duration: reduceMotion ? 0 : 0.48, ease: [0.22, 1, 0.36, 1] });
+    element.style.opacity = reduceMotion ? '1' : '0';
+    element.dataset.modalState = 'opening';
+    element.showModal();
+    animation.current = animate(element, {
+      opacity: [reduceMotion ? 1 : 0, 1],
+      y: [reduceMotion ? 0 : 18, 0],
+      scale: [reduceMotion ? 1 : 0.98, 1],
+    }, { duration: reduceMotion ? 0 : 0.7, ease: [0.22, 1, 0.36, 1] });
   }
 
   async function requestClose(event) {
     event.preventDefault();
-    if (closing.current || !dialog.current?.open) return;
+    const element = dialog.current;
+    if (closing.current || !element?.open) return;
     closing.current = true;
-    await animate(dialog.current, {
-      opacity: 0, y: reduceMotion ? 0 : 6, scale: reduceMotion ? 1 : 0.99,
-    }, { duration: reduceMotion ? 0 : 0.18, ease: [0.4, 0, 1, 1] });
-    dialog.current?.close();
+    // Capture the current backdrop opacity if Escape interrupts its entrance.
+    const backdropOpacity = getComputedStyle(element, '::backdrop').opacity;
+    element.style.setProperty('--backdrop-exit-opacity', backdropOpacity);
+    element.dataset.modalState = 'closing';
+    animation.current?.stop();
+
+    if (!reduceMotion) {
+      animation.current = animate(element, { opacity: 0, y: 10, scale: 0.99 }, {
+        // Backdrop takes 450 ms; keep the native top layer until both have faded.
+        duration: 0.5, ease: [0.22, 0.61, 0.36, 1],
+      });
+      await animation.current;
+    }
+    if (element === dialog.current && element.open) element.close();
   }
 
   function handleClose() {
+    animation.current?.stop();
+    closing.current = false;
     setSelected(null);
-    trigger.current?.focus({ preventScroll: true });
+    if (trigger.current?.isConnected) trigger.current.focus({ preventScroll: true });
   }
 
   return (

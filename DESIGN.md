@@ -129,7 +129,7 @@ Servicios: swipe táctil horizontal avanza/retrocede un servicio. Conservar flec
 
 ## Hero · secuencia y conversación (18 de noviembre de 2026)
 - Fondo existente con acercamiento continuo marcado (escala 1.03–1.54), dos capas desfasadas medio ciclo de 28 s y fundido de reinicio. La escala vuelve al inicio solo con la capa transparente; no retrocede la cámara y niebla tenue por gradientes (36 s). Sin video nuevo ni filtros animados sobre el fondo.
-- Tres frases: titular actual; «Lleva un mejor control de tu negocio»; «Transforma tu operación». Conservar el tamaño final de Geist aprobado. Entrada zoom/enfoque 700 ms, lectura 2200 ms y salida 350 ms; no repetir la secuencia al hacer scroll.
+- Tres frases: titular actual; «Lleva un mejor control de tu negocio»; «Transforma tu operación». Conservar el tamaño final de Geist aprobado. Entrada zoom/enfoque 700 ms, lectura 2000 ms y salida 350 ms; no repetir la secuencia al hacer scroll.
 - Al finalizar, el titular se desplaza arriba y aparece cuadro con icono de correo, no micrófono. Texto exacto: «Cuéntanos qué necesitas mejorar. Ejemplo: Quiero tener un mejor control de mi flujo de efectivo y cobranza». Pie exacto: «Cuéntanos tu necesidad y encontremos la mejor solución.»
 - Tres botones de ejemplo rellenan un mensaje editable: flujo de efectivo/cobranza, información centralizada y tareas repetitivas.
 - Enviar se activa con texto no vacío. Mientras no exista backend aprobado, informa al pulsar que el envío aún no está conectado; conserva el texto y nunca muestra éxito ni lo transmite.
@@ -140,3 +140,6 @@ Servicios: swipe táctil horizontal avanza/retrocede un servicio. Conservar flec
 
 ### Cuadro del hero · tratamiento tipográfico
 Conservar contenido. Pie en azul oscuro #0E0A42 y cursiva; ejemplo del placeholder en 0.875rem y cursiva. El mensaje introducido conserva tamaño 1rem y estilo normal.
+
+### Modal de soluciones · transición
+Entrada del panel 700 ms y fondo 600 ms; salida del panel 500 ms y fondo 450 ms. Mantener el diálogo nativo abierto hasta terminar la salida, incluso con Escape. Reduced motion elimina transiciones. Si se interrumpe la entrada, partir de opacidad actual para evitar destellos.
