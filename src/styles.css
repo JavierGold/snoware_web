@@ -328,6 +328,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-send-status:not(:empty) { margin-top: .7rem; }
 
 
+.hero-title-word { display: inline-block; white-space: nowrap; }
+.hero-title-letter { display: inline-block; }
+@keyframes hero-letter-focus {
+  from { transform: translateX(.35em) scale(3); filter: blur(14px); opacity: 0; }
+  to { transform: translateX(0) scale(1); filter: blur(0); opacity: 1; }
+}
 @keyframes hero-title-focus {
   from { transform: scale(3); filter: blur(16px); }
   to { transform: scale(1); filter: blur(0); }
@@ -347,12 +353,16 @@ button, a { -webkit-tap-highlight-color: transparent; }
   to { transform: translateX(2%); }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .hero-title-text[data-phase='enter'] { animation: hero-title-focus 700ms cubic-bezier(.16, 1, .3, 1) both; }
+  .hero-title-text[data-phase='enter']:not([data-letters='true']) { animation: hero-title-focus 700ms cubic-bezier(.16, 1, .3, 1) both; }
+  .hero-title-text[data-letter-motion='true'] .hero-title-letter {
+    animation: hero-letter-focus 700ms cubic-bezier(.16, 1, .3, 1) var(--letter-delay) both;
+  }
   .hero-title-text[data-phase='exit'] { animation: hero-title-depart 350ms ease-in both; }
   .hero-scenery { animation: hero-camera 28s linear -2.8s infinite both; }
   .hero-scenery-next { display: block; animation-delay: -16.8s; }
   .hero-mist { animation: hero-clouds 36s ease-in-out infinite alternate; }
   .hero[data-motion-paused='true'] .hero-title-text,
+  .hero[data-motion-paused='true'] .hero-title-letter,
   .hero[data-motion-paused='true'] .hero-scenery,
   .hero[data-motion-paused='true'] .hero-mist { animation-play-state: paused; }
 }

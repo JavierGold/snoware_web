@@ -3,6 +3,36 @@ import { motion, useInView, useReducedMotion } from 'motion/react';
 import envelope from 'bootstrap-icons/icons/envelope.svg';
 
 const durations = { enter: 700, hold: 2000, exit: 350 };
+const letterStagger = 360;
+
+function sceneDuration(scene) {
+  if (scene.index === 1 && scene.phase === 'hold') return 1400;
+  if (scene.index === 2 && scene.phase === 'enter') return durations.enter + letterStagger;
+  return durations[scene.phase];
+}
+
+function LetterTitle({ text }) {
+  let offset = 0;
+  const last = Math.max(Array.from(text).length - 1, 1);
+  return text.split(' ').map((word, wordIndex) => {
+    const start = offset;
+    offset += Array.from(word).length + 1;
+    return (
+      <span key={wordIndex}>
+        {wordIndex > 0 && ' '}
+        <span className="hero-title-word">
+          {Array.from(word).map((letter, letterIndex) => (
+            <span
+              key={letterIndex}
+              className="hero-title-letter"
+              style={{ '--letter-delay': `${(start + letterIndex) / last * letterStagger}ms` }}
+            >{letter}</span>
+          ))}
+        </span>
+      </span>
+    );
+  });
+}
 
 function advanceScene(scene) {
   if (scene.phase === 'enter') return { ...scene, phase: 'hold' };
@@ -37,7 +67,7 @@ export function Hero({ headline, content }) {
 
   useEffect(() => {
     if (stopped || ready) return;
-    const timeout = window.setTimeout(() => setScene(advanceScene), durations[scene.phase]);
+    const timeout = window.setTimeout(() => setScene(advanceScene), sceneDuration(scene));
     return () => window.clearTimeout(timeout);
   }, [scene, stopped, ready]);
 
@@ -79,9 +109,11 @@ export function Hero({ headline, content }) {
             <span
               key={index}
               className="hero-title-text"
+              data-letters={index === 2}
+              data-letter-motion={index === 2 && !ready}
               data-phase={ready ? 'ready' : scene.phase}
               aria-hidden="true"
-            >{titles[index]}</span>
+            >{index === 2 ? <LetterTitle text={titles[index]} /> : titles[index]}</span>
           </h1>
         </motion.div>
 

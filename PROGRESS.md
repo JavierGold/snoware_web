@@ -174,3 +174,9 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Build y diff --check correctos; prueba de lógica real de requestClose con cierre normal/repetido, movimiento reducido e interrupción de entrada. Revisión visual/teclado real pendiente por limitación del navegador; no se afirma animación visualmente validada.
 
 - Petición adicional: pausa entre titulares del hero de 2200 a 2000 ms; cuadro a unos 8.8 s en vez de 9.4 s si no se pausa. No cambia entrada/salida ni demás elementos.
+
+## Ajuste solicitado · Segundo titular más breve y tercero por letras
+- Pausa del segundo titular reducida de 2000 a 1400 ms. Primero/tercero conservan 2000 ms; no se alteran copy ni tamaños.
+- Solo el tercero entra por letras de izquierda a derecha, con escala 3 a 1 y desenfoque 14 a 0; 700 ms por letra y 360 ms de escalonamiento total. La fase de entrada espera 1060 ms antes de comenzar la pausa.
+- Letras agrupadas por palabra para mantener envoltura móvil; h1 mantiene nombre accesible completo. Respeta pausa y reduced motion; no se repite al scroll.
+- Build y diff --check correctos; prueba de tiempos y orden/escalonamiento ES/EN, límite de última letra y guardas de accesibilidad. Validación visual real pendiente por bloqueo de Chromium del entorno; no se afirma reproducción exacta ni rendimiento medido.
