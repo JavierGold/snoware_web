@@ -129,7 +129,7 @@ Servicios: swipe táctil horizontal avanza/retrocede un servicio. Conservar flec
 
 ## Hero · secuencia y conversación (18 de noviembre de 2026)
 - Fondo existente con cámara sutil (escala 1.06–1.12, desplazamiento inferior al 1%, ciclo alterno 28 s) y niebla tenue por gradientes (36 s). Sin video nuevo ni filtros animados sobre el fondo.
-- Tres frases: titular actual; «Lleva un mejor control de tu negocio»; «Cuéntanos qué desafío enfrenta tu negocio». Conservar el tamaño final de Geist aprobado. Entrada zoom/enfoque 700 ms, lectura 2400 ms y salida 350 ms; no repetir la secuencia al hacer scroll.
+- Tres frases: titular actual; «Lleva un mejor control de tu negocio»; «Cuéntanos qué desafío enfrenta tu negocio». Conservar el tamaño final de Geist aprobado. Entrada zoom/enfoque 700 ms, lectura 2200 ms y salida 350 ms; no repetir la secuencia al hacer scroll.
 - Al finalizar, el titular se desplaza arriba y aparece cuadro con icono de correo, no micrófono. Texto exacto: «Cuéntanos qué necesitas mejorar. Ejemplo: Quiero tener un mejor control de mi flujo de efectivo y cobranza». Pie exacto: «Cuéntanos tu necesidad y encontremos la mejor solución.»
 - Tres botones de ejemplo rellenan un mensaje editable: flujo de efectivo/cobranza, información centralizada y tareas repetitivas.
 - Enviar se activa con texto no vacío. Mientras no exista backend aprobado, informa al pulsar que el envío aún no está conectado; conserva el texto y nunca muestra éxito ni lo transmite.

@@ -138,3 +138,7 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Build y diff --check correctos. Comprobación estática de selector :not(:focus-within) y preservación del componente. Validación visual/teclado real pendiente por limitación de navegador.
 
 - Ajuste adicional solicitado: lectura entre cambios de 2800 a 2400 ms por título, conservando entrada 700 ms y salida 350 ms. El cuadro aparece aproximadamente a los 10 s en vez de 11.2 s si no se pausa, 1.2 s antes; movimiento reducido lo muestra directamente.
+
+## Refinamiento solicitado · Espera del hero
+- Reducida ligeramente la pausa por título de 2400 a 2200 ms. Entrada y salida intactas; cuadro aproximadamente a los 9.4 s en lugar de 10 s, si no se pausa.
+- Sin cambios de diseño, contenido, controles ni reduced motion. Build y diff --check correctos; comprobación del único valor modificado en el componente. No se repitió validación visual bloqueada.
