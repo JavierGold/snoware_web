@@ -1,3 +1,4 @@
+import { Reveal } from './Reveal.jsx';
 import { useEffect, useState } from 'react';
 import { PendingLink } from './PendingLink.jsx';
 
@@ -56,14 +57,14 @@ export function Services({ content }) {
 
   return (
     <section className="home-services" aria-labelledby="home-services-title">
-      <div className="home-services-heading mx-auto text-center" data-scroll-reveal>
+      <Reveal className="home-services-heading mx-auto text-center">
         <h2 id="home-services-title">
           {content.titleLead} <span>{content.titleAccent}</span>
         </h2>
         <p>{content.description}</p>
-      </div>
+      </Reveal>
 
-      <div className="services-carousel relative mx-auto" data-at-end={start === lastStart}>
+      <Reveal delay={0.12} className="services-carousel relative mx-auto" data-at-end={start === lastStart}>
         <div className="services-viewport overflow-hidden" id="services-track">
           <ul className="services-track grid" style={{ '--start': start, '--visible-count': count }}>
             {content.items.map((item, index) => (
@@ -115,7 +116,7 @@ export function Services({ content }) {
             ))}
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

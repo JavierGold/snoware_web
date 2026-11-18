@@ -30,7 +30,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   height: auto;
 }
 
-.header-controls { gap: clamp(.65rem, 1.6vw, 2rem); }
+.header-controls { flex-shrink: 0; flex-wrap: nowrap; gap: clamp(.65rem, 1.6vw, 2rem); }
 
 .primary-nav ul {
   gap: clamp(1rem, 3vw, 4rem);
@@ -102,18 +102,18 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 @media (width > 760px) {
-  .hero h1 { transform: translateY(3.5svh); }
-}
-
-@media (width >= 1024px) {
-  .header-controls { position: relative; }
-  .header-controls .language { position: absolute; inset: calc(100% + .55rem) 0 auto auto; }
+  .hero h1 {
+    font-size: clamp(1.65rem, 3.5vw, 6rem);
+    white-space: nowrap;
+    text-wrap: nowrap;
+    transform: translateY(3.5svh);
+  }
 }
 
 @media (width <= 760px) {
   .site-header { padding: .75rem clamp(1rem, 4.5vw, 2rem); }
   .brand img { width: clamp(7.5rem, 29vw, 12rem); }
-  .header-controls { gap: .5rem; }
+  .header-controls { flex-shrink: 0; flex-wrap: nowrap; gap: .5rem; }
   .language button { min-width: 38px; min-height: 36px; }
 
   .menu-toggle {
@@ -190,4 +190,13 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (prefers-reduced-motion: reduce) {
   .primary-nav, .menu-toggle span::before, .menu-toggle span::after { transition: none; }
+}
+
+[data-reveal]:focus-within {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
 }

@@ -20,6 +20,7 @@
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.0",
     "bootstrap-icons": "^1.13.2",
+    "motion": "^14.14.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   }

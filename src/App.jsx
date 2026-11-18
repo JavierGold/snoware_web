@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useScrollReveal } from './useScrollReveal.js';
-import './scroll-reveal.css';
 import { ContactCallout } from './components/ContactCallout.jsx';
 import { SiteFooter } from './components/SiteFooter.jsx';
 import { siteEnding } from './content/siteEnding.js';
@@ -22,7 +20,6 @@ function getLanguage() {
 }
 
 export function App() {
-  useScrollReveal();
   const [language, setLanguage] = useState(getLanguage);
   const text = translations[language];
   const content = homeContent[language];

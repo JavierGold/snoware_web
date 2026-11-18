@@ -221,8 +221,7 @@ body:has(.solution-dialog[open]) { overflow: hidden; }
 
 @media (prefers-reduced-motion: no-preference) {
   .methodology-tab, .solution-trigger { transition: background-color 180ms ease, color 180ms ease; }
-  .methodology-panel:not([hidden]) .methodology-panel-copy,
-  .solution-dialog[open] { animation: phase-three-enter 240ms ease-out both; }
+  .methodology-panel:not([hidden]) .methodology-panel-copy { animation: phase-three-enter 240ms ease-out both; }
 }
 
 @media (width < 700px) {

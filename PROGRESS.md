@@ -65,3 +65,13 @@ Se verificaron el logo, el fondo y la referencia del hero, así como la montaña
 
 ## Futuro
 Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío de mensajes; despliegue AWS. No afirmar que están implementados.
+
+## Ajuste solicitado · Motion y navegación por scroll (18 de noviembre de 2026)
+- Instalada `motion` y actualizado el lockfile. Sustituido el reveal CSS que partía de opacidad 0.88 por un componente React compartido: entrada desde opacidad 0, desplazamiento de 18 px y escala 0.992, durante 850 ms con desaceleración suave, una vez por bloque. No hay pulsación constante ni cambios de composición.
+- Aplicado a presentación, encabezado/carrusel de servicios, metodología, título/texto/lista de soluciones, CTA y footer. Se mantienen contenido, imágenes, Geist, colores y espaciados.
+- Las soluciones conservan el diálogo nativo, foco y bloqueo del fondo. Motion anima entrada (480 ms) y cierre (180 ms), incluidos Escape y botón de cierre, sin desmontar el diálogo antes de concluir.
+- Movimiento reducido muestra contenido sin desplazamientos y abre/cierra el diálogo sin animación. El foco por teclado nunca queda oculto por un reveal.
+- Metodología vuelve al paso 01 únicamente cuando toda la sección, incluida su imagen, deja de intersectar el viewport; no se restablece mientras siga parcialmente visible.
+- Verificación: build de Vite y revisión de diferencias. Validación de navegador pendiente de completar en este entorno; no publicado ni desplegado.
+- Ajuste adicional solicitado: frase completa del hero en una línea en escritorio con tamaño fluido; menú y ES/EN alineados en la misma fila. En móvil se conserva el título adaptable y el menú compacto.
+- Límite de verificación visual: Playwright CLI no pudo iniciar por una ruta de caché ausente; el intento alternativo de instalar Chromium en `/tmp` falló porque la descarga llegó truncada. No se afirma una revisión de navegador realizada.

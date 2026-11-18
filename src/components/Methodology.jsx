@@ -1,11 +1,20 @@
-import { useId, useRef, useState } from 'react';
+import { Reveal } from './Reveal.jsx';
+import { useInView } from 'motion/react';
+import { useEffect, useId, useRef, useState } from 'react';
 import mountain from '../assets/methodology-mountain.webp';
 
 export function Methodology({ content }) {
   const id = useId();
   const tabs = useRef(null);
+  const section = useRef(null);
+  const sectionInView = useInView(section, { amount: 'some' });
   const [selected, setSelected] = useState(0);
   const count = content.steps.length;
+
+  useEffect(() => {
+    // Reset only after the whole section (including its image) leaves the viewport.
+    if (!sectionInView) setSelected(0);
+  }, [sectionInView]);
 
   function handleKeyDown(event) {
     const targets = {
@@ -23,8 +32,8 @@ export function Methodology({ content }) {
   }
 
   return (
-    <section className="methodology" aria-labelledby={`${id}-title`}>
-      <div className="methodology-frame mx-auto grid" data-scroll-reveal>
+    <section ref={section} className="methodology" aria-labelledby={`${id}-title`}>
+      <Reveal className="methodology-frame mx-auto grid">
         <div className="methodology-controls">
           <h2 id={`${id}-title`}>{content.lead}{' '}<span className="block">{content.accent}</span></h2>
           <p>{content.introduction}</p>
@@ -67,7 +76,7 @@ export function Methodology({ content }) {
             </div>
           </div>
         ))}
-      </div>
+      </Reveal>
       <img className="methodology-mountain block w-full" src={mountain} width="2172" height="300" alt="" loading="lazy" />
     </section>
   );
