@@ -124,3 +124,5 @@ Titular completo con zoom de mayor a menor y enfoque (sin fade de opacidad ni es
 Entrada fiel a la transición del segundo 9 del video: escala inicial 3×, desenfoque 16 px y contracción centrada hasta escala 1 y blur 0 en 700 ms, con desaceleración marcada (cubic-bezier(.16, 1, .3, 1)). El comienzo desborda visualmente ambos bordes y queda contenido por el hero; no aumenta el ancho desplazable de la página. Titular escritorio: clamp(1.9rem, 4.25vw, 7rem), siempre en un renglón; móvil: clamp(2rem, 9.8vw, 4.25rem), con varias líneas. No modificar los demás titulares.
 
 Footer: visible normalmente al llegar por scroll, sin Reveal ni animación de aparición. CTA conserva su animación independiente.
+
+Servicios: swipe táctil horizontal avanza/retrocede un servicio. Conservar flechas, indicadores, scroll vertical y gesto de zoom.

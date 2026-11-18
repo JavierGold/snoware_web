@@ -111,7 +111,7 @@
 }
 
 .services-carousel[data-at-end='true'] { --peek: 0px; }
-.services-viewport { padding-bottom: .85rem; }
+.services-viewport { padding-bottom: .85rem; touch-action: pan-y pinch-zoom; }
 
 .services-track {
   --card-width: calc((100% - var(--peek) - (var(--visible-count) - 1) * var(--card-gap)) / var(--visible-count));

@@ -1,5 +1,5 @@
 import { Reveal } from './Reveal.jsx';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { PendingLink } from './PendingLink.jsx';
 
 const images = Object.values(import.meta.glob('../assets/services/servicio-*.webp', {
@@ -44,7 +44,16 @@ function ServiceCard({ item, image, visible, link }) {
   );
 }
 
+// Ignore small movements and diagonal/vertical gestures used to scroll the page.
+function swipeStep(dx, dy) {
+  return Math.abs(dx) >= 48 && Math.abs(dx) > Math.abs(dy) * 1.4
+    ? (dx < 0 ? 1 : -1)
+    : 0;
+}
+
 export function Services({ content }) {
+  const gesture = useRef(null);
+  const suppressClickUntil = useRef(0);
   const count = useVisibleCount();
   const [position, setPosition] = useState(0);
   const total = content.items.length;
@@ -53,6 +62,40 @@ export function Services({ content }) {
   const previous = Math.max(0, start - 1);
   const next = Math.min(lastStart, start + 1);
   const range = (index) => content.range(index + 1, index + count, total);
+
+  function beginSwipe(event) {
+    gesture.current = null;
+    suppressClickUntil.current = 0;
+    if (event.pointerType === 'mouse' || !event.isPrimary) return;
+    gesture.current = { id: event.pointerId, x: event.clientX, y: event.clientY };
+  }
+
+  function trackSwipe(event) {
+    const active = gesture.current;
+    if (!active || active.id !== event.pointerId) return;
+    const dx = event.clientX - active.x;
+    const dy = event.clientY - active.y;
+    // Once the user starts scrolling vertically, this gesture cannot turn into a swipe.
+    if (Math.abs(dy) > 10 && Math.abs(dy) >= Math.abs(dx)) gesture.current = null;
+  }
+
+  function endSwipe(event) {
+    const active = gesture.current;
+    gesture.current = null;
+    if (!active || active.id !== event.pointerId) return;
+    const step = swipeStep(event.clientX - active.x, event.clientY - active.y);
+    if (!step) return;
+    setPosition((current) => Math.max(0, Math.min(lastStart, Math.min(current, lastStart) + step)));
+    suppressClickUntil.current = Date.now() + 400;
+  }
+
+  function preventSwipeClick(event) {
+    // Suppress only the synthetic pointer click after a swipe, never keyboard activation.
+    if (event.detail !== 0 && Date.now() < suppressClickUntil.current) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }
 
   return (
     <section className="home-services" aria-labelledby="home-services-title">
@@ -64,7 +107,15 @@ export function Services({ content }) {
       </Reveal>
 
       <Reveal delay={0.12} className="services-carousel relative mx-auto" data-at-end={start === lastStart}>
-        <div className="services-viewport overflow-hidden" id="services-track">
+        <div
+          className="services-viewport overflow-hidden"
+          id="services-track"
+          onPointerDown={beginSwipe}
+          onPointerMove={trackSwipe}
+          onPointerUp={endSwipe}
+          onPointerCancel={() => { gesture.current = null; }}
+          onClickCapture={preventSwipeClick}
+        >
           <ul className="services-track grid" style={{ '--start': start, '--visible-count': count }}>
             {content.items.map((item, index) => (
               <ServiceCard

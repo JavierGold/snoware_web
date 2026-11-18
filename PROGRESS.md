@@ -111,3 +111,9 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Build, git diff --check y comparación estática con commit anterior correctos: solo cambia la amplitud y tiempo del efecto, además de documentación. Revisión visual de referencia realizada; revisión visual del sitio implementado sigue bloqueada por Chromium. No se afirma equivalencia exacta renderizada.
 
 - Petición adicional: retirado Reveal únicamente del footer y sustituido por div con las mismas clases. CTA y demás animaciones intactos. Build final y diff --check correctos tras este ajuste.
+
+## Ajuste solicitado · Swipe de servicios (18 de noviembre de 2026)
+- Añadido gesto táctil horizontal para avanzar/retroceder un servicio; conserva flechas, indicadores, anuncios y controles de teclado.
+- Umbral de 48 px y predominio horizontal; cancela al detectar scroll vertical, pointercancel o un segundo puntero. touch-action permite pan vertical y pinch zoom sin preventDefault durante el gesto.
+- Evita activar accidentalmente un enlace tras deslizar; no suprime activación por teclado. Límites de primera/última posición se mantienen.
+- Build y diff --check correctos. Prueba de lógica con umbral, dirección, diagonales y límites para 1/2/3 servicios visibles. Prueba táctil real pendiente por limitación de navegador.
