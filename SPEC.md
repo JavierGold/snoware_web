@@ -1,6 +1,6 @@
 # Snoware · especificación
 
-Estado: borrador. Documentación solamente; implementación aún no iniciada por esta entrega.
+Estado de implementación y validaciones en PROGRESS.md.
 
 ## Objetivo
 Presentar Snoware como consultoría de software con soluciones a la medida. Mostrar tanto capacidades técnicas como aplicaciones concretas en la operación de un negocio, sin aparentar un catálogo limitado de productos cerrados.
@@ -20,7 +20,7 @@ Páginas individuales de servicios, Nosotros y Contacto; agente IA para atenció
 - Metodología: selección de paso que cambia el contenido visible, sin repetir innecesariamente el título del paso en el panel.
 - Soluciones: 12 entradas abren un panel/modal con título, descripción específica, figura abstracta pequeña, cierre y enlace «Contáctanos».
 - CTA compartido por las páginas futuras, excepto Contacto, porque dirige a esa página.
-- Idioma: selector que conserva el contexto de navegación y presenta contenido equivalente. Estructura de rutas, idioma inicial y persistencia pendientes de elección técnica.
+- Idioma: selector que conserva el contexto de navegación y presenta contenido equivalente. Inicio usa español por defecto y conserva la selección de inglés con `?lang=en`. Las rutas de las futuras páginas se definen cuando se aprueben.
 - Las rutas todavía no existentes deben tener una solución acordada para la primera publicación. No publicar botones que aparentan funcionar y no tienen destino.
 
 ## Requisitos transversales
@@ -29,7 +29,10 @@ Responsive obligatorio en toda la página de Inicio, no solo en el carrusel: nav
 Texto real, navegación por teclado, foco visible, controles etiquetados y contraste legible. Modales con foco contenido, Escape y restauración del foco. Imágenes adaptativas y optimizadas; dimensiones reservadas para evitar saltos. Respetar preferencia de movimiento reducido.
 
 ## Tecnología
-Stack, gestor de paquetes y estructura definitivos pendientes de verificar en el nuevo proyecto. No asumir que usar las skills de MBS impone su arquitectura. AWS es el destino futuro; decidir servicio de hosting según arquitectura y necesidades reales de IA y contacto, sin aprovisionar ahora.
+- React, Vite y Tailwind CSS son el stack obligatorio de todo Snoware. Vite integra los plugins oficiales de React y Tailwind CSS. npm gestiona las dependencias con archivo de bloqueo.
+- `src/` contiene la entrada y composición de la aplicación. `src/components/` contiene componentes reutilizables como la navegación, el selector de idioma y el hero. `src/content/` contiene los textos traducidos y puede alojar datos compartidos.
+- Las páginas se compondrán a partir de componentes de interfaz. Mantener archivos enfocados, evitar duplicaciones y usar Tailwind con tokens compartidos y CSS específico para los detalles visuales.
+- AWS es el destino futuro. El servicio de hosting se decidirá según la arquitectura y las necesidades de IA y contacto.
 
 ## Criterios de aceptación de Inicio
 1. Coincide con referencias finales en composición, color, espacios, Geist e identidad.

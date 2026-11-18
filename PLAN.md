@@ -1,6 +1,6 @@
 # Plan de desarrollo · Snoware
 
-Estado: plan documental. Las cuatro fases están pendientes; este archivo no acredita implementación ni pruebas ejecutadas. Iniciar una fase solo cuando Javier lo indique.
+Estado de Inicio: las cuatro fases están implementadas en la copia local. La revisión visual y las animaciones al desplazarse quedan listas para revisión de Javier. Consultar PROGRESS.md para las verificaciones y los destinos pendientes. La publicación y el trabajo posterior requieren indicación de Javier.
 
 ## Alcance
 Desarrollar únicamente la página de Inicio en español e inglés. Las páginas de servicios, Nosotros y Contacto, el agente de IA, el envío de mensajes y el despliegue en AWS quedan para después.

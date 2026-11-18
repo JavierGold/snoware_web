@@ -1,0 +1,193 @@
+@import '@fontsource-variable/geist';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: "Geist Variable", sans-serif;
+  --color-ice: #e3f2ff;
+  --color-ink: #101b30;
+}
+
+:root {
+  line-height: normal;
+  color: #fff;
+  background: #314452;
+}
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+:focus-visible {
+  outline: 2px solid var(--color-ice);
+  outline-offset: 4px;
+}
+
+.site-header {
+  padding: clamp(.75rem, 1.45vw, 2rem) 2vw clamp(.75rem, 1.45vw, 2rem) 3.75vw;
+}
+
+.brand img {
+  display: block;
+  width: clamp(8.5rem, 18vw, 25rem);
+  height: auto;
+}
+
+.header-controls { gap: clamp(.65rem, 1.6vw, 2rem); }
+
+.primary-nav ul {
+  gap: clamp(1rem, 3vw, 4rem);
+  font-size: clamp(.875rem, 1.55vw, 1.625rem);
+}
+
+.primary-nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}
+
+.pending { color: #f0f5fb; }
+
+.chevron {
+  width: .42em;
+  height: .42em;
+  margin: -.22em 0 0 .55em;
+  border: solid currentColor;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.contact {
+  padding: .38em 1em;
+  background: var(--color-ice);
+  color: var(--color-ink);
+}
+
+.language {
+  gap: .125rem;
+  padding: .125rem;
+  border: 1px solid #e3f2ff70;
+  background: #13243840;
+}
+
+.language button {
+  min-width: 34px;
+  min-height: 32px;
+  padding: .2em .45em;
+  color: inherit;
+  background: transparent;
+  font-size: clamp(.75rem, .9vw, 1rem);
+}
+
+.language button:hover { background: #ffffff25; }
+
+.language button[aria-pressed="true"] {
+  color: var(--color-ink);
+  background: var(--color-ice);
+}
+
+.menu-toggle { display: none; }
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 6.5rem 2.7vw 1rem;
+  background:
+    linear-gradient(#16191e4d, #16191e42),
+    url('./hero-mountain.webp') center center / cover no-repeat;
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 4.35vw, 7rem);
+  line-height: 1.08;
+  letter-spacing: -.024em;
+  font-weight: 450;
+  text-wrap: balance;
+}
+
+@media (width > 760px) {
+  .hero h1 { transform: translateY(3.5svh); }
+}
+
+@media (width >= 1024px) {
+  .header-controls { position: relative; }
+  .header-controls .language { position: absolute; inset: calc(100% + .55rem) 0 auto auto; }
+}
+
+@media (width <= 760px) {
+  .site-header { padding: .75rem clamp(1rem, 4.5vw, 2rem); }
+  .brand img { width: clamp(7.5rem, 29vw, 12rem); }
+  .header-controls { gap: .5rem; }
+  .language button { min-width: 38px; min-height: 36px; }
+
+  .menu-toggle {
+    display: grid;
+    place-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #e3f2ff70;
+      background: #13243840;
+    color: inherit;
+  }
+
+  .menu-toggle span {
+    position: relative;
+    width: 16px;
+    height: 12px;
+  }
+
+  .menu-toggle span::before, .menu-toggle span::after {
+    content: '';
+    position: absolute;
+    inset: 2px 0 auto;
+    border-top: 1.5px solid;
+    transition: transform 180ms ease;
+  }
+
+  .menu-toggle span::after { inset: auto 0 2px; }
+  [data-menu-open="true"] .menu-toggle span::before { transform: translateY(3.25px) rotate(45deg); }
+  [data-menu-open="true"] .menu-toggle span::after { transform: translateY(-3.25px) rotate(-45deg); }
+
+  .primary-nav {
+    position: absolute;
+    inset: 100% clamp(1rem, 4.5vw, 2rem) auto;
+    max-height: calc(100svh - 5rem);
+    overflow: auto;
+    padding: .65rem 1rem;
+    border: 1px solid #e3f2ff38;
+    border-radius: 1rem;
+    background: #14263c;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-.35rem);
+    transition: opacity 180ms ease, transform 180ms ease, visibility 180ms step-end;
+  }
+
+  [data-menu-open="true"] .primary-nav {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition-timing-function: ease, ease, step-start;
+  }
+
+  .primary-nav ul {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .125rem;
+    font-size: 1rem;
+  }
+
+  .primary-nav .contact { margin: .4rem 0; }
+
+  .hero {
+    padding-inline: 1.25rem;
+    background-position: 39% center;
+  }
+
+  .hero h1 {
+    max-width: 19ch;
+    letter-spacing: -.038em;
+    font-size: clamp(1.75rem, 8.7vw, 3.75rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primary-nav, .menu-toggle span::before, .menu-toggle span::after { transition: none; }
+}

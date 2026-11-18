@@ -1,6 +1,6 @@
 # Snoware · instrucciones del proyecto
 
-Estado: borrador de documentación actualizado con las 12 referencias enviadas por Javier como aprobadas. No autoriza iniciar implementación, instalar dependencias ni desplegar.
+Las 12 referencias aprobadas por Javier guían el diseño. Consultar PROGRESS.md para conocer el estado de cada fase.
 
 ## Alcance y autoridad
 - Primera entrega: únicamente Inicio, en español e inglés. Las páginas de cada servicio, Nosotros y Contacto se incorporarán después; no tienen diseño aprobado.
@@ -8,6 +8,12 @@ Estado: borrador de documentación actualizado con las 12 referencias enviadas p
 - La instrucción más reciente de Javier prevalece. No eliminar opciones, inventar textos, cambiar ilustraciones, colores, distribución o navegación para resolver una duda.
 - No confundir los 8 servicios con las 12 soluciones de negocio. No reducir ninguno de los dos conjuntos.
 - Consultar SPEC.md para alcance, CONTENT.md para copy, DESIGN.md para fidelidad visual, PLAN.md para las cuatro fases de Inicio y PROGRESS.md para estado real.
+
+## Stack y organización del código
+- React, Vite y Tailwind CSS son obligatorios para todo el proyecto, incluidas las siguientes fases y páginas. Usar npm y versionar el archivo de bloqueo.
+- Organizar navegación, hero y futuras secciones como componentes React pequeños, con responsabilidades claras. Mantener la composición de cada página separada de los componentes compartidos.
+- Mantener los textos ES/EN y los datos reutilizables fuera de los componentes. Derivar la interfaz de props y estado de React, y reservar los efectos para sincronizar con APIs externas.
+- Usar utilidades de Tailwind para la composición y tokens compartidos para tipografía y color. Conservar CSS específico para la dirección visual o las interacciones cuando sea más legible. Evitar estilos y lógica duplicados.
 
 ## Trabajo eficiente
 - Desarrollar Inicio en las cuatro fases de PLAN.md. No ejecutar toda la página de una vez ni añadir microfases innecesarias. Dentro de cada fase, trabajar de forma directa e inspeccionar solo archivos relevantes. Al cerrar, actualizar PROGRESS.md y esperar la revisión de Javier antes de avanzar.

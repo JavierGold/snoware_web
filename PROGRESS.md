@@ -1,15 +1,53 @@
 # Snoware · progreso
 
-Actualización: 18 de noviembre de 2026. Documentación actualizada; esta entrega no inicia implementación.
+Actualización del 18 de noviembre de 2026. Fase 4 implementada. Inicio completo queda listo para revisión de Javier.
+
+## Fase 1 · Base, navegación y hero
+
+- Base con React, Vite y Tailwind CSS. La navegación, el selector de idioma y el hero son componentes separados. Los textos ES/EN están en `src/content/translations.js` y Geist Variable se sirve localmente en WOFF2.
+- Hero de Inicio con titular HTML y fondo WebP optimizado a partir de la montaña suministrada. La marca blanca y el favicon derivan del PNG original.
+- Navegación horizontal en escritorio y tablet, menú desplegable en celular y selector ES/EN. Español es el idioma inicial. El inglés se conserva en la URL con `?lang=en`. Servicios, Nosotros y Contacto figuran como opciones deshabilitadas mientras se definen sus destinos.
+- Transiciones del menú y del selector, con foco visible y respeto por la preferencia de movimiento reducido.
+- Verificado con `npm run build` y Chromium mediante Playwright. Se revisaron el hero y la navegación en 1672 × 941 y 390 × 844, y se comprobó el ajuste en tablet a 820 × 1180. Se comprobó el cambio ES → EN → ES, la apertura del menú, el cierre con Escape, la restauración del foco y el movimiento reducido. Capturas comparadas con la referencia aprobada y guardadas en `output/playwright/` como `fase-1-react-escritorio.png` y `fase-1-react-movil.png`.
+## Fase 2 · Sobre Snoware y Nuestros servicios
+
+- Presentación con la montaña pastel de `img/montanas/montana_01.png` y las ocho tarjetas con las ilustraciones correspondientes de `img/snoware-servicios/`. Se usan derivados WebP de los originales.
+- Carrusel con tres tarjetas en escritorio, dos en tablet y una en celular. Las flechas recorren las vistas aprobadas 1–3, 4–6 y 6–8 en escritorio. Los indicadores permiten elegir el inicio de la vista. El contador y una parte de la siguiente imagen señalan que hay más servicios. El desplazamiento respeta la preferencia de movimiento reducido.
+- Textos ES/EN centralizados, con posición del carrusel preservada al cambiar de idioma. Los enlaces de presentación y tarjetas figuran deshabilitados hasta que tengan un destino.
+- Compilación de producción verificada con `npm run build`. En Chromium se revisaron las vistas de 1672 × 941, 820 × 1180 y 390 × 844, el avance con flechas y teclado, la selección por indicadores, el cambio ES → EN → ES y el movimiento reducido. Capturas en `output/playwright/fase-2-*.png`.
+## Fase 3 · Nuestra metodología y Soluciones con impacto
+
+- Metodología oscura con la montaña técnica de `img/montanas/montana_02.png` y tres pasos seleccionables. El panel muestra la descripción y la lista del paso seleccionado.
+- Doce soluciones con título y descripción ES/EN, cada una con su figura original optimizada. La lista presenta dos columnas en escritorio y una en celular.
+- Ventanas con fondo desenfocado, Escape, foco inicial en el cierre y regreso al control que abrió la ventana. «Contáctanos» figura deshabilitado hasta que exista su destino.
+- Compilación de producción verificada con `npm run build`. Chromium confirmó los tres pasos por teclado, los doce diálogos con sus figuras, cierre y restauración de foco, inglés y la preferencia de movimiento reducido. Se revisaron escritorio (1672 × 941) y celular (390 × 844) y se comprobó la ausencia de desbordamiento horizontal en tablet (820 × 1180). Capturas en `output/playwright/fase-3-*.png`.
+## Fase 4 · CTA, pie de página y revisión final
+
+- CTA bilingüe con la franja azulada, el botón morado y Snowy asomado. Se reutiliza la imagen aprobada con un recorte WebP. El componente admite un destino de contacto cuando se defina. En Inicio el control figura deshabilitado.
+- Pie marino con marca, lema, navegación, teléfono confirmado (477 181 5000) y cinco iconos de redes. Inicio conserva el idioma activo y el teléfono usa un enlace de llamada. Los destinos de las páginas y redes siguen pendientes. Se omiten el correo de ejemplo y el aviso de privacidad provisional.
+- Compilación de producción verificada con `npm run build`. Se revisó Inicio completo en Chromium a 1672 × 941, 820 × 1180 y 390 × 844. También se comprobó la ausencia de desbordamiento horizontal a 320 px.
+- Comprobados el menú móvil, el carrusel, el selector de metodología, la apertura y cierre de un diálogo con Escape y restauración de foco, el cambio a inglés, el enlace Inicio del pie y el destino telefónico. Capturas en `output/playwright/fase-4-*.png`.
+- Inicio queda para revisión. Antes de publicar, confirmar destinos de navegación, CTA y redes, correo operativo, texto y destino de privacidad, y traducciones EN. AWS queda para una etapa posterior.
+
+## Revisión visual de Inicio
+
+- Se ajustaron alineación del menú y ancho del titular, posición del enlace de presentación, altura de las tarjetas y vista parcial del carrusel, proporciones de metodología, espaciado de soluciones, composición del diálogo y encuadre de Snowy.
+- El selector ES/EN queda debajo del menú en escritorio. El carrusel conserva seis indicadores seleccionables en escritorio, uno por cada posición válida con tres tarjetas visibles.
+- Se incorporaron entradas al hacer scroll. Chromium confirmó que la entrada se ejecuta una vez y que se desactiva con movimiento reducido. La compilación pasó y se comprobó el ancho en escritorio, tablet y móvil. Capturas en `output/playwright/revision-*.png`.
+- Los destinos pendientes, el correo y la información legal conservan el estado registrado en la fase 4.
+
+## Ejecución local
+
+Con Node.js 20.19+ de la rama 20 o 22.12+, ejecutar `npm ci` y `npm run dev` desde la raíz. Abrir la URL que imprime Vite. Para previsualizar la compilación de producción, ejecutar `npm run build` y luego `npm run preview`.
 
 ## Confirmado por conversación y referencias
 - Doce referencias aprobadas: hero, Sobre Snoware, tres vistas de servicios, tres estados de metodología oscura, lista de soluciones, primer modal, CTA y footer.
 - Hero: «Soluciones Digitales que impulsan tu crecimiento». Lema del footer: «Soluciones Digitales con impacto».
 - Ocho servicios y sus descripciones, doce soluciones, textos de Sobre, metodología y CTA registrados en CONTENT.md.
 - Primera etapa: solo Inicio. Páginas de servicios, Nosotros y Contacto se incorporarán después y no tienen diseño aprobado.
-- Geist real, ES/EN, fidelidad visual y espacios aprobados. Inglés aún propuesto, no validado.
+- Geist real, ES/EN, fidelidad visual y espacios aprobados. La traducción del hero está implementada y pendiente de revisión editorial por Javier.
 
-## Observado en capturas del proyecto
+## Inventario de recursos documentado antes de la fase 1
 - Raíz visible: `Snoware_web`.
 - Referencias en `img/references/`.
 - Fondos: `img/montanas/montana_01.png`, `montana_02.png`, `montana_hero.png`.
@@ -18,27 +56,12 @@ Actualización: 18 de noviembre de 2026. Documentación actualizada; esta entreg
 - `img/snowy/snowy_cta.png` y `img/logo_snoware.png`.
 - Cinco MD, carpeta `.agents` y `skills-lock.json` visibles. Eso no verifica instalación, contenido ni funcionamiento de todas las skills.
 
-Esta comprobación es del árbol de archivos en capturas. No se ha inspeccionado el contenido real de esos activos dentro del proyecto ni se ha evaluado su calidad.
+Se verificaron el logo, el fondo y la referencia del hero, así como la montaña pastel y las ocho ilustraciones de servicios. También se verificaron la montaña técnica y las doce figuras abstractas. También se comprobaron visualmente Snowy y las referencias del CTA y el pie de página.
 
-## Pendientes reales
-1. Comparar los activos suministrados con las referencias; verificar resolución, transparencia, recortes y ausencia de textos incrustados. No regenerar sin necesidad.
-2. Identificar visualmente cuál es `montana_01.png` y cuál `montana_02.png`; no asumir correspondencias por orden.
-3. Revisar fidelidad y calidad del logo PNG. No existe confirmación de un logo SVG; un PNG suficiente no exige rediseño.
-4. Revisar EN profesional y equivalente; definir idioma inicial/rutas y destinos de páginas futuras.
-5. Definir adaptación móvil y semántica de indicadores del carrusel, conservando vistas aprobadas 1–3, 4–6 y 6–8.
-6. Confirmar correo operativo y URLs sociales. El footer de referencia muestra un correo de ejemplo.
-7. Comprobar stack y disponibilidad de skills cuando se autorice implementar; no inferirlos del lock.
+## Pendientes de fases posteriores
+1. Comparar los activos de las siguientes fases con sus referencias.
+2. Revisar la traducción inglesa de Inicio con Javier y confirmar los destinos de las páginas futuras.
+3. Confirmar correo operativo y URLs sociales. El footer de referencia muestra un correo de ejemplo.
 
 ## Futuro
 Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío de mensajes; despliegue AWS. No afirmar que están implementados.
-
-## Entrega actual
-Carpeta con AGENTS.md, SPEC.md, CONTENT.md, DESIGN.md, PLAN.md y PROGRESS.md, empaquetada en un ZIP nuevo para sustituir los MD anteriores. No incluye imágenes, código ni dependencias. No se borró ni modificó el proyecto del usuario.
-
-## Validación y próximo paso
-Verificación de nombres contra capturas e integridad de los seis documentos. No repetir pruebas innecesarias; no hay aplicación creada en esta tarea que probar. Continuar cuando Javier indique, preservando diseño y alcance.
-
-## Plan de desarrollo vigente
-PLAN.md organiza Inicio en cuatro fases: (1) base, navegación y hero; (2) Sobre Snoware y servicios; (3) metodología y soluciones; (4) CTA, footer y revisión final. Todas figuran pendientes: no se ha comprobado ejecución de código en el proyecto. Cada fase incluye ES/EN, fidelidad visual y responsive de sus componentes; al cierre se actualiza este registro y se espera revisión de Javier.
-
-Las páginas individuales de servicios, Nosotros y Contacto no tienen diseño aprobado. El plan se ampliará después de su aprobación y de la indicación de Javier; no se consideran trabajo realizado.

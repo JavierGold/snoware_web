@@ -1,0 +1,241 @@
+.about-snoware,
+.home-services {
+  --phase-two-ink: #0e0a42;
+  --phase-two-accent: #633dd0;
+  color: var(--phase-two-ink);
+  line-height: 1.45;
+}
+
+.about-snoware {
+  padding: clamp(2.5rem, 4.9vw, 5.5rem) 0 clamp(2.5rem, 4.75vw, 5.25rem);
+  background: radial-gradient(ellipse at 62% 55%, #e6edfa, #dce5f8);
+}
+
+.about-snoware-container { width: min(88%, 98rem); }
+
+.about-snoware-label {
+  margin-bottom: clamp(1.25rem, 3vw, 3.375rem);
+  font-size: clamp(.85rem, 1.35vw, 1.5rem);
+  font-weight: 650;
+  letter-spacing: .025em;
+}
+
+.about-snoware-panel {
+  grid-template-columns: 2fr 3fr;
+  border-radius: clamp(1rem, 1.55vw, 1.75rem);
+  background: linear-gradient(115deg, #f4f7fe, #edf3fd);
+}
+
+.about-snoware-image { aspect-ratio: 1.62; }
+
+.about-snoware-copy {
+  padding: clamp(1.5rem, 3.4vw, 3.8rem);
+  gap: clamp(.65rem, .9vw, 1rem);
+}
+
+.about-snoware-copy h2 {
+  font-size: clamp(1.45rem, 2.05vw, 2.3rem);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -.04em;
+  text-wrap: balance;
+}
+
+.about-snoware-copy > p {
+  font-size: clamp(1rem, 1.4vw, 1.55rem);
+  line-height: 1.5;
+}
+
+.phase-two-link { font-weight: 550; }
+
+.phase-two-link-arrow {
+  position: relative;
+  display: inline-block;
+  width: .62em;
+  height: .62em;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+.phase-two-link-arrow::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: .8em;
+  border-top: 1px solid;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+  content: '';
+}
+
+.about-snoware-copy .phase-two-link {
+  margin-top: auto;
+  margin-bottom: clamp(.35rem, .65vw, .75rem);
+  padding-top: 1rem;
+  font-size: clamp(.95rem, 1.35vw, 1.5rem);
+  border-bottom: 1px solid #3c4286;
+}
+
+.home-services {
+  background: #fbfbfd;
+  padding: clamp(3rem, 5.4vw, 6rem) 0 clamp(2.5rem, 4vw, 4.5rem);
+}
+
+.home-services-heading {
+  width: min(90%, 57rem);
+}
+
+.home-services-heading h2 {
+  color: #111116;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 2.95vw, 3.35rem);
+  line-height: 1.1;
+  letter-spacing: -.05em;
+}
+
+.home-services-heading h2 span { color: var(--phase-two-accent); }
+
+.home-services-heading p {
+  margin: .75rem auto 0;
+  max-width: 58em;
+  font-size: clamp(.95rem, 1.16vw, 1.25rem);
+  text-wrap: balance;
+}
+
+.services-carousel {
+  width: min(89%, 100rem);
+  margin-top: clamp(2rem, 3.3vw, 3.75rem);
+  --card-gap: clamp(.65rem, .85vw, 1rem);
+  --peek: clamp(1.25rem, 2.9vw, 3.25rem);
+  --arrow-offset: clamp(1.75rem, 3.6vw, 4rem);
+}
+
+.services-carousel[data-at-end='true'] { --peek: 0px; }
+.services-viewport { padding-bottom: .85rem; }
+
+.services-track {
+  --card-width: calc((100% - var(--peek) - (var(--visible-count) - 1) * var(--card-gap)) / var(--visible-count));
+  grid-auto-flow: column;
+  grid-auto-columns: var(--card-width);
+  gap: var(--card-gap);
+  transform: translateX(calc(var(--start) * -1 * (var(--card-width) + var(--card-gap))));
+  transition: transform 390ms cubic-bezier(.22, .75, .24, 1);
+}
+
+.service-card { display: grid; grid-template-rows: auto 1fr; }
+
+.service-art {
+  aspect-ratio: 1.27;
+  border-radius: clamp(.8rem, 1.15vw, 1.3rem);
+}
+
+.service-card-copy {
+  z-index: 1;
+  min-height: clamp(11.5rem, 11.65vw, 13rem);
+  margin: clamp(-2.9rem, -2.55vw, -1.75rem) clamp(.5rem, .8vw, .9rem) 0;
+  padding: clamp(.85rem, 1.08vw, 1.25rem);
+  gap: clamp(.35rem, .52vw, .6rem);
+  border-radius: clamp(.75rem, .85vw, 1rem);
+  background: #fff;
+  box-shadow: 0 6px 15px #2d26722a;
+}
+
+.service-card[aria-hidden='true'] .service-card-copy { visibility: hidden; }
+
+.service-card h3 {
+  font-size: clamp(1.1rem, 1.45vw, 1.65rem);
+  font-weight: 650;
+  letter-spacing: -.035em;
+  line-height: 1.15;
+}
+
+.service-card p,
+.service-card .phase-two-link {
+  font-size: clamp(.92rem, 1.04vw, 1.17rem);
+}
+
+.service-card .phase-two-link {
+  margin-top: auto;
+  color: var(--phase-two-accent);
+}
+
+.services-arrow {
+  position: absolute;
+  top: 43%;
+  translate: 0 -50%;
+  width: clamp(2.75rem, 2.65vw, 3rem);
+  height: clamp(2.75rem, 2.65vw, 3rem);
+  background: #fff;
+  box-shadow: 0 4px 13px #30266e25;
+}
+
+.services-arrow span {
+  width: .5rem;
+  height: .5rem;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  transform: rotate(45deg);
+}
+
+.services-previous { left: calc(-1 * var(--arrow-offset)); }
+.services-previous span { transform: rotate(-135deg); }
+.services-next { right: calc(-1 * var(--arrow-offset)); }
+
+.services-next:not(:disabled),
+.services-previous:not(:disabled):hover {
+  background: var(--phase-two-accent);
+  color: #fff;
+}
+
+.services-arrow:not(:disabled),
+.services-dot { cursor: pointer; }
+
+.services-arrow:disabled { color: #77728f; background: #f0eff6; }
+
+.services-pagination {
+  margin-top: .85rem;
+  gap: .65rem;
+  font-size: clamp(.85rem, 1.05vw, 1.15rem);
+}
+
+.services-dot { width: 1.625rem; height: 1.625rem; }
+.services-dot::before {
+  content: '';
+  width: .7rem;
+  height: .7rem;
+  border-radius: 50%;
+  background: #b6b7cc;
+}
+
+.services-dot[aria-current]::before,
+.services-dot:hover::before { background: var(--phase-two-accent); }
+
+.services-carousel button:focus-visible { outline-color: var(--phase-two-accent); }
+
+@media (width >= 1024px) {
+  .service-card-copy { line-height: 1.38; }
+}
+
+@media (width < 820px) {
+  .services-carousel { width: min(90%, 44rem); }
+  .services-arrow { top: auto; bottom: 0; translate: none; }
+  .services-previous { left: 0; }
+  .services-next { right: 0; }
+  .services-pagination { min-height: 2.75rem; padding-inline: 3rem; }
+}
+
+@media (width < 640px) {
+  .about-snoware-panel { grid-template-columns: minmax(0, 1fr); }
+  .about-snoware-image { width: 100%; height: auto; }
+  .home-services { padding-top: 3.25rem; }
+  .services-carousel { --peek: 1.15rem; }
+  .services-carousel[data-at-end='true'] { --peek: 0px; }
+  .service-art { aspect-ratio: 1.4; }
+  .service-card-copy { min-height: 11.75rem; }
+  .services-pagination { flex-direction: column; gap: .2rem; }
+  .services-dot { width: 1.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services-track { transition: none; }
+}
