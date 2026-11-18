@@ -75,3 +75,9 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Verificación: build de Vite y revisión de diferencias. Validación de navegador pendiente de completar en este entorno; no publicado ni desplegado.
 - Ajuste adicional solicitado: frase completa del hero en una línea en escritorio con tamaño fluido; menú y ES/EN alineados en la misma fila. En móvil se conserva el título adaptable y el menú compacto.
 - Límite de verificación visual: Playwright CLI no pudo iniciar por una ruta de caché ausente; el intento alternativo de instalar Chromium en `/tmp` falló porque la descarga llegó truncada. No se afirma una revisión de navegador realizada.
+
+## Ajuste solicitado · Carrusel de servicios (18 de noviembre de 2026)
+- Flechas avanzan o retroceden exactamente un servicio por clic; conserva 3 visibles en escritorio, 2 en tablet y 1 en móvil.
+- Retirado contador visible de rango. El anuncio de rango se conserva solo para lectores de pantalla.
+- Indicadores de posición se rellenan acumulativamente y se vacían al retroceder; todos están llenos en la última posición. Se conserva un único indicador actual accesible y botones con etiquetas ES/EN.
+- Comprobados límites, avance/retroceso, acceso a los 8 servicios y progreso para 1/2/3 tarjetas mediante prueba de la lógica real extraída del componente. Build y diff --check correctos. No se completó validación visual en navegador (limitación de Chromium ya registrada).

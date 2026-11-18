@@ -48,11 +48,10 @@ export function Services({ content }) {
   const count = useVisibleCount();
   const [position, setPosition] = useState(0);
   const total = content.items.length;
-  const lastStart = total - count;
+  const lastStart = Math.max(0, total - count);
   const start = Math.min(position, lastStart);
-  const stops = Array.from({ length: Math.ceil(total / count) }, (_, index) => Math.min(index * count, lastStart));
-  const previous = stops.findLast((stop) => stop < start);
-  const next = stops.find((stop) => stop > start);
+  const previous = Math.max(0, start - 1);
+  const next = Math.min(lastStart, start + 1);
   const range = (index) => content.range(index + 1, index + count, total);
 
   return (
@@ -84,7 +83,7 @@ export function Services({ content }) {
           className="services-arrow services-previous grid place-items-center rounded-full"
           aria-label={content.previous}
           aria-controls="services-track"
-          disabled={previous === undefined}
+          disabled={start === 0}
           onClick={() => setPosition(previous)}
         >
           <span aria-hidden="true" />
@@ -94,14 +93,14 @@ export function Services({ content }) {
           className="services-arrow services-next grid place-items-center rounded-full"
           aria-label={content.next}
           aria-controls="services-track"
-          disabled={next === undefined}
+          disabled={start === lastStart}
           onClick={() => setPosition(next)}
         >
           <span aria-hidden="true" />
         </button>
 
         <div className="services-pagination flex flex-wrap items-center justify-center">
-          <span aria-live="polite" aria-atomic="true">{range(start)}</span>
+          <span className="sr-only" aria-live="polite" aria-atomic="true">{range(start)}</span>
           <div className="flex">
             {Array.from({ length: lastStart + 1 }, (_, index) => (
               <button
@@ -111,6 +110,7 @@ export function Services({ content }) {
                 aria-label={content.showRange(range(index))}
                 aria-controls="services-track"
                 aria-current={start === index ? 'true' : undefined}
+                data-complete={index <= start}
                 onClick={() => setPosition(index)}
               />
             ))}

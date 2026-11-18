@@ -207,7 +207,7 @@
   background: #b6b7cc;
 }
 
-.services-dot[aria-current]::before,
+.services-dot[data-complete="true"]::before,
 .services-dot:hover::before { background: var(--phase-two-accent); }
 
 .services-carousel button:focus-visible { outline-color: var(--phase-two-accent); }
