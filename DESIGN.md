@@ -152,3 +152,6 @@ Preparar solo la figura señalada/enfocada; esperar su decodificación hasta 250
 
 ### Hero · separación durante aparición del cuadro
 El cuadro expande su altura en flujo durante 700 ms y el título sube con ese mismo flujo, sin transform independiente del título ni desplazamiento vertical del cuadro que los cruce. Mantener margen entre ambos y dimensiones finales; padding del conjunto coordinado con la expansión. Humo en dos capas de gradientes de baja opacidad, desplazamientos opuestos de 16/23 s independientes del zoom; sin recursos adicionales. Reduced motion deja una capa tenue estática.
+
+### Header · Experiencia
+Añadir «Experiencia» / «Experience» después de Nosotros/About y antes de Contacto/Contact en el menú compartido de escritorio y móvil. Mientras su página no esté aprobada, usar el mismo estado pendiente no interactivo que Nosotros, con aria-disabled; sin URL ficticia ni contenido inventado.

@@ -3,6 +3,7 @@ export const translations = {
     home: 'Inicio',
     services: 'Servicios',
     about: 'Nosotros',
+    experience: 'Experiencia',
     contact: 'Contacto',
     headline: 'Soluciones Digitales que impulsan tu crecimiento',
     hero: {
@@ -31,6 +32,7 @@ export const translations = {
     home: 'Home',
     services: 'Services',
     about: 'About',
+    experience: 'Experience',
     contact: 'Contact',
     headline: 'Digital solutions that drive your growth',
     hero: {

@@ -78,6 +78,7 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange }) {
               </span>
             </li>
             <li><span className={`${menuItemClass} pending`} aria-disabled="true">{text.about}</span></li>
+            <li><span className={`${menuItemClass} pending`} aria-disabled="true">{text.experience}</span></li>
             <li>
               <span className="contact inline-flex items-center rounded-full whitespace-nowrap" aria-disabled="true">
                 {text.contact}

@@ -205,3 +205,8 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Niebla antes: gradientes con opacidad .16 y desplazamiento apenas ±2% en 36 s. Ahora dos capas tenues con recorridos opuestos ±10%/±8%, ciclos 16/23 s y variación leve de opacidad, independientes del zoom. Solo transform/opacity, sin imágenes ni video adicionales.
 - Respeta reduced motion y pausas; copy, secuencia por palabras y espera de 100 ms intactos.
 - Build, diff --check y comprobaciones estáticas de flujo/ausencia de transform independiente, capas y guardas correctos. No se afirma prueba visual en dispositivos ni rendimiento medido: Chromium sigue bloqueado en este entorno.
+
+## Ajuste solicitado · Experiencia en header
+- Añadida Experiencia/Experience entre Nosotros y Contacto, dentro del menú compartido de escritorio/móvil.
+- Sigue el patrón de páginas pendientes: texto no interactivo con aria-disabled, sin enlace roto ni página/contenido inventado. Footer sin cambios.
+- Build, diff --check y comprobaciones de traducciones/orden/estado pendiente correctos. Validación visual de anchos reales pendiente por bloqueo de Chromium.
