@@ -2,7 +2,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 import { motion, useInView, useReducedMotion } from 'motion/react';
 import envelope from 'bootstrap-icons/icons/envelope.svg';
 
-const durations = { enter: 700, hold: 2800, exit: 350 };
+const durations = { enter: 700, hold: 2400, exit: 350 };
 
 function advanceScene(scene) {
   if (scene.phase === 'enter') return { ...scene, phase: 'hold' };

@@ -251,6 +251,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
   display: flex;
   gap: .4rem;
 }
+/* Keep playback out of the visual design; keyboard users can still pause/skip.
+   Reveal on focus so there are no invisible focused controls. */
+.hero-playback:not(:focus-within) {
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 .hero-playback button {
   min-height: 44px;
   padding: .5rem .7rem;

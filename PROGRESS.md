@@ -131,3 +131,10 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - No se cambian tamaños, secuencia, tiempos, cuadro de mensaje ni otras secciones.
 - Build y diff --check correctos. Estimación con Geist peso 300: ambos titulares caben en una línea a 761, 820, 1024, 1280, 1440, 1920, 2560 y 3840 px. En móvil se conserva el salto de línea y se comprueba que la palabra más ancha cabe desde 320 px.
 - Comprobación por métricas del recurso Geist.ttf, no por navegador: revisión visual de desktop/móvil sigue pendiente por limitación del entorno.
+
+## Ajuste solicitado · Retirar controles visibles del hero (18 de noviembre de 2026)
+- Ocultos visualmente «Escribir mensaje» y «Pausar animación» en la vista normal. Se muestran solo al recibir foco con teclado, preservando una forma accesible de pausar el movimiento continuo y saltar al mensaje.
+- No cambia JSX, secuencia, tiempos, título, campo, CTA, cámara/niebla ni otras secciones. Reduced motion y pausa fuera de viewport/pestaña intactos.
+- Build y diff --check correctos. Comprobación estática de selector :not(:focus-within) y preservación del componente. Validación visual/teclado real pendiente por limitación de navegador.
+
+- Ajuste adicional solicitado: lectura entre cambios de 2800 a 2400 ms por título, conservando entrada 700 ms y salida 350 ms. El cuadro aparece aproximadamente a los 10 s en vez de 11.2 s si no se pausa, 1.2 s antes; movimiento reducido lo muestra directamente.
