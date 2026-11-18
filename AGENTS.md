@@ -1,0 +1,40 @@
+# Snoware · instrucciones del proyecto
+
+Estado: borrador de documentación actualizado con las 12 referencias enviadas por Javier como aprobadas. No autoriza iniciar implementación, instalar dependencias ni desplegar.
+
+## Alcance y autoridad
+- Primera entrega: únicamente Inicio, en español e inglés. Las páginas de cada servicio, Nosotros y Contacto se incorporarán después; no tienen diseño aprobado.
+- Respetar los diseños y contenidos aprobados. Una propuesta, una variante generada o un archivo llamado «aprobado» no equivalen por sí solos a aprobación del usuario.
+- La instrucción más reciente de Javier prevalece. No eliminar opciones, inventar textos, cambiar ilustraciones, colores, distribución o navegación para resolver una duda.
+- No confundir los 8 servicios con las 12 soluciones de negocio. No reducir ninguno de los dos conjuntos.
+- Consultar SPEC.md para alcance, CONTENT.md para copy, DESIGN.md para fidelidad visual, PLAN.md para las cuatro fases de Inicio y PROGRESS.md para estado real.
+
+## Trabajo eficiente
+- Desarrollar Inicio en las cuatro fases de PLAN.md. No ejecutar toda la página de una vez ni añadir microfases innecesarias. Dentro de cada fase, trabajar de forma directa e inspeccionar solo archivos relevantes. Al cerrar, actualizar PROGRESS.md y esperar la revisión de Javier antes de avanzar.
+- Optimizar tokens: no releer el repositorio completo, no repetir explicaciones, no ejecutar la misma batería de pruebas después de cambios que no la afectan.
+- Elegir validaciones proporcionales al cambio. Repetir una prueba solo si cambió lo que verifica o si falló.
+- Conservar control visual suficiente: revisar composición, espacios, alineaciones, tipografía, imágenes y responsive frente a referencias. La eficiencia no justifica bajar calidad ni omitir seguridad o funcionalidad necesaria.
+- Usar las skills pertinentes ya instaladas; no reinstalarlas ni ejecutar todas por rutina. La instalación actual la realiza Javier y aún no se ha verificado en el proyecto.
+- Informar con brevedad qué cambió, qué se comprobó y qué queda pendiente. No afirmar que algo está implementado, aprobado o probado sin evidencia.
+
+## Reglas de diseño y contenido
+- Geist real en toda la interfaz; no fuentes parecidas ni texto incrustado en imágenes para simularla.
+- Mantener espacios y proporciones aprobados. No rediseñar por gusto del implementador.
+- Referencias completas sirven para comparar; no convertirlas en una única imagen de la página.
+- Inglés natural y profesional, adaptado al significado del español. Las propuestas EN de CONTENT.md requieren revisión; no están aprobadas.
+- No inventar clientes, métricas, testimonios, capacidades, correos, enlaces sociales ni garantías.
+- Menú exacto: Inicio, Servicios, Nosotros, Contacto. Resolver destinos pendientes antes de publicar; no inventar páginas o enlaces vacíos.
+
+## Seguridad y entregas futuras
+- No incluir secretos en cliente ni en Git. IA, mensajería y credenciales se resuelven mediante servicios seguros cuando se apruebe su implementación.
+- AWS es destino previsto, no infraestructura autorizada. No crear recursos, costes ni despliegues en esta etapa.
+- No activar formularios, comunicaciones o IA ficticiamente funcionales.
+
+## Fuente visual vigente
+Las 12 imágenes en `img/references/` son el conjunto aprobado por Javier («todo eso es lo aprobado», más CTA enviado a continuación). Prevalecen sobre variantes anteriores. Conservar Geist real aunque alguna imagen generada tenga pequeñas imperfecciones tipográficas. Los datos de ejemplo siguen siendo provisionales: aprobación visual no convierte un correo ficticio en dirección operativa.
+
+## Estructura proporcionada por Javier
+Los recursos están bajo `img/`, con rutas exactas en DESIGN.md. No reorganizar carpetas ni inventar nombres. Su presencia se ha observado en capturas, no mediante lectura directa del proyecto. Validar solo los archivos pertinentes cuando se trabaje en él. `.agents` y `skills-lock.json` no prueban por sí solos que todas las skills estén instaladas correctamente.
+
+## Responsive de todo Inicio
+Toda la página debe adaptarse a celulares, tablets y computadoras: navegación, hero, textos, imágenes, presentación, servicios, metodología, soluciones y sus modales, CTA y footer. Implementarlo durante cada fase, no únicamente en el carrusel ni al final. Conservar jerarquía, espaciado y calidad visual sin desbordamiento horizontal.
