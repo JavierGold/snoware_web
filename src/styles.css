@@ -234,7 +234,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-scenery {
   background: linear-gradient(#16191e4d, #16191e42),
     url('./hero-mountain.webp') center / cover no-repeat;
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 .hero-mist {
   inset: -8%;
@@ -335,8 +335,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   to { transform: scale(.6); filter: blur(8px); opacity: 0; }
 }
 @keyframes hero-camera {
-  from { transform: scale(1.06) translate(-.4%, .2%); }
-  to { transform: scale(1.12) translate(.5%, -.4%); }
+  from { transform: scale(1.05) translate(-1.1%, .4%); }
+  to { transform: scale(1.17) translate(1.1%, -.7%); }
 }
 @keyframes hero-clouds {
   from { transform: translateX(-2%); }
@@ -345,7 +345,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: no-preference) {
   .hero-title-text[data-phase='enter'] { animation: hero-title-focus 700ms cubic-bezier(.16, 1, .3, 1) both; }
   .hero-title-text[data-phase='exit'] { animation: hero-title-depart 350ms ease-in both; }
-  .hero-scenery { animation: hero-camera 28s ease-in-out infinite alternate; }
+  .hero-scenery { animation: hero-camera 18s ease-in-out infinite alternate; }
   .hero-mist { animation: hero-clouds 36s ease-in-out infinite alternate; }
   .hero[data-motion-paused='true'] .hero-title-text,
   .hero[data-motion-paused='true'] .hero-scenery,

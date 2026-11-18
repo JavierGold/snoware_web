@@ -142,3 +142,9 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 ## Refinamiento solicitado · Espera del hero
 - Reducida ligeramente la pausa por título de 2400 a 2200 ms. Entrada y salida intactas; cuadro aproximadamente a los 9.4 s en lugar de 10 s, si no se pausa.
 - Sin cambios de diseño, contenido, controles ni reduced motion. Build y diff --check correctos; comprobación del único valor modificado en el componente. No se repitió validación visual bloqueada.
+
+## Ajuste solicitado · Movimiento perceptible de montaña
+- Diagnóstico de código: animación activa incluso tras aparecer el cuadro. Solo se pausa por reduced motion, pausa manual, sección fuera de vista o pestaña oculta. No se ha confirmado cuál condición aplica en el navegador del usuario.
+- El recorrido anterior (1.06–1.12 en 28 s) podía parecer estático. Se amplía moderadamente a 1.05–1.17 con desplazamiento lateral ±1.1% en 18 s por recorrido, alterno y ease-in-out para evitar saltos.
+- Se conserva reduced motion, pausa de visibilidad, niebla y todos los demás comportamientos. Zoom inicial suficiente para cubrir bordes durante el desplazamiento.
+- Build y diff --check correctos; comprobadas reglas CSS, duración y condiciones de pausa. No se afirma solución visual verificada sin prueba en navegador.
