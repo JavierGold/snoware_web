@@ -94,7 +94,7 @@ export function Hero({ headline, content }) {
             <span className="hero-message-icon" aria-hidden="true">
               <img src={envelope} alt="" width="26" height="26" />
             </span>
-            <label htmlFor={inputId}>{content.messageLabel}</label>
+            <label className="sr-only" htmlFor={inputId}>{content.messageLabel}</label>
             <textarea
               ref={field}
               id={inputId}

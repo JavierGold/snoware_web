@@ -148,3 +148,10 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - El recorrido anterior (1.06–1.12 en 28 s) podía parecer estático. Se amplía moderadamente a 1.05–1.17 con desplazamiento lateral ±1.1% en 18 s por recorrido, alterno y ease-in-out para evitar saltos.
 - Se conserva reduced motion, pausa de visibilidad, niebla y todos los demás comportamientos. Zoom inicial suficiente para cubrir bordes durante el desplazamiento.
 - Build y diff --check correctos; comprobadas reglas CSS, duración y condiciones de pausa. No se afirma solución visual verificada sin prueba en navegador.
+
+## Ajuste solicitado · Retirar etiqueta visible del cuadro
+- Oculta visualmente únicamente «Cuéntanos qué necesitas mejorar.» sobre el textarea. Se conserva como label asociado para lectores de pantalla; regla visual excluye sr-only para no reintroducir márgenes.
+- Sin cambios de textos, título del hero, ejemplo, sugerencias, pie, botón ni comportamiento.
+- Build y diff --check correctos; verificada asociación label/htmlFor con id del textarea. Revisión visual real pendiente por limitación del entorno.
+
+- Aprobación adicional: tercer titular grande ahora «Transforma tu operación» / «Transform your operations». No se modifican ejemplo ni texto inferior. Ambos textos son más cortos que los anteriores y conservan tamaños y responsive.

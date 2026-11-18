@@ -298,7 +298,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   box-shadow: 0 .4rem 1.2rem #30265b40;
 }
 .hero-message-icon img { filter: brightness(0) invert(1); }
-.hero-message label { display: block; margin: .4rem 0 .6rem; font-size: clamp(1rem, 1.2vw, 1.25rem); }
+.hero-message label:not(.sr-only) { display: block; margin: .4rem 0 .6rem; font-size: clamp(1rem, 1.2vw, 1.25rem); }
 .hero-message textarea {
   display: block;
   width: 100%;
