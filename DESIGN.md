@@ -191,3 +191,6 @@ Reutilizar ServiceHero, Geist real, movimiento 1600/1100 ms, línea inferior cor
 Franjas con copy bilingüe real en un párrafo Geist 500, después del hero y antes del CTA. Reutilizan `.modernization-intro` para altura, fondo cover y separación superior; separación inferior equivalente a la de 02 antes de su alcance. Reveal compartido; contenido accesible sin `aria-hidden`, sin texto provisional ni encabezados vacíos. 01 y 02 permanecen intactos.
 
 En las ocho franjas, el texto usa Geist Regular (400), con los tamaños, la altura de línea y los fondos existentes.
+
+### Servicio 06 · Snowy aprobado
+Después de la franja, composición de cuatro Snowys del diseño final aprobado, conservando disposición asimétrica y colores sin opacidad. Arte WebP recortado bajo el título original (1921×679); H2 HTML Geist 300 marino, centrado sobre fondo lavanda azul claro: «Inteligencia Artificial adaptada a tu operación» / «AI tailored to your operations». Imagen completa responsive sin recortar figuras, Reveal compartido con movimiento reducido. Solo servicio 06; resto intacto.

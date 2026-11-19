@@ -1,3 +1,4 @@
+import { ServiceAIAgents } from '../components/ServiceAIAgents.jsx';
 import { Reveal } from '../components/Reveal.jsx';
 import { ServiceHero } from '../components/ServiceHero.jsx';
 import { serviceIntros } from '../content/serviceIntros.js';
@@ -5,8 +6,8 @@ import { homeContent } from '../content/home.js';
 import './service-modernization.css';
 import './service-overview.css';
 
-// These pages contain their approved hero and intro; further sections remain
-// pending approval. Header, CTA and footer are shared by App.
+// These pages contain their approved hero and intro, plus the approved
+// Snowy section on Service 06. Other sections remain pending approval. Header, CTA and footer are shared by App.
 export function ServiceOverview({ language, serviceIndex }) {
   return (
     <div className="modernization-page service-overview-page">
@@ -20,6 +21,7 @@ export function ServiceOverview({ language, serviceIndex }) {
       >
         <p>{serviceIntros[language][serviceIndex - 2]}</p>
       </Reveal>
+      {serviceIndex === 5 && <ServiceAIAgents language={language} />}
     </div>
   );
 }

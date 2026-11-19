@@ -1,0 +1,22 @@
+.service-ai-agents {
+  margin-top: clamp(1.5rem, 2.85vw, 3.25rem);
+  background: #e3e6f8;
+  overflow: clip;
+}
+.service-ai-agents h2 {
+  margin: 0;
+  padding: clamp(1.75rem, 2.3vw, 3rem) 1.25rem clamp(1rem, 1.4vw, 1.75rem);
+  color: #0e0a42;
+  font-family: inherit;
+  font-size: clamp(1.75rem, 3.35vw, 4.25rem);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+  text-align: center;
+  text-wrap: balance;
+}
+.service-ai-agents img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
