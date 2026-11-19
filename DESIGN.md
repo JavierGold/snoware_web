@@ -175,7 +175,7 @@ Añadir «Experiencia» / «Experience» después de Nosotros/About y antes de C
 Hero con la onda azul/lavanda de puntos del original aprobado y fondo limpio optimizado, sin textos incrustados. H1 real Geist «Digitalización y automatización de procesos» / «Process digitization and automation», header compartido marino y línea decorativa corta centrada. Reutiliza geometría y entradas 1600/1100 ms del hero 01, sin modificarlo. Solo hero y cierre compartido CTA/footer; no agregar introducción o alcance sin aprobación.
 
 ### Servicio 02 · franja
-Añadir el fondo exacto aprobado de la franja, limpio y optimizado, con copy real Geist 500 y Reveal idéntico a 01. Mantener sus dimensiones y espaciado superior; reutilizar el espacio inferior antes de CTA mediante padding del contenedor, sin sección vacía. Dos líneas en escritorio con salto antes de «según»; flujo natural móvil. Hero intacto, sin alcance nuevo.
+Añadir el fondo exacto aprobado de la franja, limpio y optimizado, con copy real Geist 400 y Reveal idéntico a 01. Mantener sus dimensiones y espaciado superior; reutilizar el espacio inferior antes de CTA mediante padding del contenedor, sin sección vacía. Dos líneas en escritorio con salto antes de «según»; flujo natural móvil. Hero intacto, sin alcance nuevo.
 
 ### Servicio 02 · alcance aprobado
 Cuatro opciones numeradas sin instrucciones, con 01 activa. Reutiliza componente de alcance accesible de 01, animación de panel/Reveal y tipografía; cuatro figuras aprobadas sin cambios de tonos. Tarjeta desktop con mínimo compartido equivalente a 771 px a 1640 px de ancho; en 02, arte 880:390 y contenido alineado arriba con espacio blanco debajo. Móvil conserva altura natural. Sin otros servicios añadidos.
@@ -189,3 +189,5 @@ Reutilizar ServiceHero, Geist real, movimiento 1600/1100 ms, línea inferior cor
 
 ### Franjas introductorias 03–08
 Franjas con copy bilingüe real en un párrafo Geist 500, después del hero y antes del CTA. Reutilizan `.modernization-intro` para altura, fondo cover y separación superior; separación inferior equivalente a la de 02 antes de su alcance. Reveal compartido; contenido accesible sin `aria-hidden`, sin texto provisional ni encabezados vacíos. 01 y 02 permanecen intactos.
+
+En las ocho franjas, el texto usa Geist Regular (400), con los tamaños, la altura de línea y los fondos existentes.
