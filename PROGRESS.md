@@ -258,3 +258,7 @@ Incorporados los seis párrafos ES aprobados y sus versiones EN. Texto real acce
 ## Servicio 04 · alcance del desarrollo a la medida
 - Sección bilingüe después de la franja, cuatro ilustraciones aprobadas de malla hexagonal optimizadas en WebP y 01 activa por defecto.
 - Build, diff-check y pruebas DOM de paneles, teclado, ubicación y cambio de idioma correctos. Sin despliegue.
+
+## Servicio 05 · alcance de las soluciones en la nube
+- Añadido alcance bilingüe después de la franja, con cuatro composiciones aprobadas en WebP y 01 activa al cargar.
+- Build, diff-check y DOM verificados: cuatro paneles e imágenes, teclado, cambio ES/EN y CTA/footer sin cambios. Sin despliegue.

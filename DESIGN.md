@@ -203,3 +203,6 @@ Después de la franja, tarjeta compartida con 01/02/06, cuatro alcances y 01 act
 
 ### Servicio 04 · alcance del desarrollo a la medida
 Después de la franja, tarjeta compartida de cuatro opciones y 01 activa al cargar. Título «Alcance del desarrollo a la medida», con «desarrollo a la medida» en morado. Ilustraciones aprobadas de malla hexagonal turquesa en proporción 880:390. La descripción se muestra bajo la figura sobre blanco; la 01 resalta «sistemas completos». Altura mínima de escritorio, flujo natural en móvil, animaciones y teclado compartidos.
+
+### Servicio 05 · alcance de las soluciones en la nube
+Tarjeta compartida después de la franja, sin instrucciones y con 01 activa al cargar. El título resalta «soluciones en la nube» en morado. Cuatro composiciones aprobadas de pliegues ciruela y carmesí, en proporción 880:390. Altura compartida en escritorio, altura natural en móvil y los mismos controles de teclado y movimiento reducido.

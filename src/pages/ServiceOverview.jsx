@@ -1,3 +1,4 @@
+import { ServiceCloudScope } from '../components/ServiceCloudScope.jsx';
 import { ServiceCustomDevelopmentScope } from '../components/ServiceCustomDevelopmentScope.jsx';
 import { ServiceIntegrationScope } from '../components/ServiceIntegrationScope.jsx';
 import { ServiceAIScope } from '../components/ServiceAIScope.jsx';
@@ -10,7 +11,7 @@ import './service-modernization.css';
 import './service-overview.css';
 
 // These pages contain their approved hero and intro, plus the approved
-// scope on Services 03/04 and Snowy/scope sections on Service 06. Other sections remain pending approval. Header, CTA and footer are shared by App.
+// scope on Services 03/04/05 and Snowy/scope sections on Service 06. Other sections remain pending approval. Header, CTA and footer are shared by App.
 export function ServiceOverview({ language, serviceIndex }) {
   return (
     <div className="modernization-page service-overview-page">
@@ -26,6 +27,7 @@ export function ServiceOverview({ language, serviceIndex }) {
       </Reveal>
       {serviceIndex === 2 && <ServiceIntegrationScope language={language} />}
       {serviceIndex === 3 && <ServiceCustomDevelopmentScope language={language} />}
+      {serviceIndex === 4 && <ServiceCloudScope language={language} />}
       {serviceIndex === 5 && <>
         <ServiceAIAgents language={language} />
         <ServiceAIScope language={language} />
