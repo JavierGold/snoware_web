@@ -197,3 +197,6 @@ Después de la franja, composición de cuatro Snowys del diseño final aprobado,
 
 ### Servicio 06 · alcance de IA
 Después de Snowys, `ServiceScope` compartido con cinco opciones ES/EN y 01 activa. Título «Alcance de la inteligencia artificial», últimas dos palabras moradas; primer párrafo resalta «información de tu negocio». Cinco recortes exactos del arte aprobado de ondas azules, sin separadores, en `src/assets/ai/scope/`. Área de imagen 880:390 y altura desktop de tarjeta compartida con 01/02; móvil con altura natural. Sin instrucciones ni ejemplos adicionales; conserva teclado, Reveal y movimiento reducido.
+
+### Servicio 03 · alcance de integración de sistemas
+Después de la franja, tarjeta compartida con 01/02/06, cuatro alcances y 01 activa al cargar. Título de una línea en escritorio, con «integración de sistemas» en morado. A la derecha, la figura aprobada correspondiente y el texto sobre blanco. Se conserva la misma altura mínima de escritorio y proporción del arte de 02, altura natural en móvil y navegación por teclado. Sin texto de instrucciones.

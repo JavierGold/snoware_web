@@ -250,3 +250,7 @@ Añadidas seis franjas sin texto después del hero, antes del cierre compartido.
 
 ## Servicios 03–08 · copy de franjas
 Incorporados los seis párrafos ES aprobados y sus versiones EN. Texto real accesible con tipografía compartida Geist 500, dentro del Reveal existente. Fondos, CSS, navegación y páginas 01/02 intactos.
+
+## Servicio 03 · alcance de integración de sistemas
+- Implementado después de la franja, con las cuatro ilustraciones aprobadas optimizadas en WebP y la opción 01 activa al cargar. Reutiliza altura, proporción de imagen, movimiento y comportamiento adaptable de la tarjeta de alcance.
+- Build, diff-check y DOM verificados para los cuatro paneles, teclado y cambio ES/EN. No se realizó comprobación visual en Chromium ni despliegue.
