@@ -194,3 +194,6 @@ En las ocho franjas, el texto usa Geist Regular (400), con los tamaños, la altu
 
 ### Servicio 06 · Snowy aprobado
 Después de la franja, composición de cuatro Snowys del diseño final aprobado, conservando disposición asimétrica y colores sin opacidad. Arte WebP recortado bajo el título original (1921×679); H2 HTML Geist 300 marino, centrado sobre fondo lavanda azul claro: «Inteligencia Artificial adaptada a tu operación» / «AI tailored to your operations». Imagen completa responsive sin recortar figuras, Reveal compartido con movimiento reducido. Solo servicio 06; resto intacto.
+
+### Servicio 06 · alcance de IA
+Después de Snowys, `ServiceScope` compartido con cinco opciones ES/EN y 01 activa. Título «Alcance de la inteligencia artificial», últimas dos palabras moradas; primer párrafo resalta «información de tu negocio». Cinco recortes exactos del arte aprobado de ondas azules, sin separadores, en `src/assets/ai/scope/`. Área de imagen 880:390 y altura desktop de tarjeta compartida con 01/02; móvil con altura natural. Sin instrucciones ni ejemplos adicionales; conserva teclado, Reveal y movimiento reducido.
