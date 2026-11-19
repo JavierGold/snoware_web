@@ -10,7 +10,7 @@ Presentar Snoware como consultoría de software con soluciones a la medida. Most
 - Desarrollo organizado en las cuatro fases de PLAN.md; PROGRESS.md registra únicamente avances comprobados.
 - Orden de trabajo documental: hero, presentación de Snoware, Nuestros servicios, Nuestra metodología, Soluciones con impacto, CTA, footer. Las 12 referencias finales están identificadas en DESIGN.md.
 - 8 servicios, 12 soluciones, metodología de 3 pasos.
-- Menú compartido de Servicios con ocho opciones, y página bilingüe del servicio 01 en `/servicios/modernizacion-de-sistemas`. El servicio 02 tiene hero, franja y alcance bilingües en `/servicios/digitalizacion-y-automatizacion-de-procesos`. Los servicios 03–08 tienen rutas con su hero aprobado y CTA/footer compartidos, sin secciones interiores. El resto de destinos no disponibles no simulan enlaces.
+- Menú compartido de Servicios con ocho opciones, y página bilingüe del servicio 01 en `/servicios/modernizacion-de-sistemas`. El servicio 02 tiene hero, franja y alcance bilingües en `/servicios/digitalizacion-y-automatizacion-de-procesos`. Los servicios 03–08 tienen rutas con su hero aprobado, franja decorativa sin texto y CTA/footer compartidos, sin más secciones interiores. El resto de destinos no disponibles no simulan enlaces.
 
 ## Fuera de alcance actual
 Secciones interiores de los servicios 03–08, Nosotros, Experiencia y Contacto; agente IA para atención a interesados; envío de mensajes desde Contacto; infraestructura y despliegue AWS. Son requisitos futuros expresos, no funcionalidades descartadas ni terminadas.

@@ -30,7 +30,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .brand img {
   display: block;
-  width: clamp(8.5rem, 18vw, 25rem);
+  width: clamp(8rem, 14vw, 18rem);
   height: auto;
 }
 
@@ -117,7 +117,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 @media (width <= 760px) {
   .site-header { padding: .75rem clamp(1rem, 4.5vw, 2rem); }
-  .brand img { width: clamp(7.5rem, 29vw, 12rem); }
+  .brand img { width: clamp(7.25rem, 26vw, 10rem); }
   .header-controls { flex-shrink: 0; flex-wrap: nowrap; gap: .5rem; }
   .language button { min-width: 38px; min-height: 36px; }
 

@@ -11,3 +11,12 @@
 .service-overview-hero--6::before { background-image: linear-gradient(to bottom, rgb(248 249 255 / 0) 36%, rgb(248 249 255 / .45) 62%, #f8f9ff 100%), url('../assets/service-heroes/service-06.webp'); }
 .service-overview-hero--7::before { background-image: linear-gradient(to bottom, rgb(248 249 255 / 0) 36%, rgb(248 249 255 / .45) 62%, #f8f9ff 100%), url('../assets/service-heroes/service-07.webp'); }
 .service-overview-hero--8::before { background-image: linear-gradient(to bottom, rgb(248 249 255 / 0) 36%, rgb(248 249 255 / .45) 62%, #f8f9ff 100%), url('../assets/service-heroes/service-08.webp'); }
+
+/* Textless artwork uses the existing intro geometry and matching lower gap. */
+.service-overview-page { padding-bottom: clamp(1.5rem, 2.85vw, 3.25rem); }
+.service-overview-intro--3 { background-image: url('../assets/service-franjas/service-03.webp'); }
+.service-overview-intro--4 { background-image: url('../assets/service-franjas/service-04.webp'); }
+.service-overview-intro--5 { background-image: url('../assets/service-franjas/service-05.webp'); }
+.service-overview-intro--6 { background-image: url('../assets/service-franjas/service-06.webp'); }
+.service-overview-intro--7 { background-image: url('../assets/service-franjas/service-07.webp'); }
+.service-overview-intro--8 { background-image: url('../assets/service-franjas/service-08.webp'); }

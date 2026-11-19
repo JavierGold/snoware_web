@@ -244,3 +244,6 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 ## Servicios 03–08 · heroes aprobados
 - Habilitadas las seis rutas individuales y sus enlaces del menú/carrusel con títulos ES/EN existentes, fondos aportados optimizados y ServiceHero compartido. Sin nuevas secciones interiores, sin alterar 01/02. CTA/footer reutilizados.
 - Build, diff --check y DOM de las seis rutas/idiomas/títulos/enlaces activos/cierre verificados; comprobados assets de producción. Chromium continúa restringido: sin afirmar revisión visual de navegador. Sin despliegue.
+
+## Servicios 03–08 · franjas decorativas
+Añadidas seis franjas sin texto después del hero, antes del cierre compartido. Geometría de la franja 02, Reveal y movimiento reducido; sin contenido ni placeholders. 01/02 sin modificaciones.
