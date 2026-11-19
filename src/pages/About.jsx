@@ -8,7 +8,7 @@ export function About({ language }) {
   const { title, purpose } = aboutContent[language];
 
   return (
-    <>
+    <div className="about-page">
       <ServiceHero title={title} id="about-title" className="about-hero" />
       <div className="about-purpose">
         <Reveal as="p">
@@ -16,6 +16,6 @@ export function About({ language }) {
           <span>{purpose[2]}</span>
         </Reveal>
       </div>
-    </>
+    </div>
   );
 }
