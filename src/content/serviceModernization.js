@@ -6,7 +6,6 @@ export const serviceModernizationContent = {
       'resolvemos fallas, renovamos su tecnología y desarrollamos nuevas funcionalidades.',
     ],
     scopeTitle: ['Alcance de la ', 'modernización'],
-    instruction: 'Selecciona un área para ver qué podemos mejorar en tu sistema.',
     areas: [
       {
         label: 'Rendimiento y estabilidad',
@@ -41,7 +40,6 @@ export const serviceModernizationContent = {
       'we fix recurring issues, update the underlying technology, and build new features.',
     ],
     scopeTitle: ['Modernization ', 'scope'],
-    instruction: 'Select an area to see what we can improve in your system.',
     areas: [
       {
         label: 'Performance and stability',

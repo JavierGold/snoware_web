@@ -58,14 +58,10 @@ function ModernizationScope({ content }) {
           <h2 className="modernization-scope__title" id={`${id}-scope`}>
             {content.scopeTitle[0]}<span>{content.scopeTitle[1]}</span>
           </h2>
-          <p className="modernization-scope__instruction" id={`${id}-instruction`}>
-            {content.instruction}
-          </p>
           <div
             className="modernization-scope__tabs grid"
             role="tablist"
             aria-labelledby={`${id}-scope`}
-            aria-describedby={`${id}-instruction`}
             aria-orientation="vertical"
           >
             {content.areas.map(({ label }, index) => (

@@ -74,15 +74,8 @@
   color: var(--modernization-violet);
 }
 
-.modernization-scope__instruction {
-  max-width: 39ch;
-  margin: clamp(.95rem, 1.2vw, 1.4rem) clamp(.4rem, .9vw, 1rem) clamp(1.4rem, 2.65vw, 3.25rem);
-  font-size: clamp(1rem, 1.33vw, 1.6rem);
-  line-height: 1.45;
-  text-wrap: pretty;
-}
-
 .modernization-scope__tabs {
+  margin-top: clamp(1rem, 1.5vw, 1.75rem);
   gap: clamp(.4rem, 1vw, 1.2rem);
 }
 
@@ -151,7 +144,6 @@
   .modernization-scope__selection { border-radius: .7rem .7rem 0 0; }
   .modernization-scope__panel { border-radius: 0 0 .7rem .7rem; }
   .modernization-scope__art { border-radius: 0; }
-  .modernization-scope__instruction { max-width: 34ch; }
   .modernization-scope__description { max-width: 45ch; }
 }
 

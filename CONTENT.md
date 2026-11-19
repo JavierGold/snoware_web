@@ -192,7 +192,7 @@ Sin subtítulo ni encabezado adicional. Mantener Snowy asomado. No mostrar este 
 
 - H1 ES: «Mejora y modernización de sistemas».
 - Introducción ES aprobada: «Transformamos tu sistema en una herramienta lista para los retos de tu negocio: resolvemos fallas, renovamos su tecnología y desarrollamos nuevas funcionalidades.»
-- Título ES: «Alcance de la modernización». Instrucción: «Selecciona un área para ver qué podemos mejorar en tu sistema.»
+- Título ES: «Alcance de la modernización». Sin párrafo de instrucciones en ES ni EN.
 - Orden ES: 01 Rendimiento y estabilidad; 02 Actualización tecnológica; 03 Nuevas funcionalidades; 04 Modernización por etapas; 05 Experiencia de uso; 06 Mantenibilidad.
 - Texto 01 ES aprobado: «Optimizamos los procesos críticos para reducir los tiempos de respuesta y prevenir fallas ante picos de demanda.»
 - Los textos complementarios de Alcance y las traducciones EN se mantienen en el contenido bilingüe del componente y quedan disponibles para revisión editorial. No añadir garantías, cifras ni ejemplos no aprobados.
