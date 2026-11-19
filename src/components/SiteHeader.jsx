@@ -8,7 +8,7 @@ import { LanguageSelector } from './LanguageSelector.jsx';
 const mobileLayout = window.matchMedia('(width <= 760px)');
 const menuItemClass = 'inline-flex min-h-11 items-center whitespace-nowrap';
 
-export function SiteHeader({ text, homeUrl, language, onLanguageChange, servicePage = false, activeServiceIndex = 0 }) {
+export function SiteHeader({ text, homeUrl, language, onLanguageChange, servicePage = false, aboutPage = false, activeServiceIndex = 0 }) {
   const navId = useId();
   const servicesId = useId();
   const servicesRef = useRef(null);
@@ -65,7 +65,8 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange, serviceP
       ref={headerRef}
       className="site-header absolute inset-x-0 top-0 z-[1] flex items-center justify-between gap-4"
       data-menu-open={menuOpen}
-      data-service-page={servicePage}
+      data-service-page={servicePage || aboutPage}
+      data-about-page={aboutPage}
       onBlur={(event) => {
         if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) {
           setServicesOpen(false);
@@ -92,7 +93,7 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange, serviceP
 
         <nav id={navId} className="primary-nav" aria-label={text.navigation} inert={mobile && !menuOpen}>
           <ul className="flex items-center">
-            <li><a className={menuItemClass} href={homeUrl} aria-current={!servicePage ? "page" : undefined}>{text.home}</a></li>
+            <li><a className={menuItemClass} href={homeUrl} aria-current={!servicePage && !aboutPage ? "page" : undefined}>{text.home}</a></li>
             <li className="services-nav-item">
               <button
                 ref={servicesRef}
@@ -133,7 +134,7 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange, serviceP
                 </div>
               )}
             </li>
-            <li><span className={`${menuItemClass} pending`} aria-disabled="true">{text.about}</span></li>
+            <li><a className={menuItemClass} href={localizedUrl('/nosotros', language)} aria-current={aboutPage ? "page" : undefined}>{text.about}</a></li>
             <li><span className={`${menuItemClass} pending`} aria-disabled="true">{text.experience}</span></li>
             <li>
               <span className="contact inline-flex items-center rounded-full whitespace-nowrap" aria-disabled="true">

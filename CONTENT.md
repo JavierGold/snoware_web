@@ -16,7 +16,7 @@ Presentación:
 - Etiqueta: **SOBRE SNOWARE**.
 - Título: **Tecnología que se adapta a tu negocio**.
 - Texto: **Desarrollamos, conectamos y mejoramos sistemas para ayudar a las empresas a optimizar sus operaciones y crecer.**
-- Enlace: **Conoce Snoware** (destino futuro Nosotros).
+- Enlace: **Conoce Snoware** (destino Nosotros; hero disponible).
 - EN propuesto: **ABOUT SNOWARE** / **Technology built around your business** / **We develop, connect and improve systems to help businesses streamline operations and grow.** / **Meet Snoware**.
 
 ## Nuestros servicios · 8 confirmados en referencias
@@ -218,3 +218,6 @@ EN natural y equivalente disponible en `src/content/serviceAutomation.js`.
 
 ## Franjas de servicios 03–08
 Copy ES aprobado y traducción EN natural centralizados en `src/content/serviceIntros.js`, en orden de navegación. Párrafo real sobre el arte existente, sin nuevos títulos ni cambios al contenido de las tarjetas de Inicio.
+
+## Nosotros · hero aprobado
+ES: «Generamos Soluciones Digitales para tu operación completa.» EN: «We create digital solutions for your entire operation.». Texto real en `src/content/about.js`.

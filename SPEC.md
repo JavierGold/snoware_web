@@ -13,7 +13,7 @@ Presentar Snoware como consultoría de software con soluciones a la medida. Most
 - Menú compartido de Servicios con ocho opciones, y página bilingüe del servicio 01 en `/servicios/modernizacion-de-sistemas`. El servicio 02 tiene hero, franja y alcance bilingües en `/servicios/digitalizacion-y-automatizacion-de-procesos`. Los servicios 03–08 tienen rutas con su hero aprobado, franja introductoria bilingüe y CTA/footer compartidos. El servicio 03 añade «Alcance de la integración de sistemas» con cuatro opciones, 01 activa al cargar. El servicio 04 añade «Alcance del desarrollo a la medida» con cuatro opciones y 01 activa al cargar. El servicio 05 añade «Alcance de las soluciones en la nube» con cuatro opciones y 01 activa al cargar. El servicio 06 incluye la sección de Snowys y su alcance de cinco opciones. El servicio 07 incluye cinco alcances de seguridad y el 08 incluye tres de mantenimiento y soporte. En ambos, 01 queda activa al cargar. El resto de destinos no disponibles no simulan enlaces.
 
 ## Fuera de alcance actual
-Páginas de Nosotros, Experiencia y Contacto; agente IA para atención a interesados; envío de mensajes desde Contacto; infraestructura y despliegue AWS. Son requisitos futuros expresos, no funcionalidades descartadas ni terminadas.
+Secciones adicionales de Nosotros y páginas de Experiencia y Contacto; agente IA para atención a interesados; envío de mensajes desde Contacto; infraestructura y despliegue AWS. Son requisitos futuros expresos, no funcionalidades descartadas ni terminadas.
 
 ## Interacciones previstas
 - Servicios: carrusel con 3 tarjetas visibles en escritorio e indicación clara de más contenido. Se solicitaron vistas 1–3, 4–6 y 6–8. Las tres vistas aprobadas representan grupos 1–3, 4–6 y 6–8; no inferir autoplay. Resolver la semántica de los indicadores y adaptación móvil sin alterar la composición aprobada.
@@ -46,3 +46,6 @@ Texto real, navegación por teclado, foco visible, controles etiquetados y contr
 
 ## Ubicación de recursos
 Usar las rutas reales bajo `img/` documentadas en DESIGN.md. Hay evidencia visual de su presencia en el explorador del proyecto; calidad y contenido individual pendientes de validar. Este documento no autoriza moverlas ni crear una nueva estructura de aplicación.
+
+## Nosotros · hero aprobado
+Ruta `/nosotros` bilingüe con hero y footer existente, sin nuevas secciones ni CTA; navegación activa y localizada.

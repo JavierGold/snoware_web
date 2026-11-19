@@ -16,7 +16,7 @@ const socialNetworks = [
 ];
 const pendingPages = ['services', 'about', 'contact'];
 
-export function SiteFooter({ content, navigation, homeUrl, isHome = true }) {
+export function SiteFooter({ content, navigation, homeUrl, isHome = true, aboutPage = false, aboutUrl = '/nosotros' }) {
   return (
     <footer className="site-footer">
       <div className="site-footer-inner mx-auto">
@@ -31,7 +31,7 @@ export function SiteFooter({ content, navigation, homeUrl, isHome = true }) {
             <ul className="footer-menu">
               <li><a href={homeUrl} aria-current={isHome ? "page" : undefined}>{navigation.home}</a></li>
               {pendingPages.map((page) => (
-                <li key={page}><span role="link" aria-disabled="true">{navigation[page]}</span></li>
+                <li key={page}>{page === 'about' ? <a href={aboutUrl} aria-current={aboutPage ? "page" : undefined}>{navigation[page]}</a> : <span role="link" aria-disabled="true">{navigation[page]}</span>}</li>
               ))}
             </ul>
           </nav>

@@ -3,7 +3,7 @@
 Estado de Inicio: las cuatro fases están implementadas en la copia local. La revisión visual y las animaciones al desplazarse quedan listas para revisión de Javier. Consultar PROGRESS.md para las verificaciones y los destinos pendientes. La publicación y el trabajo posterior requieren indicación de Javier.
 
 ## Alcance
-Las fases 1–4 cubren únicamente Inicio en español e inglés. La ampliación autorizada incluye el menú de Servicios y la página del servicio 01. El hero, la franja y el alcance de cuatro áreas de 02 están autorizados e implementados; los servicios 03–08 ya tienen hero, franja introductoria bilingüe y cierre compartido, y los ocho servicios incluyen sus alcances aprobados. Nosotros, Experiencia, Contacto, agente de IA, mensajes y AWS quedan para después.
+Las fases 1–4 cubren únicamente Inicio en español e inglés. La ampliación autorizada incluye el menú de Servicios y la página del servicio 01. El hero, la franja y el alcance de cuatro áreas de 02 están autorizados e implementados; los servicios 03–08 ya tienen hero, franja introductoria bilingüe y cierre compartido, y los ocho servicios incluyen sus alcances aprobados. Nosotros tiene su hero aprobado; sus siguientes secciones, Experiencia, Contacto, agente de IA, mensajes y AWS quedan para después.
 
 ## Criterios para todas las fases
 - Consultar AGENTS.md, SPEC.md, CONTENT.md, DESIGN.md y PROGRESS.md y las referencias correspondientes antes de trabajar.
@@ -27,7 +27,7 @@ Implementar la metodología con sus tres pasos seleccionables y la sección de d
 Implementar el CTA y el footer según los diseños aprobados. El CTA dirige a Contacto; no crear ni simular una página de Contacto terminada. Revisar el conjunto de Inicio en escritorio, tablet y celular, corregir diferencias observadas y verificar compilación y principales interacciones una vez estable. Registrar pendientes y solicitar aprobación; no publicar.
 
 ## Posterior a Inicio
-Implementar primero el menú y el servicio 01 con sus referencias aprobadas. El servicio 02 incluye hero, franja y alcance aprobados; los servicios 03–08 incorporan los heroes y franjas introductorias bilingües, con los alcances de cuatro áreas de 03, 04 y 05 y las secciones Snowys y Alcance de 06 como ampliaciones aprobadas. Los servicios 07 y 08 añaden sus alcances de cinco y tres áreas, respectivamente. No implementar las páginas de Nosotros, Experiencia o Contacto hasta que Javier indique continuar. IA, envío de mensajes e infraestructura AWS se definirán aparte.
+Implementar primero el menú y el servicio 01 con sus referencias aprobadas. El servicio 02 incluye hero, franja y alcance aprobados; los servicios 03–08 incorporan los heroes y franjas introductorias bilingües, con los alcances de cuatro áreas de 03, 04 y 05 y las secciones Snowys y Alcance de 06 como ampliaciones aprobadas. Los servicios 07 y 08 añaden sus alcances de cinco y tres áreas, respectivamente. Nosotros incorpora solo su hero aprobado; no implementar secciones adicionales, Experiencia o Contacto sin nueva autorización. IA, envío de mensajes e infraestructura AWS se definirán aparte.
 
 ## Actualización posterior del plan
 Las cuatro fases originales siguen reservadas a Inicio. Para las demás páginas, ampliar este plan solo con referencias aprobadas y autorización explícita. No inventar diseños, contenido ni fases. IA, envío de mensajes y AWS se planificarán cuando se definan y autoricen sus requisitos. Registrar en PROGRESS.md la aprobación y el alcance que habilitan cada ampliación.

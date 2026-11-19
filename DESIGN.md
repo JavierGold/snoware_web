@@ -209,3 +209,6 @@ Tarjeta compartida después de la franja, sin instrucciones y con 01 activa al c
 
 ### Servicios 07 y 08 · alcances aprobados
 Después de cada franja, tarjeta compartida con altura mínima en escritorio, flujo natural en móvil e imagen 880:390. 07: cinco composiciones de láminas de vidrio azul, título con «seguridad de la información» en morado. 08: tres composiciones de vidrio violeta iridiscente en el orden 01–03 de la lámina aprobada, título con «mantenimiento y soporte» en morado. En ambos, 01 activa; conservar Reveal, teclado, foco y movimiento reducido.
+
+## Nosotros · hero aprobado
+Ruta `/nosotros` ES/EN con hero aprobado, arcos pequeños bajo header transparente y fondo continuo. Texto HTML Geist: «Generamos Soluciones Digitales para tu operación completa.» / «We create digital solutions for your entire operation.». Menú y footer enlazan Nosotros con estado activo; solo hero y footer existente, sin nuevas secciones ni CTA en esta entrega. Fondo optimizado sin texto incrustado; responsive y movimiento reducido compartidos.

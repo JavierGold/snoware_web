@@ -1,0 +1,8 @@
+.about-hero { --hero-art-opacity: 1; background: #e4edf9; }
+.about-hero::before { background: #e4edf9 url('../assets/about/hero.webp') center / cover no-repeat; }
+.about-hero h1 { max-width: none; font-size: clamp(1.75rem, 3.3125vw, 4.4rem); font-weight: 400; letter-spacing: -.04em; }
+.about-hero::after { width: clamp(6rem, 9.25vw, 12rem); height: 6px; bottom: clamp(1.75rem, 3vw, 3.5rem); }
+@media (width >= 900px) { .about-hero h1 { white-space: nowrap; } }
+@media (width <= 760px) { .about-hero h1 { max-width: 20ch; } }
+
+.site-header[data-about-page='true'] .primary-nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: .45em; text-decoration-thickness: 2px; }

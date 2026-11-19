@@ -266,3 +266,6 @@ Incorporados los seis párrafos ES aprobados y sus versiones EN. Texto real acce
 ## Servicios 07 y 08 · alcances de seguridad y de mantenimiento
 - Añadidas las dos secciones bilingües después de sus franjas, con cinco ilustraciones aprobadas para 07 y tres para 08 optimizadas en WebP. En ambas, 01 queda activa al cargar.
 - Build, diff-check y DOM verificados: paneles e imágenes, teclado y cambio ES/EN sin perder la selección. Sin despliegue.
+
+## Nosotros · hero aprobado · 19 noviembre 2026
+Implementada ruta ES/EN `/nosotros`, arte sin texto (21 KB), navegación header/footer, título y barra reales. Build y DOM de ruta/idioma/menú verificados; QA visual Chromium no disponible. Sin despliegue.
