@@ -42,6 +42,7 @@
   place-items: center;
   aspect-ratio: 16 / 9;
   width: 100%;
+  max-height: 520px;
   min-width: 0;
   background: #0e0a42;
   color: #f8f9ff;
