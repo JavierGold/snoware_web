@@ -269,3 +269,6 @@ Incorporados los seis párrafos ES aprobados y sus versiones EN. Texto real acce
 
 ## Nosotros · hero aprobado · 19 noviembre 2026
 Implementada ruta ES/EN `/nosotros`, arte sin texto (21 KB), navegación header/footer, título y barra reales. Build y DOM de ruta/idioma/menú verificados; QA visual Chromium no disponible. Sin despliegue.
+
+## Nosotros · franja de propósito
+Implementada bajo el hero, con arte WebP separado y copy ES/EN. Hero corregido de 2400×1200 (75 KB) preservado sin cambios.

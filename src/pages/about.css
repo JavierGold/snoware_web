@@ -6,3 +6,25 @@
 @media (width <= 760px) { .about-hero h1 { max-width: 20ch; } }
 
 .site-header[data-about-page='true'] .primary-nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: .45em; text-decoration-thickness: 2px; }
+
+.about-purpose {
+  display: flex;
+  align-items: center;
+  min-height: clamp(10rem, 14.875vw, 20rem);
+  padding: clamp(2rem, 4vw, 5rem) 5.625%;
+  color: #0e0a42;
+  background: #e3edfc url('../assets/about/purpose.webp') center 52.6% / cover no-repeat;
+}
+
+.about-purpose p {
+  max-width: 100%;
+  margin: 0;
+  font-size: clamp(1.25rem, 2.1875vw, 3rem);
+  font-weight: 400;
+  line-height: 1.314;
+  letter-spacing: -.017em;
+}
+
+.about-purpose strong { font-weight: 500; }
+@media (width >= 900px) { .about-purpose p > span { display: block; } }
+@media (width <= 760px) { .about-purpose { background-position: 32% 52.6%; } }
