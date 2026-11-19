@@ -163,9 +163,9 @@
   inset: 0;
   z-index: -2;
   background: #edf3fc url('../assets/modernization/hero.webp') center / cover no-repeat;
-  animation: modernization-breathe 1400ms cubic-bezier(.22, 1, .36, 1) both;
+  animation: modernization-breathe 1600ms cubic-bezier(.22, 1, .36, 1) both;
 }
-.modernization-hero h1 { animation: modernization-title-enter 950ms cubic-bezier(.22, 1, .36, 1) both; }
+.modernization-hero h1 { animation: modernization-title-enter 1100ms cubic-bezier(.22, 1, .36, 1) both; }
 /* One decorative reference bar, not a carousel control. */
 .modernization-hero::after {
   content: '';
