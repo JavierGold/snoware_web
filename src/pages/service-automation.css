@@ -1,0 +1,7 @@
+/* Clean approved artwork; typography, navigation and decorative line stay real. */
+.automation-hero::before {
+  background-image: url('../assets/automation/hero.webp');
+  background-position: center;
+  background-size: cover;
+}
+.automation-hero::after { width: clamp(6rem, 9.2vw, 12rem); height: 6px; bottom: clamp(1.75rem, 3vw, 3.5rem); }

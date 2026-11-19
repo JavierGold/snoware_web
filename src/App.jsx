@@ -13,6 +13,7 @@ import { phaseThreeContent } from './content/phaseThree.js';
 import './home-phase-three.css';
 import { Hero } from './components/Hero.jsx';
 import { SiteHeader } from './components/SiteHeader.jsx';
+import { ServiceAutomation } from './pages/ServiceAutomation.jsx';
 import { ServiceModernization } from './pages/ServiceModernization.jsx';
 import { localizedUrl, serviceRoutes } from './content/serviceNavigation.js';
 import { translations } from './content/translations.js';
@@ -21,7 +22,6 @@ function getLanguage() {
   return new URL(location.href).searchParams.get('lang') === 'en' ? 'en' : 'es';
 }
 
-const pageTitles = { es: "Mejora y modernización de sistemas | Snoware", en: "System improvement and modernization | Snoware" };
 
 export function App() {
   const [language, setLanguage] = useState(getLanguage);
@@ -30,12 +30,13 @@ export function App() {
   const phaseThree = phaseThreeContent[language];
   const ending = siteEnding[language];
   const homeUrl = localizedUrl('/', language);
-  const servicePage = location.pathname.replace(/\/$/, '') === serviceRoutes[0];
+  const serviceIndex = serviceRoutes.indexOf(location.pathname.replace(/\/$/, ''));
+  const servicePage = serviceIndex >= 0;
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = servicePage ? pageTitles[language] : "Snoware";
-  }, [language, servicePage]);
+    document.title = servicePage ? `${content.services.items[serviceIndex].title} | Snoware` : "Snoware";
+  }, [language, servicePage, serviceIndex, content]);
 
   function changeLanguage(nextLanguage) {
     const url = new URL(location.href);
@@ -50,9 +51,9 @@ export function App() {
 
   return (
     <>
-      <SiteHeader text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} servicePage={servicePage} />
+      <SiteHeader text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} servicePage={servicePage} activeServiceIndex={serviceIndex} />
       <main>
-        {servicePage ? <ServiceModernization language={language} /> : <>
+        {serviceIndex === 0 ? <ServiceModernization language={language} /> : serviceIndex === 1 ? <ServiceAutomation language={language} /> : <>
         <Hero headline={text.headline} content={text.hero} />
         <AboutSnoware content={content.about} />
         <Services content={content.services} language={language} />

@@ -170,3 +170,6 @@ Añadir «Experiencia» / «Experience» después de Nosotros/About y antes de C
 - Introducción y tarjeta de alcance reutilizan Reveal de Inicio (850 ms, una vez al entrar en viewport). Cambio de alcance: contenido conjunto 320 ms y 4 px; precarga de figura solo por intención (puntero/foco), sin retrasar el texto.
 - Última referencia: una sola barra decorativa periwinkle centrada, 8 px de altura, ancho 21vw limitado, esquinas redondas; no es control. Separación azul gris antes de intro ~21 px y después ~52 px en escritorio, adaptada a móvil; el espacio inferior sustituye el padding superior del alcance. No hay puente de degradado.
 - Mantener ilustraciones, copy, Geist, CTA y footer. Footer estático. Reduced motion elimina entradas y transiciones, sin ocultar contenido.
+
+### Servicio 02 · hero aprobado
+Hero con la onda azul/lavanda de puntos del original aprobado y fondo limpio optimizado, sin textos incrustados. H1 real Geist «Digitalización y automatización de procesos» / «Process digitization and automation», header compartido marino y línea decorativa corta centrada. Reutiliza geometría y entradas 1600/1100 ms del hero 01, sin modificarlo. Solo hero y cierre compartido CTA/footer; no agregar introducción o alcance sin aprobación.

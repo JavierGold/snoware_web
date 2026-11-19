@@ -8,7 +8,7 @@ import { LanguageSelector } from './LanguageSelector.jsx';
 const mobileLayout = window.matchMedia('(width <= 760px)');
 const menuItemClass = 'inline-flex min-h-11 items-center whitespace-nowrap';
 
-export function SiteHeader({ text, homeUrl, language, onLanguageChange, servicePage = false }) {
+export function SiteHeader({ text, homeUrl, language, onLanguageChange, servicePage = false, activeServiceIndex = 0 }) {
   const navId = useId();
   const servicesId = useId();
   const servicesRef = useRef(null);
@@ -118,7 +118,7 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange, serviceP
                       </>;
                       return <li key={service.title}>
                         {href ? (
-                          <a className="services-menu-link" href={localizedUrl(href, language)} aria-current={servicePage && index === 0 ? 'page' : undefined}>
+                          <a className="services-menu-link" href={localizedUrl(href, language)} aria-current={servicePage && index === activeServiceIndex ? 'page' : undefined}>
                             {children}
                           </a>
                         ) : (

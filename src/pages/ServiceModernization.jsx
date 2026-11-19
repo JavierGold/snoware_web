@@ -1,4 +1,5 @@
 import { useId, useRef, useState } from 'react';
+import { ServiceHero } from '../components/ServiceHero.jsx';
 import { Reveal } from '../components/Reveal.jsx';
 import { serviceModernizationContent } from '../content/serviceModernization.js';
 import scopeOne from '../assets/modernization/scope-01.webp';
@@ -120,9 +121,7 @@ export function ServiceModernization({ language }) {
 
   return (
     <div className="modernization-page">
-      <section className="modernization-hero flex items-end justify-center" aria-labelledby="modernization-title">
-        <h1 id="modernization-title">{content.title}</h1>
-      </section>
+      <ServiceHero title={content.title} id="modernization-title" />
       <div className="modernization-intro flex items-center justify-center">
         <Reveal as="p">
           {content.intro.map((line, index) => <span key={line}>{index > 0 ? ' ' : ''}{line}</span>)}

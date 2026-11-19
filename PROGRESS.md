@@ -224,3 +224,8 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Según aclaración final, se descarta el puente de degradado: una barra decorativa periwinkle centrada bajo el título y pequeños espacios de fondo azul gris alrededor de la introducción. Sin controles extra ni acumulación de padding inferior.
 - CTA/footer, textos, idiomas e ilustraciones sin cambios. Reduced motion elimina movimiento; estados hidden, foco, teclado y cierre del menú se conservan.
 - Comprobación: build, diff --check y pruebas DOM del bundle de producción (ruta, seis imágenes/paneles, teclado, ES/EN, menú y CTA/footer compartidos). Pruebas DOM de menú repetido/Escape/exterior/móvil también correctas. Chromium no permite sockets del navegador en este entorno: no se declara revisión visual real ni timing medido en dispositivos.
+
+## Servicio 02 · hero
+- Implementado el hero aprobado en `/servicios/digitalizacion-y-automatizacion-de-procesos`, ES/EN, con H1 real y fondo limpio WebP 1774×887. Menú y tarjeta 02 de Inicio enlazan a la ruta; 03–08 siguen pendientes.
+- Hero compartido con 01 conserva sus clases, geometría y movimiento; 02 únicamente cambia fondo y línea según su referencia. CTA/footer existentes reutilizados. Sin introducción, alcance ni contenidos inventados.
+- Build, diff --check y pruebas DOM de ruta 02/ES/EN/menú/cierre, más regresión de ruta 01 y sus seis estados. Sin validación visual real de navegador por restricción de Chromium del entorno. No desplegado.
