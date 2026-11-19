@@ -3,7 +3,7 @@
 Las 12 referencias aprobadas por Javier guían el diseño. Consultar PROGRESS.md para conocer el estado de cada fase.
 
 ## Alcance y autoridad
-- Primera entrega: Inicio en español e inglés. El 19 de noviembre de 2026 Javier aprobó e indicó implementar el menú desplegable de Servicios y la página individual del servicio 01 (Mejora y modernización de sistemas). Los servicios 02–08, Nosotros, Experiencia y Contacto quedan pendientes.
+- Primera entrega: Inicio en español e inglés. El 19 de noviembre de 2026 Javier aprobó e indicó implementar el menú desplegable de Servicios y la página individual del servicio 01 (Mejora y modernización de sistemas). El servicio 02 ya tiene hero y franja introductoria aprobados; su alcance queda pendiente, igual que los servicios 03–08, Nosotros, Experiencia y Contacto.
 - Respetar los diseños y contenidos aprobados. Una propuesta, una variante generada o un archivo llamado «aprobado» no equivalen por sí solos a aprobación del usuario.
 - La instrucción más reciente de Javier prevalece. No eliminar opciones, inventar textos, cambiar ilustraciones, colores, distribución o navegación para resolver una duda.
 - No confundir los 8 servicios con las 12 soluciones de negocio. No reducir ninguno de los dos conjuntos.
@@ -29,7 +29,7 @@ Las 12 referencias aprobadas por Javier guían el diseño. Consultar PROGRESS.md
 - Referencias completas sirven para comparar; no convertirlas en una única imagen de la página.
 - Inglés natural y profesional, adaptado al significado del español. Las propuestas EN de CONTENT.md requieren revisión; no están aprobadas.
 - No inventar clientes, métricas, testimonios, capacidades, correos, enlaces sociales ni garantías.
-- Menú exacto: Inicio, Servicios, Nosotros, Experiencia y Contacto. Servicios abre el desplegable de ocho opciones. Enlazar el servicio 01 y mantener los destinos aún no construidos claramente no disponibles; no inventar páginas o enlaces vacíos.
+- Menú exacto: Inicio, Servicios, Nosotros, Experiencia y Contacto. Servicios abre el desplegable de ocho opciones. Enlazar los servicios 01 y 02 y mantener los destinos aún no construidos claramente no disponibles; no inventar páginas o enlaces vacíos.
 
 ## Seguridad y entregas futuras
 - No incluir secretos en cliente ni en Git. IA, mensajería y credenciales se resuelven mediante servicios seguros cuando se apruebe su implementación.

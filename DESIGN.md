@@ -173,3 +173,6 @@ Añadir «Experiencia» / «Experience» después de Nosotros/About y antes de C
 
 ### Servicio 02 · hero aprobado
 Hero con la onda azul/lavanda de puntos del original aprobado y fondo limpio optimizado, sin textos incrustados. H1 real Geist «Digitalización y automatización de procesos» / «Process digitization and automation», header compartido marino y línea decorativa corta centrada. Reutiliza geometría y entradas 1600/1100 ms del hero 01, sin modificarlo. Solo hero y cierre compartido CTA/footer; no agregar introducción o alcance sin aprobación.
+
+### Servicio 02 · franja
+Añadir el fondo exacto aprobado de la franja, limpio y optimizado, con copy real Geist 500 y Reveal idéntico a 01. Mantener sus dimensiones y espaciado superior; reutilizar el espacio inferior antes de CTA mediante padding del contenedor, sin sección vacía. Dos líneas en escritorio con salto antes de «según»; flujo natural móvil. Hero intacto, sin alcance nuevo.

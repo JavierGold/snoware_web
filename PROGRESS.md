@@ -229,3 +229,8 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Implementado el hero aprobado en `/servicios/digitalizacion-y-automatizacion-de-procesos`, ES/EN, con H1 real y fondo limpio WebP 1774×887. Menú y tarjeta 02 de Inicio enlazan a la ruta; 03–08 siguen pendientes.
 - Hero compartido con 01 conserva sus clases, geometría y movimiento; 02 únicamente cambia fondo y línea según su referencia. CTA/footer existentes reutilizados. Sin introducción, alcance ni contenidos inventados.
 - Build, diff --check y pruebas DOM de ruta 02/ES/EN/menú/cierre, más regresión de ruta 01 y sus seis estados. Sin validación visual real de navegador por restricción de Chromium del entorno. No desplegado.
+
+## Servicio 02 · franja de introducción
+- Integrado el arte limpio exacto aprobado y copy ES/EN separado del componente. Reutiliza layout, Geist 500, Reveal y espacio superior de 01; hueco inferior equivalente antes del CTA sin sección vacía. Hero y copy de Inicio intactos; alcance pendiente.
+- Alineados CONTENT/SPEC/PLAN: 02 ya tiene destino con hero y franja; 03–08 siguen pendientes.
+- Build, diff --check y DOM ES/EN verificados; sin revisión visual real de navegador por la restricción conocida de Chromium. Sin despliegue.

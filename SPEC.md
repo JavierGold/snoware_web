@@ -10,17 +10,17 @@ Presentar Snoware como consultoría de software con soluciones a la medida. Most
 - Desarrollo organizado en las cuatro fases de PLAN.md; PROGRESS.md registra únicamente avances comprobados.
 - Orden de trabajo documental: hero, presentación de Snoware, Nuestros servicios, Nuestra metodología, Soluciones con impacto, CTA, footer. Las 12 referencias finales están identificadas en DESIGN.md.
 - 8 servicios, 12 soluciones, metodología de 3 pasos.
-- Menú compartido de Servicios con ocho opciones, y página bilingüe del servicio 01 en `/servicios/modernizacion-de-sistemas`. El resto de destinos no disponibles no simulan enlaces.
+- Menú compartido de Servicios con ocho opciones, y página bilingüe del servicio 01 en `/servicios/modernizacion-de-sistemas`. El servicio 02 tiene hero y franja bilingües en `/servicios/digitalizacion-y-automatizacion-de-procesos`; su alcance queda pendiente. El resto de destinos no disponibles no simulan enlaces.
 
 ## Fuera de alcance actual
-Páginas individuales de los servicios 02–08, Nosotros, Experiencia y Contacto; agente IA para atención a interesados; envío de mensajes desde Contacto; infraestructura y despliegue AWS. Son requisitos futuros expresos, no funcionalidades descartadas ni terminadas.
+Alcance del servicio 02, páginas individuales de los servicios 03–08, Nosotros, Experiencia y Contacto; agente IA para atención a interesados; envío de mensajes desde Contacto; infraestructura y despliegue AWS. Son requisitos futuros expresos, no funcionalidades descartadas ni terminadas.
 
 ## Interacciones previstas
 - Servicios: carrusel con 3 tarjetas visibles en escritorio e indicación clara de más contenido. Se solicitaron vistas 1–3, 4–6 y 6–8. Las tres vistas aprobadas representan grupos 1–3, 4–6 y 6–8; no inferir autoplay. Resolver la semántica de los indicadores y adaptación móvil sin alterar la composición aprobada.
 - Metodología: selección de paso que cambia el contenido visible, sin repetir innecesariamente el título del paso en el panel.
 - Soluciones: 12 entradas abren un panel/modal con título, descripción específica, figura abstracta pequeña, cierre y enlace «Contáctanos».
 - Página del servicio 01: hero con título, franja de introducción, tarjeta interactiva «Alcance de la modernización» con seis estados, CTA y footer reutilizados. Seleccionar un alcance cambia imagen y texto sin navegar. No agregar tarjetas, ejemplos, un FAQ ni gráficos exploratorios no aprobados.
-- CTA compartido por Inicio y el servicio 01, y por las páginas futuras excepto Contacto, porque dirige a esa página.
+- CTA compartido por Inicio y los servicios 01 y 02, y por las páginas futuras excepto Contacto, porque dirige a esa página.
 - Idioma: selector que conserva el contexto de navegación y presenta contenido equivalente. Español por defecto; `?lang=en` conserva inglés en Inicio y servicio 01. Las demás rutas se definen cuando se aprueben.
 - Las rutas todavía no existentes deben tener una solución acordada para la primera publicación. No publicar botones que aparentan funcionar y no tienen destino.
 

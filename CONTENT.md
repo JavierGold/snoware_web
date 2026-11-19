@@ -5,7 +5,7 @@ Estado: copy ES de las 12 soluciones aprobado en conversación; EN es propuesta 
 ## Navegación
 ES: Inicio · Servicios · Nosotros · Experiencia · Contacto.
 EN propuesto: Home · Services · About · Experience · Contact.
-«Servicios» muestra los ocho nombres de «Nuestros servicios». El servicio 01 enlaza a `/servicios/modernizacion-de-sistemas`; los demás destinos futuros permanecen pendientes.
+«Servicios» muestra los ocho nombres de «Nuestros servicios». El servicio 01 enlaza a `/servicios/modernizacion-de-sistemas` y el 02 a `/servicios/digitalizacion-y-automatizacion-de-procesos` (hero y franja implementados; alcance pendiente). Los servicios 03–08 permanecen pendientes.
 
 ## Hero y presentación · referencias aprobadas
 Hero ES: **Soluciones Digitales que impulsan tu crecimiento**.
@@ -22,7 +22,7 @@ Presentación:
 ## Nuestros servicios · 8 confirmados en referencias
 Introducción ES: **Impulsamos la evolución de tu negocio con soluciones tecnológicas que modernizan tus sistemas, digitalizan tus procesos e integran toda tu operación.**
 EN propuesto: **Our services** / **Move your business forward with technology that modernizes your systems, digitizes your processes and connects your operations.**
-Enlace por tarjeta: **Conoce más**. EN propuesto: **Learn more**. El servicio 01 tiene destino en la página individual. Las páginas 02–08 siguen pendientes.
+Enlace por tarjeta: **Conoce más**. EN propuesto: **Learn more**. Los servicios 01 y 02 tienen destino individual; el 02 incluye hero y franja, con alcance pendiente. Las páginas 03–08 siguen pendientes.
 
 ### Servicio 1. Mejora y modernización de sistemas
 **ES aprobado en referencia:** Evolucionamos tus plataformas para que sean más seguras, eficientes, escalables y alineadas con las necesidades actuales de tu negocio.
@@ -197,3 +197,13 @@ Sin subtítulo ni encabezado adicional. Mantener Snowy asomado. No mostrar este 
 - Texto 01 ES aprobado: «Optimizamos los procesos críticos para reducir los tiempos de respuesta y prevenir fallas ante picos de demanda.»
 - Los textos complementarios de Alcance y las traducciones EN se mantienen en el contenido bilingüe del componente y quedan disponibles para revisión editorial. No añadir garantías, cifras ni ejemplos no aprobados.
 - Cierre: CTA compartido y footer existentes.
+
+
+## Servicio 02 · franja aprobada
+**ES:** Convertimos procesos manuales en flujos digitales y automatizamos los pasos repetitivos según las reglas de tu operación, desde una tarea puntual hasta un proceso completo.
+
+Salto de línea de escritorio antes de «según»; en móvil el texto fluye.
+
+**EN:** We turn manual processes into digital workflows and automate repetitive steps based on your business rules, from a single task to an entire process.
+
+Copy de las tarjetas de Inicio sin cambios. Alcance de 02 aún pendiente.
