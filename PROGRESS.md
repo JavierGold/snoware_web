@@ -247,3 +247,6 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 
 ## Servicios 03–08 · franjas decorativas
 Añadidas seis franjas sin texto después del hero, antes del cierre compartido. Geometría de la franja 02, Reveal y movimiento reducido; sin contenido ni placeholders. 01/02 sin modificaciones.
+
+## Servicios 03–08 · copy de franjas
+Incorporados los seis párrafos ES aprobados y sus versiones EN. Texto real accesible con tipografía compartida Geist 500, dentro del Reveal existente. Fondos, CSS, navegación y páginas 01/02 intactos.

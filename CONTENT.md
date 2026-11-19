@@ -5,7 +5,7 @@ Estado: copy ES de las 12 soluciones aprobado en conversación; EN es propuesta 
 ## Navegación
 ES: Inicio · Servicios · Nosotros · Experiencia · Contacto.
 EN propuesto: Home · Services · About · Experience · Contact.
-«Servicios» muestra los ocho nombres de «Nuestros servicios». El servicio 01 enlaza a `/servicios/modernizacion-de-sistemas` y el 02 a `/servicios/digitalizacion-y-automatizacion-de-procesos` (hero, franja y alcance de cuatro áreas implementados). Los servicios 03–08 tienen destino individual con hero aprobado y franja decorativa sin texto; sus secciones interiores quedan pendientes.
+«Servicios» muestra los ocho nombres de «Nuestros servicios». El servicio 01 enlaza a `/servicios/modernizacion-de-sistemas` y el 02 a `/servicios/digitalizacion-y-automatizacion-de-procesos` (hero, franja y alcance de cuatro áreas implementados). Los servicios 03–08 tienen destino individual con hero aprobado y franja introductoria bilingüe; sus secciones interiores quedan pendientes.
 
 ## Hero y presentación · referencias aprobadas
 Hero ES: **Soluciones Digitales que impulsan tu crecimiento**.
@@ -22,7 +22,7 @@ Presentación:
 ## Nuestros servicios · 8 confirmados en referencias
 Introducción ES: **Impulsamos la evolución de tu negocio con soluciones tecnológicas que modernizan tus sistemas, digitalizan tus procesos e integran toda tu operación.**
 EN propuesto: **Our services** / **Move your business forward with technology that modernizes your systems, digitizes your processes and connects your operations.**
-Enlace por tarjeta: **Conoce más**. EN propuesto: **Learn more**. Los servicios 01 y 02 tienen destino individual; el 02 incluye hero, franja y alcance de cuatro áreas. Las páginas 03–08 incluyen hero, franja decorativa sin texto y cierre compartido; sus secciones interiores siguen pendientes.
+Enlace por tarjeta: **Conoce más**. EN propuesto: **Learn more**. Los servicios 01 y 02 tienen destino individual; el 02 incluye hero, franja y alcance de cuatro áreas. Las páginas 03–08 incluyen hero, franja introductoria bilingüe y cierre compartido; sus secciones interiores siguen pendientes.
 
 ### Servicio 1. Mejora y modernización de sistemas
 **ES aprobado en referencia:** Evolucionamos tus plataformas para que sean más seguras, eficientes, escalables y alineadas con las necesidades actuales de tu negocio.
@@ -215,3 +215,6 @@ Título: «Alcance de la automatización». Sin instrucciones.
 3. **Flujos de aprobación:** Asignamos cada solicitud a la persona responsable y escalamos las aprobaciones pendientes según los plazos definidos.
 4. **Seguimiento operativo:** Mostramos el estado de cada trámite, dónde se detuvo y qué requiere atención para que el equipo pueda actuar a tiempo.
 EN natural y equivalente disponible en `src/content/serviceAutomation.js`.
+
+## Franjas de servicios 03–08
+Copy ES aprobado y traducción EN natural centralizados en `src/content/serviceIntros.js`, en orden de navegación. Párrafo real sobre el arte existente, sin nuevos títulos ni cambios al contenido de las tarjetas de Inicio.

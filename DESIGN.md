@@ -187,5 +187,5 @@ Conservar las figuras y el encuadre. El fondo claro reduce la intensidad de la i
 ### Servicios 03–08 · heroes
 Reutilizar ServiceHero, Geist real, movimiento 1600/1100 ms, línea inferior corta y adaptación móvil de 02. Fondo propio aprobado: 03 anillos enlazados, 04 bloques, 05 volúmenes nube, 06 toro de puntos, 07 láminas cruzadas y 08 ondas de malla. Copiar los títulos ES/EN existentes de servicios sin nuevas promesas ni secciones interiores. CTA/footer compartidos.
 
-### Franjas decorativas 03–08
-Franjas de arte sin texto, después del hero y antes del CTA. Reutilizan `.modernization-intro` para altura, fondo cover y separación superior; separación inferior equivalente a la de 02 antes de su alcance. Reveal compartido y `aria-hidden`, sin texto provisional ni encabezados vacíos. 01 y 02 permanecen intactos.
+### Franjas introductorias 03–08
+Franjas con copy bilingüe real en un párrafo Geist 500, después del hero y antes del CTA. Reutilizan `.modernization-intro` para altura, fondo cover y separación superior; separación inferior equivalente a la de 02 antes de su alcance. Reveal compartido; contenido accesible sin `aria-hidden`, sin texto provisional ni encabezados vacíos. 01 y 02 permanecen intactos.
