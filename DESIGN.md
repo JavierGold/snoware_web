@@ -179,3 +179,6 @@ Añadir el fondo exacto aprobado de la franja, limpio y optimizado, con copy rea
 
 ### Servicio 02 · alcance aprobado
 Cuatro opciones numeradas sin instrucciones, con 01 activa. Reutiliza componente de alcance accesible de 01, animación de panel/Reveal y tipografía; cuatro figuras aprobadas sin cambios de tonos. Tarjeta desktop con mínimo compartido equivalente a 771 px a 1640 px de ancho; en 02, arte 880:390 y contenido alineado arriba con espacio blanco debajo. Móvil conserva altura natural. Sin otros servicios añadidos.
+
+### Servicios 03–08 · heroes
+Reutilizar ServiceHero, Geist real, movimiento 1600/1100 ms, línea inferior corta y adaptación móvil de 02. Fondo propio aprobado: 03 anillos enlazados, 04 bloques, 05 volúmenes nube, 06 toro de puntos, 07 láminas cruzadas y 08 ondas de malla. Copiar los títulos ES/EN existentes de servicios sin nuevas promesas ni secciones interiores. CTA/footer compartidos.

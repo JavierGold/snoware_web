@@ -240,3 +240,7 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Extraída lógica existente a ServiceScope compartido, manteniendo teclado, foco, hidden, precarga por intención y transiciones/reduced motion. Servicio 01 conserva seis estados y sus imágenes.
 - Altura mínima desktop compartida y proporción de arte 880:390 solo para 02; móvil natural. Retirado padding provisional previo a CTA para no duplicar espacio del alcance.
 - Build, diff --check y DOM de ambas rutas/ES/EN/paneles/teclado verificados. Sin revisión visual real de navegador por restricción del entorno. Sin despliegue.
+
+## Servicios 03–08 · heroes aprobados
+- Habilitadas las seis rutas individuales y sus enlaces del menú/carrusel con títulos ES/EN existentes, fondos aportados optimizados y ServiceHero compartido. Sin nuevas secciones interiores, sin alterar 01/02. CTA/footer reutilizados.
+- Build, diff --check y DOM de las seis rutas/idiomas/títulos/enlaces activos/cierre verificados; comprobados assets de producción. Chromium continúa restringido: sin afirmar revisión visual de navegador. Sin despliegue.

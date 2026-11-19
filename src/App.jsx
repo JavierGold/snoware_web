@@ -13,6 +13,7 @@ import { phaseThreeContent } from './content/phaseThree.js';
 import './home-phase-three.css';
 import { Hero } from './components/Hero.jsx';
 import { SiteHeader } from './components/SiteHeader.jsx';
+import { ServiceOverview } from './pages/ServiceOverview.jsx';
 import { ServiceAutomation } from './pages/ServiceAutomation.jsx';
 import { ServiceModernization } from './pages/ServiceModernization.jsx';
 import { localizedUrl, serviceRoutes } from './content/serviceNavigation.js';
@@ -53,7 +54,7 @@ export function App() {
     <>
       <SiteHeader text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} servicePage={servicePage} activeServiceIndex={serviceIndex} />
       <main>
-        {serviceIndex === 0 ? <ServiceModernization language={language} /> : serviceIndex === 1 ? <ServiceAutomation language={language} /> : <>
+        {serviceIndex === 0 ? <ServiceModernization language={language} /> : serviceIndex === 1 ? <ServiceAutomation language={language} /> : servicePage ? <ServiceOverview language={language} serviceIndex={serviceIndex} /> : <>
         <Hero headline={text.headline} content={text.hero} />
         <AboutSnoware content={content.about} />
         <Services content={content.services} language={language} />
