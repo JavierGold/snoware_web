@@ -16,7 +16,7 @@ const socialNetworks = [
 ];
 const pendingPages = ['services', 'about', 'contact'];
 
-export function SiteFooter({ content, navigation, homeUrl }) {
+export function SiteFooter({ content, navigation, homeUrl, isHome = true }) {
   return (
     <footer className="site-footer">
       <div className="site-footer-inner mx-auto">
@@ -29,7 +29,7 @@ export function SiteFooter({ content, navigation, homeUrl }) {
           <nav aria-label={content.navigation}>
             <h2>{content.explore}</h2>
             <ul className="footer-menu">
-              <li><a href={homeUrl} aria-current="page">{navigation.home}</a></li>
+              <li><a href={homeUrl} aria-current={isHome ? "page" : undefined}>{navigation.home}</a></li>
               {pendingPages.map((page) => (
                 <li key={page}><span role="link" aria-disabled="true">{navigation[page]}</span></li>
               ))}

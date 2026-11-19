@@ -3,7 +3,7 @@
 Las 12 referencias aprobadas por Javier guían el diseño. Consultar PROGRESS.md para conocer el estado de cada fase.
 
 ## Alcance y autoridad
-- Primera entrega: únicamente Inicio, en español e inglés. Las páginas de cada servicio, Nosotros y Contacto se incorporarán después; no tienen diseño aprobado.
+- Primera entrega: Inicio en español e inglés. El 19 de noviembre de 2026 Javier aprobó e indicó implementar el menú desplegable de Servicios y la página individual del servicio 01 (Mejora y modernización de sistemas). Los servicios 02–08, Nosotros, Experiencia y Contacto quedan pendientes.
 - Respetar los diseños y contenidos aprobados. Una propuesta, una variante generada o un archivo llamado «aprobado» no equivalen por sí solos a aprobación del usuario.
 - La instrucción más reciente de Javier prevalece. No eliminar opciones, inventar textos, cambiar ilustraciones, colores, distribución o navegación para resolver una duda.
 - No confundir los 8 servicios con las 12 soluciones de negocio. No reducir ninguno de los dos conjuntos.
@@ -16,7 +16,7 @@ Las 12 referencias aprobadas por Javier guían el diseño. Consultar PROGRESS.md
 - Usar utilidades de Tailwind para la composición y tokens compartidos para tipografía y color. Conservar CSS específico para la dirección visual o las interacciones cuando sea más legible. Evitar estilos y lógica duplicados.
 
 ## Trabajo eficiente
-- Desarrollar Inicio en las cuatro fases de PLAN.md. No ejecutar toda la página de una vez ni añadir microfases innecesarias. Dentro de cada fase, trabajar de forma directa e inspeccionar solo archivos relevantes. Al cerrar, actualizar PROGRESS.md y esperar la revisión de Javier antes de avanzar.
+- Las cuatro fases de PLAN.md documentan Inicio; para el servicio 01 seguir la ampliación aprobada del plan. No ejecutar toda la página de una vez ni añadir microfases innecesarias. Dentro de cada fase, trabajar de forma directa e inspeccionar solo archivos relevantes. Al cerrar, actualizar PROGRESS.md y esperar la revisión de Javier antes de avanzar.
 - Optimizar tokens: no releer el repositorio completo, no repetir explicaciones, no ejecutar la misma batería de pruebas después de cambios que no la afectan.
 - Elegir validaciones proporcionales al cambio. Repetir una prueba solo si cambió lo que verifica o si falló.
 - Conservar control visual suficiente: revisar composición, espacios, alineaciones, tipografía, imágenes y responsive frente a referencias. La eficiencia no justifica bajar calidad ni omitir seguridad o funcionalidad necesaria.
@@ -29,7 +29,7 @@ Las 12 referencias aprobadas por Javier guían el diseño. Consultar PROGRESS.md
 - Referencias completas sirven para comparar; no convertirlas en una única imagen de la página.
 - Inglés natural y profesional, adaptado al significado del español. Las propuestas EN de CONTENT.md requieren revisión; no están aprobadas.
 - No inventar clientes, métricas, testimonios, capacidades, correos, enlaces sociales ni garantías.
-- Menú exacto: Inicio, Servicios, Nosotros, Contacto. Resolver destinos pendientes antes de publicar; no inventar páginas o enlaces vacíos.
+- Menú exacto: Inicio, Servicios, Nosotros, Experiencia y Contacto. Servicios abre el desplegable de ocho opciones. Enlazar el servicio 01 y mantener los destinos aún no construidos claramente no disponibles; no inventar páginas o enlaces vacíos.
 
 ## Seguridad y entregas futuras
 - No incluir secretos en cliente ni en Git. IA, mensajería y credenciales se resuelven mediante servicios seguros cuando se apruebe su implementación.

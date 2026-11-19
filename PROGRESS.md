@@ -210,3 +210,11 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Añadida Experiencia/Experience entre Nosotros y Contacto, dentro del menú compartido de escritorio/móvil.
 - Sigue el patrón de páginas pendientes: texto no interactivo con aria-disabled, sin enlace roto ni página/contenido inventado. Footer sin cambios.
 - Build, diff --check y comprobaciones de traducciones/orden/estado pendiente correctos. Validación visual de anchos reales pendiente por bloqueo de Chromium.
+
+## Menú de Servicios y página del servicio 01 · 19 de noviembre de 2026
+
+- Javier aprobó el menú en tonos azules y solicitó integrarlo, implementar la página 01 conforme a las referencias adjuntas y reutilizar el CTA y el footer.
+- El header conserva su composición. El menú despliega los ocho servicios en ES/EN; 01 enlaza a `/servicios/modernizacion-de-sistemas` desde el desplegable y desde su tarjeta de Inicio. 02–08 se muestran como pendientes, sin URLs ficticias.
+- La página incluye el hero pastel, la franja de introducción y los seis estados de Alcance con su imagen y texto. Conserva Geist y comparte CTA y pie de página. El destino de Contacto sigue pendiente.
+- Verificado: `npm run build`, `git diff --check` y pruebas DOM de la ruta directa, seis estados e imágenes, navegación por teclado, ES/EN con la misma ruta, ocho opciones del menú, Escape, cierre exterior y estructura móvil del menú. El navegador de este entorno no permitió la revisión visual en píxeles; no se afirma que se haya hecho.
+- Sin despliegue. Al publicar en un servidor estático, la ruta directa debe resolver a `index.html` mediante la regla de fallback de la SPA.

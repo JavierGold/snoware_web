@@ -155,3 +155,11 @@ El cuadro expande su altura en flujo durante 700 ms y el título sube con ese mi
 
 ### Header · Experiencia
 Añadir «Experiencia» / «Experience» después de Nosotros/About y antes de Contacto/Contact en el menú compartido de escritorio y móvil. Mientras su página no esté aprobada, usar el mismo estado pendiente no interactivo que Nosotros, con aria-disabled; sin URL ficticia ni contenido inventado.
+
+## Menú de Servicios y página 01 · referencias aprobadas el 19 de noviembre de 2026
+
+- **Menú compartido:** desplegable en dos columnas en escritorio (01–04, 05–08); una columna en móvil. Fondo claro, borde superior azul, números y flechas azules, texto de servicio marino y resaltado azul hielo. Subrayado blanco bajo «Servicios» sobre el header oscuro; sobre fondos claros, conservar contraste. No alterar la navegación general ni el orden de los servicios.
+- **Hero del servicio 01:** pliegues translúcidos pastel en azul, rosa y lavanda, de ancho completo con degradado hacia blanco; logo y navegación marinos; solo el H1 marino, centrado abajo. Conservar Geist como texto real.
+- **Franja:** estrecha, de ancho completo, fondo azul hielo con onda lavanda tenue. Copiar las dos líneas de la referencia aprobada; sin título ni tarjetas adicionales. Adaptar saltos a móvil.
+- **Alcance:** una sola tarjeta redondeada sobre fondo azul grisáceo. Izquierda con título de una línea en escritorio y «modernización» en violeta, instrucción breve y seis opciones; la activa lleva fondo blanco y barra violeta. Derecha con ilustración azul de la serie de seis acomodos y con texto debajo sobre blanco. 01 activo al cargar. En móvil priorizar lectura y evitar desbordamientos.
+- **Cierre:** reutilizar los componentes existentes de CTA y footer, sin rediseño. Los archivos de referencia sirven para revisar estilos y composición, no como capturas incrustadas de la interfaz.

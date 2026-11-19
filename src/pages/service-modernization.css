@@ -1,0 +1,156 @@
+.modernization-page {
+  --modernization-ink: #0e0a42;
+  --modernization-violet: #6040b8;
+  color: var(--modernization-ink);
+  background: #fff;
+}
+
+.modernization-hero {
+  min-height: clamp(28rem, 50vw, 66rem);
+  padding: 6rem clamp(1rem, 4.5vw, 5rem) clamp(3.5rem, 6.9vw, 8rem);
+  background: #edf3fc url('../assets/modernization/hero.webp') center / cover no-repeat;
+  text-align: center;
+}
+
+.modernization-hero h1 {
+  margin: 0;
+  font-size: clamp(2.375rem, 3.78vw, 5.125rem);
+  font-weight: 400;
+  letter-spacing: -.038em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.modernization-intro {
+  min-height: clamp(8rem, 12.5vw, 16rem);
+  padding: clamp(1.65rem, 3vw, 4rem) clamp(1.25rem, 6vw, 8rem);
+  background: #eef2fb url('../assets/modernization/intro.webp') center / cover no-repeat;
+  text-align: center;
+}
+
+.modernization-intro p {
+  max-width: 92rem;
+  margin: 0;
+  font-size: clamp(1.25rem, 1.83vw, 2.25rem);
+  font-weight: 500;
+  letter-spacing: -.02em;
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+
+.modernization-intro p span { display: block; }
+
+.modernization-scope {
+  padding: clamp(2rem, 4.45vw, 6rem) clamp(1rem, 4.45vw, 6rem);
+  background: #e9eef7;
+}
+
+.modernization-scope__card {
+  grid-template-columns: minmax(0, 46.34fr) minmax(0, 53.66fr);
+  max-width: 112rem;
+  margin-inline: auto;
+  border-radius: .7rem;
+  background: #fff;
+  box-shadow: 0 .65rem 1.05rem rgb(28 40 70 / .09);
+}
+
+.modernization-scope__selection {
+  padding: clamp(1.25rem, 2.55vw, 3rem) clamp(.85rem, 1.34vw, 1.55rem) clamp(1.5rem, 3.6vw, 4.1rem);
+  border-radius: .7rem 0 0 .7rem;
+  background: #f0f3fd;
+}
+
+.modernization-scope__title {
+  margin: 0 clamp(.4rem, .9vw, 1rem);
+  font-size: clamp(1.55rem, 1.9vw, 2.3rem);
+  font-weight: 400;
+  letter-spacing: -.027em;
+  line-height: 1.13;
+}
+
+.modernization-scope__title span,
+.modernization-scope__tab span:first-child,
+.modernization-scope__description span {
+  color: var(--modernization-violet);
+}
+
+.modernization-scope__instruction {
+  max-width: 39ch;
+  margin: clamp(.95rem, 1.2vw, 1.4rem) clamp(.4rem, .9vw, 1rem) clamp(1.4rem, 2.65vw, 3.25rem);
+  font-size: clamp(1rem, 1.33vw, 1.6rem);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+.modernization-scope__tabs {
+  gap: clamp(.4rem, 1vw, 1.2rem);
+}
+
+.modernization-scope__tab {
+  position: relative;
+  grid-template-columns: 2.22em minmax(0, 1fr);
+  min-height: clamp(3rem, 3.67vw, 4.6rem);
+  padding: .62em clamp(.65rem, 1.33vw, 1.55rem);
+  border-radius: .5rem;
+  font-size: clamp(1rem, 1.53vw, 1.8rem);
+  line-height: 1.32;
+  cursor: pointer;
+}
+
+.modernization-scope__tab:hover { background: rgb(255 255 255 / .6); }
+
+.modernization-scope__tab[aria-selected='true'] { background: #fff; }
+
+.modernization-scope__tab[aria-selected='true']::before {
+  position: absolute;
+  inset: .54rem auto .54rem 0;
+  width: .28rem;
+  border-radius: .2rem;
+  background: var(--modernization-violet);
+  content: '';
+}
+
+.modernization-scope__tab:focus-visible,
+.modernization-scope__panel:focus-visible {
+  outline: 2px solid var(--modernization-violet);
+  outline-offset: -2px;
+}
+
+.modernization-scope__details { min-width: 0; }
+
+.modernization-scope__panel { border-radius: 0 .7rem .7rem 0; }
+
+.modernization-scope__art {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2.3;
+  border-radius: 0 .7rem 0 0;
+  background: #a5cbff;
+  object-fit: cover;
+}
+
+.modernization-scope__description {
+  max-width: 40ch;
+  margin: 0;
+  padding: clamp(1.25rem, 2.62vw, 3rem);
+  font-size: clamp(1.17rem, 1.67vw, 2rem);
+  line-height: 1.42;
+  text-wrap: pretty;
+}
+
+@media (width <= 760px) {
+  .modernization-hero {
+    min-height: clamp(25rem, 84vw, 35rem);
+    padding-bottom: clamp(3rem, 10vw, 5rem);
+    background-position: 51% center;
+  }
+
+  .modernization-hero h1 { max-width: 17ch; }
+  .modernization-intro p span { display: inline; }
+  .modernization-scope__card { grid-template-columns: 1fr; }
+  .modernization-scope__selection { border-radius: .7rem .7rem 0 0; }
+  .modernization-scope__panel { border-radius: 0 0 .7rem .7rem; }
+  .modernization-scope__art { border-radius: 0; }
+  .modernization-scope__instruction { max-width: 34ch; }
+  .modernization-scope__description { max-width: 45ch; }
+}

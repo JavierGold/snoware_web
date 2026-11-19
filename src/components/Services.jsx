@@ -1,5 +1,6 @@
 import { Reveal } from './Reveal.jsx';
 import { useEffect, useRef, useState } from 'react';
+import { localizedUrl, serviceRoutes } from '../content/serviceNavigation.js';
 import { PendingLink } from './PendingLink.jsx';
 
 const images = Object.values(import.meta.glob('../assets/services/servicio-*.webp', {
@@ -31,14 +32,14 @@ function useVisibleCount() {
   return count;
 }
 
-function ServiceCard({ item, image, visible, link }) {
+function ServiceCard({ item, image, visible, link, href }) {
   return (
     <li className="service-card min-w-0" aria-hidden={!visible}>
       <img className="service-art block w-full object-cover" src={image} alt="" loading="lazy" />
       <div className="service-card-copy flex flex-col items-start">
         <h3>{item.title}</h3>
         <p>{item.description}</p>
-        <PendingLink>{link}</PendingLink>
+        {href ? <a className="phase-two-link inline-flex items-baseline gap-1.5" href={href} tabIndex={visible ? 0 : -1}>{link}<span className="phase-two-link-arrow" aria-hidden="true" /></a> : <PendingLink>{link}</PendingLink>}
       </div>
     </li>
   );
@@ -51,7 +52,7 @@ function swipeStep(dx, dy) {
     : 0;
 }
 
-export function Services({ content }) {
+export function Services({ content, language }) {
   const gesture = useRef(null);
   const suppressClickUntil = useRef(0);
   const count = useVisibleCount();
@@ -124,6 +125,7 @@ export function Services({ content }) {
                 image={images[index]}
                 visible={index >= start && index < start + count}
                 link={content.link}
+                href={serviceRoutes[index] ? localizedUrl(serviceRoutes[index], language) : undefined}
               />
             ))}
           </ul>

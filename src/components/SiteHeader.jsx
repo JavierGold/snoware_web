@@ -1,12 +1,19 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import mark from '../snoware-mark.png';
+import { homeContent } from '../content/home.js';
+import { localizedUrl, serviceRoutes } from '../content/serviceNavigation.js';
+import './services-menu.css';
 import { LanguageSelector } from './LanguageSelector.jsx';
 
 const mobileLayout = window.matchMedia('(width <= 760px)');
 const menuItemClass = 'inline-flex min-h-11 items-center whitespace-nowrap';
 
-export function SiteHeader({ text, homeUrl, language, onLanguageChange }) {
+export function SiteHeader({ text, homeUrl, language, onLanguageChange, servicePage = false }) {
   const navId = useId();
+  const servicesId = useId();
+  const servicesRef = useRef(null);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const services = homeContent[language].services.items;
   const headerRef = useRef(null);
   const toggleRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,6 +23,7 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange }) {
     function handleLayoutChange(event) {
       setMobile(event.matches);
       setMenuOpen(false);
+      setServicesOpen(false);
     }
 
     mobileLayout.addEventListener('change', handleLayoutChange);
@@ -23,18 +31,24 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange }) {
   }, []);
 
   useEffect(() => {
-    if (!menuOpen) return;
+    if (!menuOpen && !servicesOpen) return;
 
     function handleEscape(event) {
       if (event.key === 'Escape') {
-        setMenuOpen(false);
-        toggleRef.current.focus();
+        if (servicesOpen) {
+          setServicesOpen(false);
+          servicesRef.current.focus();
+        } else {
+          setMenuOpen(false);
+          toggleRef.current.focus();
+        }
       }
     }
 
     function handleOutsideClick(event) {
       if (!headerRef.current.contains(event.target)) {
         setMenuOpen(false);
+        setServicesOpen(false);
       }
     }
 
@@ -44,13 +58,20 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange }) {
       document.removeEventListener('keydown', handleEscape);
       document.removeEventListener('click', handleOutsideClick);
     };
-  }, [menuOpen]);
+  }, [menuOpen, servicesOpen]);
 
   return (
     <header
       ref={headerRef}
       className="site-header absolute inset-x-0 top-0 z-[1] flex items-center justify-between gap-4"
       data-menu-open={menuOpen}
+      data-service-page={servicePage}
+      onBlur={(event) => {
+        if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) {
+          setServicesOpen(false);
+          setMenuOpen(false);
+        }
+      }}
     >
       <a className="brand" href={homeUrl} aria-label={`Snoware — ${text.home}`}>
         <img src={mark} width="604" height="109" alt="" />
@@ -64,18 +85,53 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange }) {
           aria-expanded={menuOpen}
           aria-controls={navId}
           aria-label={menuOpen ? text.closeMenu : text.openMenu}
-          onClick={() => setMenuOpen((open) => !open)}
+          onClick={() => { setMenuOpen((open) => !open); setServicesOpen(false); }}
         >
           <span aria-hidden="true" />
         </button>
 
         <nav id={navId} className="primary-nav" aria-label={text.navigation} inert={mobile && !menuOpen}>
           <ul className="flex items-center">
-            <li><a className={menuItemClass} href={homeUrl} aria-current="page">{text.home}</a></li>
-            <li>
-              <span className={`${menuItemClass} pending`} aria-disabled="true">
+            <li><a className={menuItemClass} href={homeUrl} aria-current={!servicePage ? "page" : undefined}>{text.home}</a></li>
+            <li className="services-nav-item">
+              <button
+                ref={servicesRef}
+                className={`${menuItemClass} services-toggle`}
+                type="button"
+                aria-expanded={servicesOpen}
+                aria-controls={servicesId}
+                data-active={servicesOpen || servicePage}
+                onClick={() => setServicesOpen((open) => !open)}
+              >
                 {text.services}<span className="chevron" aria-hidden="true" />
-              </span>
+              </button>
+              {servicesOpen && (
+                <div className="services-menu" id={servicesId}>
+                  <p className="services-menu-label">{text.services}</p>
+                  <ol className="services-menu-list">
+                    {services.map((service, index) => {
+                      const href = serviceRoutes[index];
+                      const children = <>
+                        <span className="services-menu-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                        <span>{service.title}</span>
+                        <span className="services-menu-arrow" aria-hidden="true">›</span>
+                      </>;
+                      return <li key={service.title}>
+                        {href ? (
+                          <a className="services-menu-link" href={localizedUrl(href, language)} aria-current={servicePage && index === 0 ? 'page' : undefined}>
+                            {children}
+                          </a>
+                        ) : (
+                          <span className="services-menu-link" role="link" aria-disabled="true" title={language === 'en' ? 'Page coming soon' : 'Página pendiente'}>
+                            {children}
+                            <span className="sr-only">{language === 'en' ? ' (page coming soon)' : ' (página pendiente)'}</span>
+                          </span>
+                        )}
+                      </li>;
+                    })}
+                  </ol>
+                </div>
+              )}
             </li>
             <li><span className={`${menuItemClass} pending`} aria-disabled="true">{text.about}</span></li>
             <li><span className={`${menuItemClass} pending`} aria-disabled="true">{text.experience}</span></li>
