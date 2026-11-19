@@ -218,3 +218,9 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - La página incluye el hero pastel, la franja de introducción y los seis estados de Alcance con su imagen y texto. Conserva Geist y comparte CTA y pie de página. El destino de Contacto sigue pendiente.
 - Verificado: `npm run build`, `git diff --check` y pruebas DOM de la ruta directa, seis estados e imágenes, navegación por teclado, ES/EN con la misma ruta, ocho opciones del menú, Escape, cierre exterior y estructura móvil del menú. El navegador de este entorno no permitió la revisión visual en píxeles; no se afirma que se haya hecho.
 - Sin despliegue. Al publicar en un servidor estático, la ruta directa debe resolver a `index.html` mediante la regla de fallback de la SPA.
+
+## Movimiento y unión de secciones · servicio 01
+- Añadida entrada suave al desplegable, respiración única al hero, Reveal de Inicio para introducción/alcance y transición corta entre seis paneles. Precarga por puntero/foco sin bloquear lectura.
+- Según aclaración final, se descarta el puente de degradado: una barra decorativa periwinkle centrada bajo el título y pequeños espacios de fondo azul gris alrededor de la introducción. Sin controles extra ni acumulación de padding inferior.
+- CTA/footer, textos, idiomas e ilustraciones sin cambios. Reduced motion elimina movimiento; estados hidden, foco, teclado y cierre del menú se conservan.
+- Comprobación: build, diff --check y pruebas DOM del bundle de producción (ruta, seis imágenes/paneles, teclado, ES/EN, menú y CTA/footer compartidos). Pruebas DOM de menú repetido/Escape/exterior/móvil también correctas. Chromium no permite sockets del navegador en este entorno: no se declara revisión visual real ni timing medido en dispositivos.

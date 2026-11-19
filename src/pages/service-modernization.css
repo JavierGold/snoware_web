@@ -154,3 +154,56 @@
   .modernization-scope__instruction { max-width: 34ch; }
   .modernization-scope__description { max-width: 45ch; }
 }
+
+/* A single gentle settling breath, not continuous motion or layout scaling. */
+.modernization-hero { position: relative; isolation: isolate; overflow: clip; background-image: none; }
+.modernization-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: #edf3fc url('../assets/modernization/hero.webp') center / cover no-repeat;
+  animation: modernization-breathe 1400ms cubic-bezier(.22, 1, .36, 1) both;
+}
+.modernization-hero h1 { animation: modernization-title-enter 950ms cubic-bezier(.22, 1, .36, 1) both; }
+/* One decorative reference bar, not a carousel control. */
+.modernization-hero::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1rem, 1.6vw, 1.8rem);
+  width: clamp(7rem, 21vw, 24rem);
+  height: 8px;
+  border-radius: 999px;
+  transform: translateX(-50%);
+  background: #c1ceff;
+  pointer-events: none;
+}
+/* The page color is visible around the original full-width intro artwork.
+   The lower gap replaces scope's top padding instead of adding to it. */
+.modernization-page { background: #e9eef7; }
+.modernization-intro { margin-top: clamp(.875rem, 1.15vw, 1.3125rem); }
+.modernization-scope { padding-top: clamp(1.5rem, 2.85vw, 3.25rem); }
+.modernization-scope__tab { transition: background-color 200ms ease; }
+.modernization-scope__panel-content { animation: modernization-panel-enter 320ms cubic-bezier(.22, 1, .36, 1) both; }
+@keyframes modernization-breathe {
+  from { opacity: .8; transform: scale(1.012); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes modernization-title-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes modernization-panel-enter {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (width <= 760px) {
+  .modernization-hero::before { background-position: 51% center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .modernization-hero::before,
+  .modernization-hero h1,
+  .modernization-scope__panel-content { animation: none; }
+  .modernization-scope__tab { transition: none; }
+}

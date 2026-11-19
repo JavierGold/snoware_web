@@ -1,4 +1,5 @@
-import { useId, useState } from 'react';
+import { useId, useRef, useState } from 'react';
+import { Reveal } from '../components/Reveal.jsx';
 import { serviceModernizationContent } from '../content/serviceModernization.js';
 import scopeOne from '../assets/modernization/scope-01.webp';
 import scopeTwo from '../assets/modernization/scope-02.webp';
@@ -13,6 +14,14 @@ const scopeImages = [scopeOne, scopeTwo, scopeThree, scopeFour, scopeFive, scope
 function ModernizationScope({ content }) {
   const [activeArea, setActiveArea] = useState(0);
   const id = useId();
+  const preparedImages = useRef(new Map());
+
+  function prepareImage(index) {
+    if (preparedImages.current.has(index)) return;
+    const image = new Image();
+    image.src = scopeImages[index];
+    preparedImages.current.set(index, image);
+  }
 
   function onTabKeyDown(event, index) {
     const last = content.areas.length - 1;
@@ -43,7 +52,7 @@ function ModernizationScope({ content }) {
 
   return (
     <section className="modernization-scope" aria-labelledby={`${id}-scope`}>
-      <div className="modernization-scope__card grid">
+      <Reveal className="modernization-scope__card grid">
         <div className="modernization-scope__selection">
           <h2 className="modernization-scope__title" id={`${id}-scope`}>
             {content.scopeTitle[0]}<span>{content.scopeTitle[1]}</span>
@@ -68,6 +77,8 @@ function ModernizationScope({ content }) {
                 aria-controls={`${id}-area-${index}`}
                 aria-selected={index === activeArea}
                 tabIndex={index === activeArea ? 0 : -1}
+                onPointerEnter={() => prepareImage(index)}
+                onFocus={() => prepareImage(index)}
                 onClick={() => setActiveArea(index)}
                 onKeyDown={(event) => onTabKeyDown(event, index)}
               >
@@ -89,17 +100,17 @@ function ModernizationScope({ content }) {
               tabIndex={index === activeArea ? 0 : -1}
             >
               {index === activeArea && (
-                <>
+                <div className="modernization-scope__panel-content">
                   <img className="modernization-scope__art" src={scopeImages[index]} alt="" decoding="async" />
                   <p className="modernization-scope__description">
                     {description[0]}<span>{description[1]}</span>{description[2]}
                   </p>
-                </>
+                </div>
               )}
             </div>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
@@ -113,9 +124,9 @@ export function ServiceModernization({ language }) {
         <h1 id="modernization-title">{content.title}</h1>
       </section>
       <div className="modernization-intro flex items-center justify-center">
-        <p>
+        <Reveal as="p">
           {content.intro.map((line, index) => <span key={line}>{index > 0 ? ' ' : ''}{line}</span>)}
-        </p>
+        </Reveal>
       </div>
       <ModernizationScope content={content} />
     </div>

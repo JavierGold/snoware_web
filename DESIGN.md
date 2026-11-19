@@ -163,3 +163,10 @@ Añadir «Experiencia» / «Experience» después de Nosotros/About y antes de C
 - **Franja:** estrecha, de ancho completo, fondo azul hielo con onda lavanda tenue. Copiar las dos líneas de la referencia aprobada; sin título ni tarjetas adicionales. Adaptar saltos a móvil.
 - **Alcance:** una sola tarjeta redondeada sobre fondo azul grisáceo. Izquierda con título de una línea en escritorio y «modernización» en violeta, instrucción breve y seis opciones; la activa lleva fondo blanco y barra violeta. Derecha con ilustración azul de la serie de seis acomodos y con texto debajo sobre blanco. 01 activo al cargar. En móvil priorizar lectura y evitar desbordamientos.
 - **Cierre:** reutilizar los componentes existentes de CTA y footer, sin rediseño. Los archivos de referencia sirven para revisar estilos y composición, no como capturas incrustadas de la interfaz.
+
+### Movimiento y separación · servicio 01
+- Menú Servicios: entrada de opacidad y 6 px en 240 ms, cierre inmediato para Escape/exterior.
+- Hero: una sola entrada suave de imagen (escala 1.012 → 1, 1400 ms), sin ciclo continuo ni cambios de dimensiones; titular entra 8 px en 950 ms.
+- Introducción y tarjeta de alcance reutilizan Reveal de Inicio (850 ms, una vez al entrar en viewport). Cambio de alcance: contenido conjunto 320 ms y 4 px; precarga de figura solo por intención (puntero/foco), sin retrasar el texto.
+- Última referencia: una sola barra decorativa periwinkle centrada, 8 px de altura, ancho 21vw limitado, esquinas redondas; no es control. Separación azul gris antes de intro ~21 px y después ~52 px en escritorio, adaptada a móvil; el espacio inferior sustituye el padding superior del alcance. No hay puente de degradado.
+- Mantener ilustraciones, copy, Geist, CTA y footer. Footer estático. Reduced motion elimina entradas y transiciones, sin ocultar contenido.
