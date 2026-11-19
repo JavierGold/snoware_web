@@ -5,7 +5,7 @@ import './service-modernization.css';
 import './about.css';
 
 export function About({ language }) {
-  const { title, purpose } = aboutContent[language];
+  const { title, purpose, videoPending } = aboutContent[language];
 
   return (
     <div className="about-page">
@@ -15,6 +15,9 @@ export function About({ language }) {
           <span><strong>{purpose[0]}</strong>{purpose[1]}</span>{' '}
           <span>{purpose[2]}</span>
         </Reveal>
+      </div>
+      <div className="about-video">
+        <p>{videoPending}</p>
       </div>
     </div>
   );

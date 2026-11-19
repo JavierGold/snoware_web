@@ -272,3 +272,6 @@ Implementada ruta ES/EN `/nosotros`, arte sin texto (21 KB), navegación header/
 
 ## Nosotros · franja de propósito
 Implementada bajo el hero, con arte WebP separado y copy ES/EN. Hero corregido de 2400×1200 (75 KB) preservado sin cambios.
+
+## Nosotros · espacio para video
+Reservado un bloque 16:9 a ancho completo después de la franja, con los mismos espacios entre secciones. Video y portada definitivos pendientes; no hay controles ni carga de video provisional.

@@ -35,3 +35,21 @@
 .about-purpose strong { font-weight: 500; }
 @media (width >= 900px) { .about-purpose p > span { display: block; } }
 @media (width <= 760px) { .about-purpose { background-position: 32% 52.6%; } }
+
+/* Keep the full-width frame ready for the final video. */
+.about-video {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  min-width: 0;
+  background: #0e0a42;
+  color: #f8f9ff;
+}
+
+.about-video p {
+  margin: 0;
+  padding: 1rem;
+  font-size: clamp(.875rem, 1.25vw, 1.125rem);
+  text-align: center;
+}
