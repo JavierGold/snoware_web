@@ -1,0 +1,5 @@
+/* Preserve the artwork and lift the cloud panel's dark plum and crimson tones. */
+.service-maintenance-scope .modernization-scope__art {
+  aspect-ratio: 88 / 39;
+  filter: brightness(1.44) contrast(0.91) saturate(1.08);
+}

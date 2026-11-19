@@ -262,3 +262,7 @@ Incorporados los seis párrafos ES aprobados y sus versiones EN. Texto real acce
 ## Servicio 05 · alcance de las soluciones en la nube
 - Añadido alcance bilingüe después de la franja, con cuatro composiciones aprobadas en WebP y 01 activa al cargar.
 - Build, diff-check y DOM verificados: cuatro paneles e imágenes, teclado, cambio ES/EN y CTA/footer sin cambios. Sin despliegue.
+
+## Servicios 07 y 08 · alcances de seguridad y de mantenimiento
+- Añadidas las dos secciones bilingües después de sus franjas, con cinco ilustraciones aprobadas para 07 y tres para 08 optimizadas en WebP. En ambas, 01 queda activa al cargar.
+- Build, diff-check y DOM verificados: paneles e imágenes, teclado y cambio ES/EN sin perder la selección. Sin despliegue.

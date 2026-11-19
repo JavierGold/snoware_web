@@ -206,3 +206,6 @@ Después de la franja, tarjeta compartida de cuatro opciones y 01 activa al carg
 
 ### Servicio 05 · alcance de las soluciones en la nube
 Tarjeta compartida después de la franja, sin instrucciones y con 01 activa al cargar. El título resalta «soluciones en la nube» en morado. Cuatro composiciones aprobadas de pliegues ciruela y carmesí, en proporción 880:390. Altura compartida en escritorio, altura natural en móvil y los mismos controles de teclado y movimiento reducido.
+
+### Servicios 07 y 08 · alcances aprobados
+Después de cada franja, tarjeta compartida con altura mínima en escritorio, flujo natural en móvil e imagen 880:390. 07: cinco composiciones de láminas de vidrio azul, título con «seguridad de la información» en morado. 08: tres composiciones de vidrio violeta iridiscente en el orden 01–03 de la lámina aprobada, título con «mantenimiento y soporte» en morado. En ambos, 01 activa; conservar Reveal, teclado, foco y movimiento reducido.
