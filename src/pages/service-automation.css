@@ -1,4 +1,5 @@
 /* Clean approved artwork; typography, navigation and decorative line stay real. */
+.automation-hero { --hero-art-opacity: .64; }
 .automation-hero::before {
   background-image: url('../assets/automation/hero.webp');
   background-position: center;

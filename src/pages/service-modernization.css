@@ -148,12 +148,19 @@
 }
 
 /* A single gentle settling breath, not continuous motion or layout scaling. */
-.modernization-hero { position: relative; isolation: isolate; overflow: clip; background-image: none; }
+.modernization-hero {
+  --hero-art-opacity: .86;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  background: #f8f9ff;
+}
 .modernization-hero::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -2;
+  opacity: var(--hero-art-opacity);
   background: #edf3fc url('../assets/modernization/hero.webp') center / cover no-repeat;
   animation: modernization-breathe 1600ms cubic-bezier(.22, 1, .36, 1) both;
 }
@@ -179,8 +186,8 @@
 .modernization-scope__tab { transition: background-color 200ms ease; }
 .modernization-scope__panel-content { animation: modernization-panel-enter 320ms cubic-bezier(.22, 1, .36, 1) both; }
 @keyframes modernization-breathe {
-  from { opacity: .8; transform: scale(1.012); }
-  to { opacity: 1; transform: scale(1); }
+  from { opacity: calc(var(--hero-art-opacity) * .8); transform: scale(1.012); }
+  to { opacity: var(--hero-art-opacity); transform: scale(1); }
 }
 @keyframes modernization-title-enter {
   from { opacity: 0; transform: translateY(8px); }

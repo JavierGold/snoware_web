@@ -1,3 +1,8 @@
+/* Keep the original artwork, but let pale backgrounds and navy headings lead. */
+.service-overview-hero { --hero-art-opacity: .60; }
+.service-overview-hero--3 { --hero-art-opacity: .46; }
+.service-overview-hero--6 { --hero-art-opacity: .42; }
+.service-overview-hero--8 { --hero-art-opacity: .55; }
 .service-overview-hero::before { background-position: center; background-size: cover; }
 .service-overview-hero::after { width: clamp(6rem, 9.2vw, 12rem); height: 6px; bottom: clamp(1.75rem, 3vw, 3.5rem); }
 .service-overview-hero--3::before { background-image: linear-gradient(to bottom, rgb(248 249 255 / 0) 36%, rgb(248 249 255 / .45) 62%, #f8f9ff 100%), url('../assets/service-heroes/service-03.webp'); }
