@@ -200,3 +200,6 @@ Después de Snowys, `ServiceScope` compartido con cinco opciones ES/EN y 01 acti
 
 ### Servicio 03 · alcance de integración de sistemas
 Después de la franja, tarjeta compartida con 01/02/06, cuatro alcances y 01 activa al cargar. Título de una línea en escritorio, con «integración de sistemas» en morado. A la derecha, la figura aprobada correspondiente y el texto sobre blanco. Se conserva la misma altura mínima de escritorio y proporción del arte de 02, altura natural en móvil y navegación por teclado. Sin texto de instrucciones.
+
+### Servicio 04 · alcance del desarrollo a la medida
+Después de la franja, tarjeta compartida de cuatro opciones y 01 activa al cargar. Título «Alcance del desarrollo a la medida», con «desarrollo a la medida» en morado. Ilustraciones aprobadas de malla hexagonal turquesa en proporción 880:390. La descripción se muestra bajo la figura sobre blanco; la 01 resalta «sistemas completos». Altura mínima de escritorio, flujo natural en móvil, animaciones y teclado compartidos.

@@ -254,3 +254,7 @@ Incorporados los seis párrafos ES aprobados y sus versiones EN. Texto real acce
 ## Servicio 03 · alcance de integración de sistemas
 - Implementado después de la franja, con las cuatro ilustraciones aprobadas optimizadas en WebP y la opción 01 activa al cargar. Reutiliza altura, proporción de imagen, movimiento y comportamiento adaptable de la tarjeta de alcance.
 - Build, diff-check y DOM verificados para los cuatro paneles, teclado y cambio ES/EN. No se realizó comprobación visual en Chromium ni despliegue.
+
+## Servicio 04 · alcance del desarrollo a la medida
+- Sección bilingüe después de la franja, cuatro ilustraciones aprobadas de malla hexagonal optimizadas en WebP y 01 activa por defecto.
+- Build, diff-check y pruebas DOM de paneles, teclado, ubicación y cambio de idioma correctos. Sin despliegue.

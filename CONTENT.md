@@ -5,7 +5,7 @@ Estado: copy ES de las 12 soluciones aprobado en conversación; EN es propuesta 
 ## Navegación
 ES: Inicio · Servicios · Nosotros · Experiencia · Contacto.
 EN propuesto: Home · Services · About · Experience · Contact.
-«Servicios» muestra los ocho nombres de «Nuestros servicios». El servicio 01 enlaza a `/servicios/modernizacion-de-sistemas` y el 02 a `/servicios/digitalizacion-y-automatizacion-de-procesos` (hero, franja y alcance de cuatro áreas implementados). Los servicios 03–08 tienen destino individual con hero aprobado y franja introductoria bilingüe; 03 incluye cuatro alcances y 06 incluye Snowys y cinco alcances; los interiores de 04, 05, 07 y 08 quedan pendientes.
+«Servicios» muestra los ocho nombres de «Nuestros servicios». El servicio 01 enlaza a `/servicios/modernizacion-de-sistemas` y el 02 a `/servicios/digitalizacion-y-automatizacion-de-procesos` (hero, franja y alcance de cuatro áreas implementados). Los servicios 03–08 tienen destino individual con hero aprobado y franja introductoria bilingüe; 03 y 04 incluyen cuatro alcances cada uno y 06 incluye Snowys y cinco alcances; los interiores de 05, 07 y 08 quedan pendientes.
 
 ## Hero y presentación · referencias aprobadas
 Hero ES: **Soluciones Digitales que impulsan tu crecimiento**.
@@ -22,7 +22,7 @@ Presentación:
 ## Nuestros servicios · 8 confirmados en referencias
 Introducción ES: **Impulsamos la evolución de tu negocio con soluciones tecnológicas que modernizan tus sistemas, digitalizan tus procesos e integran toda tu operación.**
 EN propuesto: **Our services** / **Move your business forward with technology that modernizes your systems, digitizes your processes and connects your operations.**
-Enlace por tarjeta: **Conoce más**. EN propuesto: **Learn more**. Los servicios 01 y 02 tienen destino individual; el 02 incluye hero, franja y alcance de cuatro áreas. Las páginas 03–08 incluyen hero, franja introductoria bilingüe y cierre compartido; 03 incorpora «Alcance de la integración de sistemas» y 06 incorpora Snowys y el alcance de IA. Las secciones interiores de 04, 05, 07 y 08 siguen pendientes.
+Enlace por tarjeta: **Conoce más**. EN propuesto: **Learn more**. Los servicios 01 y 02 tienen destino individual; el 02 incluye hero, franja y alcance de cuatro áreas. Las páginas 03–08 incluyen hero, franja introductoria bilingüe y cierre compartido; 03 incorpora «Alcance de la integración de sistemas», 04 incorpora «Alcance del desarrollo a la medida» y 06 incorpora Snowys y el alcance de IA. Las secciones interiores de 05, 07 y 08 siguen pendientes.
 
 ### Servicio 1. Mejora y modernización de sistemas
 **ES aprobado en referencia:** Evolucionamos tus plataformas para que sean más seguras, eficientes, escalables y alineadas con las necesidades actuales de tu negocio.
