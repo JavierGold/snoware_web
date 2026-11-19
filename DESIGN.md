@@ -176,3 +176,6 @@ Hero con la onda azul/lavanda de puntos del original aprobado y fondo limpio opt
 
 ### Servicio 02 · franja
 Añadir el fondo exacto aprobado de la franja, limpio y optimizado, con copy real Geist 500 y Reveal idéntico a 01. Mantener sus dimensiones y espaciado superior; reutilizar el espacio inferior antes de CTA mediante padding del contenedor, sin sección vacía. Dos líneas en escritorio con salto antes de «según»; flujo natural móvil. Hero intacto, sin alcance nuevo.
+
+### Servicio 02 · alcance aprobado
+Cuatro opciones numeradas sin instrucciones, con 01 activa. Reutiliza componente de alcance accesible de 01, animación de panel/Reveal y tipografía; cuatro figuras aprobadas sin cambios de tonos. Tarjeta desktop con mínimo compartido equivalente a 771 px a 1640 px de ancho; en 02, arte 880:390 y contenido alineado arriba con espacio blanco debajo. Móvil conserva altura natural. Sin otros servicios añadidos.

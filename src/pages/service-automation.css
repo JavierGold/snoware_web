@@ -6,7 +6,6 @@
 }
 .automation-hero::after { width: clamp(6rem, 9.2vw, 12rem); height: 6px; bottom: clamp(1.75rem, 3vw, 3.5rem); }
 
-/* Reuse Service 01's typography, Reveal and upper spacing exactly. The
-   page padding supplies the equivalent lower gap without an empty section. */
+/* The intro retains Service 01's shared typography, Reveal and spacing. */
 .automation-intro { background-image: url('../assets/automation/intro.webp'); }
-.automation-page { padding-bottom: clamp(1.5rem, 2.85vw, 3.25rem); }
+.automation-page .modernization-scope__art { aspect-ratio: 88 / 39; }

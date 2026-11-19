@@ -234,3 +234,9 @@ Páginas de servicios, Nosotros y Contacto; agente IA para interesados; envío d
 - Integrado el arte limpio exacto aprobado y copy ES/EN separado del componente. Reutiliza layout, Geist 500, Reveal y espacio superior de 01; hueco inferior equivalente antes del CTA sin sección vacía. Hero y copy de Inicio intactos; alcance pendiente.
 - Alineados CONTENT/SPEC/PLAN: 02 ya tiene destino con hero y franja; 03–08 siguen pendientes.
 - Build, diff --check y DOM ES/EN verificados; sin revisión visual real de navegador por la restricción conocida de Chromium. Sin despliegue.
+
+## Servicio 02 · alcance de cuatro áreas
+- Añadido alcance aprobado entre franja y CTA: cuatro figuras optimizadas WebP y copy ES/EN, 01 activa, sin instrucciones.
+- Extraída lógica existente a ServiceScope compartido, manteniendo teclado, foco, hidden, precarga por intención y transiciones/reduced motion. Servicio 01 conserva seis estados y sus imágenes.
+- Altura mínima desktop compartida y proporción de arte 880:390 solo para 02; móvil natural. Retirado padding provisional previo a CTA para no duplicar espacio del alcance.
+- Build, diff --check y DOM de ambas rutas/ES/EN/paneles/teclado verificados. Sin revisión visual real de navegador por restricción del entorno. Sin despliegue.

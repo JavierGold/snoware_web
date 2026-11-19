@@ -199,3 +199,8 @@
   .modernization-scope__panel-content { animation: none; }
   .modernization-scope__tab { transition: none; }
 }
+
+/* Shared desktop card minimum: six-row 32rem floor, 771px at 1640px content width; mobile is natural. */
+@media (width > 760px) {
+  .modernization-scope__card { min-height: max(32rem, min(42.8333vw, 52.654rem)); }
+}
