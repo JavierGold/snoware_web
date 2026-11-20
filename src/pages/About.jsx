@@ -2,6 +2,7 @@ import { AboutEditorial } from '../components/AboutEditorial.jsx';
 import { aboutContent } from '../content/about.js';
 import { Reveal } from '../components/Reveal.jsx';
 import { ServiceHero } from '../components/ServiceHero.jsx';
+import snowyClosing from '../assets/about/snowy-closing.webp';
 import './service-modernization.css';
 import './about.css';
 
@@ -21,6 +22,9 @@ export function About({ language }) {
         <p>{videoPending}</p>
       </div>
       <AboutEditorial content={editorial} />
+      <div className="about-snowy-closing">
+        <img src={snowyClosing} alt="" width="2700" height="543" loading="lazy" decoding="async" />
+      </div>
     </div>
   );
 }

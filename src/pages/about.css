@@ -111,3 +111,18 @@
 @media (width <= 620px) {
   .about-editorial-stats { grid-template-columns: 1fr; }
 }
+
+.about-snowy-closing {
+  display: grid;
+  min-width: 0;
+  justify-items: center;
+  background: #9baccb;
+}
+
+.about-snowy-closing img {
+  display: block;
+  width: 100%;
+  height: max(clamp(13rem, 24vw, 28rem), 20.111vw);
+  object-fit: cover;
+  object-position: center;
+}
