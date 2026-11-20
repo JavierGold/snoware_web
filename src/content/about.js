@@ -3,7 +3,7 @@ export const aboutContent = {
     title: 'Generamos Soluciones Digitales para tu operación completa.',
     pageTitle: 'Nosotros | Snoware',
     videoPending: 'Video próximamente',
-    purpose: ['Nuestro propósito', ' es brindarle a los negocios', 'las herramientas tecnológicas para cumplir sus estándares.'],
+    purpose: ['Nuestro propósito', ' es que la tecnología se adapte', 'a la forma en que cada empresa opera y evolucione conforme cambian sus necesidades.'],
     editorial: {
       intro: 'Somos una consultoría de software que ayuda a las empresas a mejorar su operación con',
       accent: 'soluciones digitales a la medida.',
@@ -15,7 +15,7 @@ export const aboutContent = {
     title: 'We create digital solutions for your entire operation.',
     pageTitle: 'About us | Snoware',
     videoPending: 'Video coming soon',
-    purpose: ['Our purpose', ' is to give businesses', 'the technology they need to meet their standards.'],
+    purpose: ['Our purpose', ' is for technology to adapt', 'to how each business operates and evolve as its needs change.'],
     editorial: {
       intro: 'We are a software consultancy that helps businesses improve their operations with',
       accent: 'custom digital solutions.',
