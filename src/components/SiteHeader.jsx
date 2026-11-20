@@ -137,7 +137,7 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange, serviceP
             <li><a className={menuItemClass} href={localizedUrl('/nosotros', language)} aria-current={aboutPage ? "page" : undefined}>{text.about}</a></li>
             <li><span className={`${menuItemClass} pending`} aria-disabled="true">{text.experience}</span></li>
             <li>
-              <span className="contact inline-flex items-center rounded-full whitespace-nowrap" aria-disabled="true">
+              <span className={mobile ? `${menuItemClass} pending` : "contact inline-flex items-center rounded-full whitespace-nowrap"} aria-disabled="true">
                 {text.contact}
               </span>
             </li>
