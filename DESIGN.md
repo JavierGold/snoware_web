@@ -215,4 +215,4 @@ Ruta `/nosotros` ES/EN con hero aprobado, arcos pequeños bajo header transparen
 
 Franja de propósito a todo ancho directamente después del hero, con figura translúcida a la derecha y texto Geist marino real a la izquierda. Solo «Nuestro propósito» en peso 500, resto 400; dos líneas previstas en escritorio y ajuste natural en móvil.
 
-Después del video en Nosotros, bloque editorial blanco centrado en Geist con acento #6b55a8 solo en la frase final y las tres cifras. Sin título para las cifras, tarjetas o separadores. Conteo único al entrar en vista durante 1,8 s; valores finales para lectores de pantalla y movimiento reducido.
+Después del video en Nosotros, bloque editorial blanco centrado en Geist con acento #6b55a8 solo en la frase final y las tres cifras. Sin título para las cifras, tarjetas o separadores. Conteo único al entrar en vista durante 650 ms, con el signo + solo en el resultado; valores finales para lectores de pantalla y movimiento reducido.

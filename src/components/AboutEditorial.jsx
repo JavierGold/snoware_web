@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const duration = 1800;
+const duration = 650;
 const motionQuery = '(prefers-reduced-motion: reduce)';
 const formatNumber = new Intl.NumberFormat('en-US');
 
@@ -65,7 +65,7 @@ export function AboutEditorial({ content }) {
                 <span className="sr-only">{finalValue}</span>
                 <span className="about-editorial-number" aria-hidden="true">
                   <span>{finalValue}</span>
-                  <span data-count>{formatNumber.format(Math.floor(value * progress))}+</span>
+                  <span data-count>{progress === 1 ? finalValue : formatNumber.format(Math.floor(value * progress))}</span>
                 </span>
               </dd>
             </div>
