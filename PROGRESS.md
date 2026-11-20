@@ -275,3 +275,6 @@ Implementada bajo el hero, con arte WebP separado y copy ES/EN. Hero corregido d
 
 ## Nosotros · espacio para video
 Reservado un bloque a ancho completo después de la franja, en 16:9 con un máximo de 520 px de alto en escritorio, con los mismos espacios entre secciones. Video y portada definitivos pendientes; no hay controles ni carga de video provisional.
+
+## Nosotros · presentación y cifras
+Agregado el bloque editorial ES/EN después del espacio de video, con los valores aprobados 10+, 150+ y 2,000+. Sin cambios al hero, franja de propósito ni espacio de video.

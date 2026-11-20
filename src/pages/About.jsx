@@ -1,3 +1,4 @@
+import { AboutEditorial } from '../components/AboutEditorial.jsx';
 import { aboutContent } from '../content/about.js';
 import { Reveal } from '../components/Reveal.jsx';
 import { ServiceHero } from '../components/ServiceHero.jsx';
@@ -5,7 +6,7 @@ import './service-modernization.css';
 import './about.css';
 
 export function About({ language }) {
-  const { title, purpose, videoPending } = aboutContent[language];
+  const { title, purpose, videoPending, editorial } = aboutContent[language];
 
   return (
     <div className="about-page">
@@ -19,6 +20,7 @@ export function About({ language }) {
       <div className="about-video">
         <p>{videoPending}</p>
       </div>
+      <AboutEditorial content={editorial} />
     </div>
   );
 }

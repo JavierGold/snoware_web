@@ -47,5 +47,5 @@ Texto real, navegación por teclado, foco visible, controles etiquetados y contr
 ## Ubicación de recursos
 Usar las rutas reales bajo `img/` documentadas en DESIGN.md. Hay evidencia visual de su presencia en el explorador del proyecto; calidad y contenido individual pendientes de validar. Este documento no autoriza moverlas ni crear una nueva estructura de aplicación.
 
-## Nosotros · hero aprobado
-Ruta `/nosotros` bilingüe con hero, franja de propósito y footer existente, sin CTA; navegación activa y localizada.
+## Nosotros · alcance aprobado
+Ruta `/nosotros` bilingüe con hero, franja de propósito, espacio reservado para video, presentación editorial, cifras y footer existente. Sin CTA; navegación activa y localizada.
