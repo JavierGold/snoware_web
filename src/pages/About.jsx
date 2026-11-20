@@ -23,7 +23,7 @@ export function About({ language }) {
       </div>
       <AboutEditorial content={editorial} />
       <div className="about-snowy-closing">
-        <img src={snowyClosing} alt="" width="2700" height="543" loading="lazy" decoding="async" />
+        <img src={snowyClosing} alt="" width="800" height="800" loading="lazy" decoding="async" />
       </div>
     </div>
   );
