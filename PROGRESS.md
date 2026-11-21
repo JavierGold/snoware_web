@@ -283,3 +283,6 @@ Ajustado el conteo a 650 ms; el signo + aparece al finalizar.
 
 ## Experiencia · hero
 Hero bilingüe en `/experiencia` con enlace activo en el menú y arte completo atenuado; sin contenido de casos ni despliegue. El armado visual de tarjetas y sus fichas queda pendiente.
+
+## Experiencia · galería
+Añadida la galería bilingüe de seis páginas con seis ilustraciones distintas por página. Cada ficha indica que se trata de un ejemplo hipotético y muestra su ilustración, problema y solución sin afirmar resultados ni clientes reales.

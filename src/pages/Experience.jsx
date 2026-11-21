@@ -1,3 +1,4 @@
+import { ExperienceGallery } from '../components/ExperienceGallery.jsx';
 import { ServiceHero } from '../components/ServiceHero.jsx';
 import './service-modernization.css';
 import './about.css';
@@ -9,5 +10,10 @@ export const experienceContent = {
 };
 
 export function Experience({ language }) {
-  return <ServiceHero title={experienceContent[language].title} id="experience-title" className="about-hero experience-hero" />;
+  return (
+    <>
+      <ServiceHero title={experienceContent[language].title} id="experience-title" className="about-hero experience-hero" />
+      <ExperienceGallery language={language} />
+    </>
+  );
 }

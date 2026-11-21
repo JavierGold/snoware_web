@@ -1,0 +1,26 @@
+export const experienceGalleryText = {
+  es: {
+    gallery: 'Galería de proyectos',
+    more: 'Ver más',
+    hypothetical: 'Ejemplo hipotético',
+    problem: 'Problema',
+    solution: 'Solución',
+    close: 'Cerrar',
+    pages: 'Paginación de proyectos',
+    previous: 'Página anterior',
+    next: 'Página siguiente',
+    current: (page, pages) => `Página ${page} de ${pages}`,
+  },
+  en: {
+    gallery: 'Project gallery',
+    more: 'Read more',
+    hypothetical: 'Hypothetical example',
+    problem: 'Problem',
+    solution: 'Solution',
+    close: 'Close',
+    pages: 'Project pagination',
+    previous: 'Previous page',
+    next: 'Next page',
+    current: (page, pages) => `Page ${page} of ${pages}`,
+  },
+};
