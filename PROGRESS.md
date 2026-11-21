@@ -288,3 +288,5 @@ Hero bilingüe en `/experiencia` con enlace activo en el menú y arte completo a
 Añadida la galería bilingüe de seis páginas con seis ilustraciones distintas por página. Cada ficha indica que se trata de un ejemplo hipotético y muestra su ilustración, problema y solución sin afirmar resultados ni clientes reales.
 
 Experiencia: tarjetas y flechas mantienen su posición al paginar. En escritorio la cuadrícula se adapta a la altura disponible; hay transiciones breves y un cierre accesible del modal sin forzar desplazamiento. Se retiró la etiqueta visible de las fichas.
+
+Experiencia: los 36 planteamientos se actualizaron en español e inglés, con industria concreta en cada ficha. Problemas y soluciones se presentan sin marcas ni afirmaciones de entrega por Snoware.

@@ -119,6 +119,7 @@ export function ExperienceGallery({ language }) {
             <img src={imageFor(selected.id)} alt="" decoding="async" />
             <div className="experience-case-copy">
               <h2 id={dialogTitle}>{activeCase.title}</h2>
+              <p className="experience-case-industry">{activeCase.industry}</p>
               <h3>{text.problem}</h3>
               <p>{activeCase.problem}</p>
               <h3>{text.solution}</h3>
