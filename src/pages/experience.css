@@ -1,0 +1,14 @@
+.modernization-hero.experience-hero {
+  background: linear-gradient(180deg, #e4edf9, #f8f9ff);
+}
+
+.modernization-hero.experience-hero::before {
+  inset: clamp(6.25rem, 11.5vw, 13rem) 2.5% clamp(1.2rem, 2vw, 2.625rem);
+  background: url('../assets/experience/hero.webp') center / contain no-repeat;
+}
+
+.site-header[data-experience-page='true'] .primary-nav a[aria-current='page'] {
+  text-decoration: underline;
+  text-underline-offset: .45em;
+  text-decoration-thickness: 2px;
+}

@@ -280,3 +280,6 @@ Reservado un bloque a ancho completo después de la franja, en 16:9 con un máxi
 Agregado el bloque editorial ES/EN después del espacio de video, con los valores aprobados 10+, 150+ y 2,000+. Sin cambios al hero, franja de propósito ni espacio de video.
 
 Ajustado el conteo a 650 ms; el signo + aparece al finalizar.
+
+## Experiencia · hero
+Hero bilingüe en `/experiencia` con enlace activo en el menú y arte completo atenuado; sin contenido de casos ni despliegue. El armado visual de tarjetas y sus fichas queda pendiente.

@@ -1,3 +1,4 @@
+import { Experience, experienceContent } from './pages/Experience.jsx';
 import { About } from './pages/About.jsx';
 import { aboutContent } from './content/about.js';
 import { useEffect, useState } from 'react';
@@ -35,12 +36,13 @@ export function App() {
   const homeUrl = localizedUrl('/', language);
   const serviceIndex = serviceRoutes.indexOf(location.pathname.replace(/\/$/, ''));
   const servicePage = serviceIndex >= 0;
+  const experiencePage = location.pathname.replace(/\/$/, '') === '/experiencia';
   const aboutPage = location.pathname.replace(/\/$/, '') === '/nosotros';
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = aboutPage ? aboutContent[language].pageTitle : servicePage ? `${content.services.items[serviceIndex].title} | Snoware` : "Snoware";
-  }, [language, servicePage, serviceIndex, content, aboutPage]);
+    document.title = experiencePage ? experienceContent[language].pageTitle : aboutPage ? aboutContent[language].pageTitle : servicePage ? `${content.services.items[serviceIndex].title} | Snoware` : "Snoware";
+  }, [language, servicePage, serviceIndex, content, aboutPage, experiencePage]);
 
   function changeLanguage(nextLanguage) {
     const url = new URL(location.href);
@@ -55,18 +57,18 @@ export function App() {
 
   return (
     <>
-      <SiteHeader text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} servicePage={servicePage} aboutPage={aboutPage} activeServiceIndex={serviceIndex} />
+      <SiteHeader text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} servicePage={servicePage} aboutPage={aboutPage} experiencePage={experiencePage} activeServiceIndex={serviceIndex} />
       <main>
-        {aboutPage ? <About language={language} /> : serviceIndex === 0 ? <ServiceModernization language={language} /> : serviceIndex === 1 ? <ServiceAutomation language={language} /> : servicePage ? <ServiceOverview language={language} serviceIndex={serviceIndex} /> : <>
+        {experiencePage ? <Experience language={language} /> : aboutPage ? <About language={language} /> : serviceIndex === 0 ? <ServiceModernization language={language} /> : serviceIndex === 1 ? <ServiceAutomation language={language} /> : servicePage ? <ServiceOverview language={language} serviceIndex={serviceIndex} /> : <>
         <Hero headline={text.headline} content={text.hero} />
         <AboutSnoware content={content.about} />
         <Services content={content.services} language={language} />
         <Methodology content={phaseThree.methodology} />
         <Solutions content={phaseThree.solutions} />
         </>}
-        {!aboutPage && <ContactCallout content={ending.cta} />}
+        {!aboutPage && !experiencePage && <ContactCallout content={ending.cta} />}
       </main>
-      <SiteFooter content={ending.footer} navigation={text} homeUrl={homeUrl} isHome={!servicePage && !aboutPage} aboutPage={aboutPage} aboutUrl={localizedUrl('/nosotros', language)} />
+      <SiteFooter content={ending.footer} navigation={text} homeUrl={homeUrl} isHome={!servicePage && !aboutPage && !experiencePage} aboutPage={aboutPage} aboutUrl={localizedUrl('/nosotros', language)} />
     </>
   );
 }
