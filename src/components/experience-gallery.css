@@ -50,7 +50,8 @@
   align-items: center;
   justify-content: space-between;
   gap: .65rem;
-  min-height: clamp(3.5rem, 4vw, 4.75rem);
+  min-height: 4.6rem;
+  height: 4.6rem;
   padding: .75rem clamp(.8rem, 1.35vw, 1.5rem);
   font-size: clamp(.95rem, 1.35vw, 1.4rem);
   line-height: 1.28;
@@ -106,6 +107,7 @@
 }
 
 .experience-case-dialog::backdrop { background: rgb(5 4 26 / 78%); }
+html:has(.experience-gallery) { scrollbar-gutter: stable; }
 body:has(.experience-case-dialog[open]) { overflow: hidden; }
 
 .experience-case-panel { position: relative; }
@@ -119,7 +121,6 @@ body:has(.experience-case-dialog[open]) { overflow: hidden; }
   font-size: 1.6rem;
 }
 .experience-case-copy { padding: clamp(1.25rem, 4.1vw, 2.75rem); line-height: 1.5; overflow-wrap: anywhere; }
-.experience-case-label { color: #c4c2df; font-size: .85rem; }
 .experience-case-copy h2 { margin: .3rem 0 1.4rem; font-size: clamp(1.45rem, 3vw, 2.25rem); }
 .experience-case-copy h3 { margin: 1.1rem 0 .25rem; font-size: 1.1rem; font-weight: 500; }
 .experience-case-copy p { margin: 0; }
@@ -130,3 +131,68 @@ body:has(.experience-case-dialog[open]) { overflow: hidden; }
 @media (width <= 560px) {
   .experience-gallery-grid { grid-template-columns: minmax(0, 1fr); }
 }
+
+.experience-gallery-art { display: block; overflow: hidden; border-radius: inherit; }
+.experience-gallery-card button > .experience-gallery-art {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@media (width > 950px) {
+  .experience-gallery {
+    --gallery-top: clamp(3rem, 5vw, 5.5rem);
+    --gallery-bottom: clamp(2.5rem, 4vw, 4rem);
+    --gallery-gap: clamp(.95rem, 1.6vw, 1.8rem);
+    --gallery-pager-gap: clamp(1.5rem, 2.6vw, 3rem);
+    --gallery-fixed-height: calc(var(--gallery-top) + var(--gallery-bottom) + var(--gallery-gap) + var(--gallery-pager-gap) + 13.2rem);
+    padding-top: var(--gallery-top);
+    padding-bottom: var(--gallery-bottom);
+  }
+
+  /* Two image rows plus reserved captions and pager fit a short laptop viewport. */
+  .experience-gallery-card img {
+    height: clamp(7rem, calc((100vh - var(--gallery-fixed-height)) / 2), 17.5rem);
+    height: clamp(7rem, calc((100svh - var(--gallery-fixed-height)) / 2), 17.5rem);
+    aspect-ratio: auto;
+  }
+}
+
+@media (width > 950px) and (height <= 680px) {
+  .experience-gallery {
+    --gallery-top: 2.5rem;
+    --gallery-bottom: 2rem;
+    --gallery-gap: 1rem;
+    --gallery-pager-gap: 1.25rem;
+  }
+  .experience-gallery-grid { row-gap: var(--gallery-gap); }
+  .experience-gallery-pager { margin-top: var(--gallery-pager-gap); }
+}
+
+@media (width <= 560px) {
+  .experience-gallery-caption { height: 5.25rem; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .experience-gallery[data-entered] .experience-gallery-art img { animation: experience-art-in 280ms cubic-bezier(.22, 1, .36, 1) both; }
+  .experience-case-dialog[open] { animation: experience-dialog-in 240ms cubic-bezier(.22, 1, .36, 1) both; }
+  .experience-case-dialog[open]::backdrop { animation: experience-backdrop-in 220ms ease-out both; }
+  .experience-case-dialog[open][data-closing] { animation: experience-dialog-out 180ms ease-in both; }
+  .experience-case-dialog[open][data-closing]::backdrop { animation: experience-backdrop-out 180ms ease-in both; }
+}
+
+@keyframes experience-art-in {
+  from { opacity: .42; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes experience-dialog-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes experience-dialog-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(5px); }
+}
+@keyframes experience-backdrop-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes experience-backdrop-out { from { opacity: 1; } to { opacity: 0; } }

@@ -2,7 +2,6 @@ export const experienceGalleryText = {
   es: {
     gallery: 'Galería de proyectos',
     more: 'Ver más',
-    hypothetical: 'Ejemplo hipotético',
     problem: 'Problema',
     solution: 'Solución',
     close: 'Cerrar',
@@ -14,7 +13,6 @@ export const experienceGalleryText = {
   en: {
     gallery: 'Project gallery',
     more: 'Read more',
-    hypothetical: 'Hypothetical example',
     problem: 'Problem',
     solution: 'Solution',
     close: 'Close',
