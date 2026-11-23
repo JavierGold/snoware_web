@@ -295,3 +295,5 @@ Experiencia: los 36 planteamientos se actualizaron en español e inglés, con in
 Ruta bilingüe con formulario responsive y validación local. El menú, el footer y los enlaces de contacto existentes ahora llevan a esta página. El envío sigue pendiente de un servicio y destinatario autorizados; no se transmiten ni guardan datos.
 
 Contacto: el fondo acanalado se sustituyó por un recurso más nítido y claro, sin ampliación adicional. La sección ocupa al menos la primera pantalla; se ajustaron el espaciado y la jerarquía del texto sin cambiar los campos ni su comportamiento.
+
+Contacto: el titular, el texto y el formulario tienen una entrada suave y breve, sin mover el resto de la página. Se respeta el movimiento reducido y el foco queda visible y fijo. El botón de envío se compactó, conservando el área táctil y el comportamiento.

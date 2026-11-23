@@ -88,16 +88,22 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: .62em;
+  gap: .5rem;
   min-height: 44px;
   margin-top: clamp(1.25rem, 2.45vw, 2.8rem);
-  padding: .65em 1.42em;
+  padding: .5rem 1rem;
   border-radius: .65rem;
   background: #5830cb;
   color: #fff;
-  font-size: clamp(1rem, 1.35vw, 1.55rem);
+  font-size: .9375rem;
+  line-height: 1.2;
   font-weight: 400;
   cursor: pointer;
+}
+.contact-page-submit svg {
+  flex: none;
+  width: .9rem;
+  height: .9rem;
 }
 .contact-page-submit:hover { background: #4925b1; }
 .contact-page :is(input, textarea, button):focus-visible { outline: 2px solid #4b2db0; outline-offset: 2px; }
@@ -115,4 +121,24 @@
 }
 @media (width <= 560px) {
   .contact-page-fields { grid-template-columns: minmax(0, 1fr); }
+}
+
+@keyframes contact-content-enter {
+  from { opacity: .82; transform: translateY(.45rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contact-page-intro :is(h1, p),
+  .contact-page-form {
+    animation: contact-content-enter 640ms cubic-bezier(.22, 1, .36, 1) backwards;
+  }
+  .contact-page-intro p { animation-delay: 55ms; }
+  .contact-page-form { animation-delay: 95ms; }
+
+  /* Focus is immediately steady and opaque; the one-shot animation clock continues. */
+  .contact-page-form:focus-within {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
