@@ -1,6 +1,7 @@
 export const translations = {
   es: {
     home: 'Inicio',
+    backToTop: 'Volver arriba',
     services: 'Servicios',
     about: 'Nosotros',
     experience: 'Experiencia',
@@ -30,6 +31,7 @@ export const translations = {
   },
   en: {
     home: 'Home',
+    backToTop: 'Back to top',
     services: 'Services',
     about: 'About',
     experience: 'Experience',

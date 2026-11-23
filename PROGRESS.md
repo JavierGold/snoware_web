@@ -301,3 +301,5 @@ Ruta bilingüe con formulario responsive y validación local. El menú, el foote
 Contacto: el fondo acanalado se sustituyó por un recurso más nítido y claro, sin ampliación adicional. La sección ocupa al menos la primera pantalla; se ajustaron el espaciado y la jerarquía del texto sin cambiar los campos ni su comportamiento.
 
 Contacto: el titular, el texto y el formulario tienen una entrada suave y breve, sin mover el resto de la página. Se respeta el movimiento reducido y el foco queda visible y fijo. El botón de envío se compactó, conservando el área táctil y el comportamiento.
+
+Navegación: se añadió un botón bilingüe «Volver arriba» en todas las páginas. Aparece al desplazarse, respeta la preferencia de movimiento reducido y devuelve el foco al inicio.

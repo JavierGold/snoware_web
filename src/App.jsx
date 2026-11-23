@@ -3,7 +3,8 @@ import { Contact } from './pages/Contact.jsx';
 import { contactContent } from './content/contact.js';
 import { About } from './pages/About.jsx';
 import { aboutContent } from './content/about.js';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { BackToTop } from './components/BackToTop.jsx';
 import { ContactCallout } from './components/ContactCallout.jsx';
 import { SiteFooter } from './components/SiteFooter.jsx';
 import { siteEnding } from './content/siteEnding.js';
@@ -31,6 +32,7 @@ function getLanguage() {
 
 export function App() {
   const [language, setLanguage] = useState(getLanguage);
+  const pageStartRef = useRef(null);
   const text = translations[language];
   const content = homeContent[language];
   const phaseThree = phaseThreeContent[language];
@@ -61,7 +63,7 @@ export function App() {
 
   return (
     <>
-      <SiteHeader text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} servicePage={servicePage} aboutPage={aboutPage} experiencePage={experiencePage} contactPage={contactPage} contactUrl={contactUrl} activeServiceIndex={serviceIndex} />
+      <SiteHeader brandRef={pageStartRef} text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} servicePage={servicePage} aboutPage={aboutPage} experiencePage={experiencePage} contactPage={contactPage} contactUrl={contactUrl} activeServiceIndex={serviceIndex} />
       <main>
         {contactPage ? <Contact language={language} /> : experiencePage ? <Experience language={language} /> : aboutPage ? <About language={language} /> : serviceIndex === 0 ? <ServiceModernization language={language} /> : serviceIndex === 1 ? <ServiceAutomation language={language} /> : servicePage ? <ServiceOverview language={language} serviceIndex={serviceIndex} /> : <>
         <Hero headline={text.headline} content={text.hero} />
@@ -73,6 +75,7 @@ export function App() {
         {!aboutPage && !experiencePage && !contactPage && <ContactCallout content={ending.cta} href={contactUrl} />}
       </main>
       <SiteFooter content={ending.footer} navigation={text} homeUrl={homeUrl} isHome={!servicePage && !aboutPage && !experiencePage && !contactPage} contactPage={contactPage} contactUrl={contactUrl} aboutPage={aboutPage} aboutUrl={localizedUrl('/nosotros', language)} />
+      <BackToTop label={text.backToTop} startRef={pageStartRef} />
     </>
   );
 }

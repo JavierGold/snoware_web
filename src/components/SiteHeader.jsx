@@ -8,7 +8,7 @@ import { LanguageSelector } from './LanguageSelector.jsx';
 const mobileLayout = window.matchMedia('(width <= 760px)');
 const menuItemClass = 'inline-flex min-h-11 items-center whitespace-nowrap';
 
-export function SiteHeader({ text, homeUrl, language, onLanguageChange, servicePage = false, aboutPage = false, experiencePage = false, contactPage = false, contactUrl = '/contacto', activeServiceIndex = 0 }) {
+export function SiteHeader({ brandRef, text, homeUrl, language, onLanguageChange, servicePage = false, aboutPage = false, experiencePage = false, contactPage = false, contactUrl = '/contacto', activeServiceIndex = 0 }) {
   const navId = useId();
   const servicesId = useId();
   const servicesRef = useRef(null);
@@ -75,7 +75,7 @@ export function SiteHeader({ text, homeUrl, language, onLanguageChange, serviceP
         }
       }}
     >
-      <a className="brand" href={homeUrl} aria-label={`Snoware — ${text.home}`}>
+      <a ref={brandRef} className="brand" href={homeUrl} aria-label={`Snoware — ${text.home}`}>
         <img src={mark} width="604" height="109" alt="" />
       </a>
 

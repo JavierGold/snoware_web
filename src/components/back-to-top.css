@@ -1,0 +1,35 @@
+.back-to-top {
+  position: fixed;
+  z-index: 0;
+  inset-inline-end: max(clamp(1rem, 2.4vw, 2rem), calc(env(safe-area-inset-right) + .75rem));
+  inset-block-end: max(clamp(1rem, 2.4vw, 2rem), calc(env(safe-area-inset-bottom) + .75rem));
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 1px solid #d1cbef;
+  border-radius: 50%;
+  background: #0e0a42;
+  color: #fff;
+  box-shadow: 0 .25rem .85rem rgb(14 10 66 / 22%);
+  cursor: pointer;
+}
+
+.back-to-top:hover { background: #5830cb; }
+
+.back-to-top:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px #5830cb;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .back-to-top { animation: back-to-top-enter .18s ease-out; transition: background-color .18s ease; }
+
+  @keyframes back-to-top-enter {
+    from { opacity: .78; transform: translateY(.25rem); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
