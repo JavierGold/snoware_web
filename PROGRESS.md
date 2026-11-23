@@ -303,3 +303,5 @@ Contacto: el fondo acanalado se sustituyó por un recurso más nítido y claro, 
 Contacto: el titular, el texto y el formulario tienen una entrada suave y breve, sin mover el resto de la página. Se respeta el movimiento reducido y el foco queda visible y fijo. El botón de envío se compactó, conservando el área táctil y el comportamiento.
 
 Navegación: se añadió un botón bilingüe «Volver arriba» en todas las páginas. Aparece al desplazarse, respeta la preferencia de movimiento reducido y devuelve el foco al inicio. Se reforzó el contraste con fondo morado, borde claro y una flecha blanca más definida.
+
+Navegación móvil: el encabezado conserva la marca y muestra un botón «Menú». El selector Español / English pasa debajo de los enlaces; escritorio no cambia.

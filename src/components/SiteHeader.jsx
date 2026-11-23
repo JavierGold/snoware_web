@@ -89,7 +89,8 @@ export function SiteHeader({ brandRef, text, homeUrl, language, onLanguageChange
           aria-label={menuOpen ? text.closeMenu : text.openMenu}
           onClick={() => { setMenuOpen((open) => !open); setServicesOpen(false); }}
         >
-          <span aria-hidden="true" />
+          <span>{text.menu}</span>
+          <span className="menu-toggle-icon" aria-hidden="true"><span /></span>
         </button>
 
         <nav id={navId} className="primary-nav" aria-label={text.navigation} inert={mobile && !menuOpen}>
@@ -143,9 +144,10 @@ export function SiteHeader({ brandRef, text, homeUrl, language, onLanguageChange
               </a>
             </li>
           </ul>
+          {mobile && <LanguageSelector label={text.language} language={language} onLanguageChange={onLanguageChange} mobile />}
         </nav>
 
-        <LanguageSelector label={text.language} language={language} onLanguageChange={onLanguageChange} />
+        {!mobile && <LanguageSelector label={text.language} language={language} onLanguageChange={onLanguageChange} />}
       </div>
     </header>
   );
