@@ -33,8 +33,8 @@ export function BackToTop({ label, startRef }) {
   return (
     <button type="button" className="back-to-top" aria-label={label} title={label}
       onClick={goToTop} onFocus={() => setFocused(true)} onBlur={() => setFocused(false)}>
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
-        <path d="M12 19V5m-5 5 5-5 5 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" aria-hidden="true">
+        <path d="M12 19V5m-5 5 5-5 5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </button>
   );

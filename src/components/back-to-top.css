@@ -6,18 +6,18 @@
   display: grid;
   place-items: center;
   box-sizing: border-box;
-  width: 3rem;
-  height: 3rem;
+  width: 3.125rem;
+  height: 3.125rem;
   padding: 0;
-  border: 1px solid #d1cbef;
+  border: 2px solid #f3efff;
   border-radius: 50%;
-  background: #0e0a42;
+  background: #5830cb;
   color: #fff;
-  box-shadow: 0 .25rem .85rem rgb(14 10 66 / 22%);
+  box-shadow: 0 .3rem .95rem rgb(14 10 66 / 30%);
   cursor: pointer;
 }
 
-.back-to-top:hover { background: #5830cb; }
+.back-to-top:hover { background: #4925b1; }
 
 .back-to-top:focus-visible {
   outline: 2px solid #fff;
