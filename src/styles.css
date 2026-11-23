@@ -120,19 +120,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .brand img { width: clamp(7.25rem, 26vw, 10rem); }
   .header-controls { flex-shrink: 0; flex-wrap: nowrap; gap: .5rem; }
   .menu-toggle {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: .55rem;
-    min-width: 44px;
-    min-height: 44px;
-    padding: .45rem .75rem;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     border: 1px solid #e3f2ff8c;
     background: #13243866;
     color: inherit;
-    font-size: .9rem;
-    line-height: 1;
-    white-space: nowrap;
   }
 
   .site-header[data-service-page="true"] .menu-toggle {
@@ -143,29 +138,31 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .menu-toggle-icon {
     position: relative;
     flex: none;
-    width: 16px;
-    height: 14px;
+    width: 20px;
+    height: 16px;
   }
 
   .menu-toggle-icon::before, .menu-toggle-icon::after, .menu-toggle-icon > span {
     content: '';
     position: absolute;
-    inset: 2px 0 auto;
-    border-top: 1.5px solid;
+    inset: 1px 0 auto;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
     transition: transform 180ms ease, opacity 180ms ease;
   }
 
-  .menu-toggle-icon::after { inset: auto 0 2px; }
-  .menu-toggle-icon > span { top: 6.25px; }
-  [data-menu-open="true"] .menu-toggle-icon::before { transform: translateY(4.25px) rotate(45deg); }
-  [data-menu-open="true"] .menu-toggle-icon::after { transform: translateY(-4.25px) rotate(-45deg); }
+  .menu-toggle-icon::after { inset: auto 0 1px; }
+  .menu-toggle-icon > span { top: 7px; }
+  [data-menu-open="true"] .menu-toggle-icon::before { transform: translateY(6px) rotate(45deg); }
+  [data-menu-open="true"] .menu-toggle-icon::after { transform: translateY(-6px) rotate(-45deg); }
   [data-menu-open="true"] .menu-toggle-icon > span { opacity: 0; }
 
   .language-mobile {
     flex-wrap: wrap;
-    gap: .2rem;
-    margin-top: .45rem;
-    padding: .6rem 0 .15rem;
+    gap: .05rem;
+    margin-top: .35rem;
+    padding: .15rem 0 0;
     border: 0;
     border-top: 1px solid currentColor;
     border-top-color: color-mix(in srgb, currentColor 23%, transparent);
@@ -175,14 +172,25 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .language-mobile button {
     min-width: 44px;
     min-height: 44px;
-    padding: .45rem .7rem;
-    border: 1px solid transparent;
-    font-size: .9rem;
-    white-space: nowrap;
+    padding: .35rem .45rem;
+    font-size: .75rem;
+    opacity: .75;
   }
 
-  .language-mobile button[aria-pressed="true"] { border-color: #88a4c5; }
-  .language-mobile-separator { opacity: .7; }
+  .language-mobile button:hover,
+  .language-mobile button[aria-pressed="true"] {
+    background: transparent;
+    color: inherit;
+    opacity: 1;
+  }
+
+  .language-mobile button[aria-pressed="true"] {
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: .25em;
+  }
+
+  .language-mobile-separator { font-size: .75rem; opacity: .65; }
 
   .primary-nav {
     position: absolute;

@@ -15,7 +15,7 @@ export function LanguageSelector({ label, language, onLanguageChange, mobile = f
             aria-pressed={language === code}
             onClick={() => onLanguageChange(code)}
           >
-            {mobile ? languageName : code.toUpperCase()}
+            {code.toUpperCase()}
           </button>
         </Fragment>
       ))}

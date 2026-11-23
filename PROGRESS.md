@@ -304,4 +304,4 @@ Contacto: el titular, el texto y el formulario tienen una entrada suave y breve,
 
 Navegación: se añadió un botón bilingüe «Volver arriba» en todas las páginas. Aparece al desplazarse, respeta la preferencia de movimiento reducido y devuelve el foco al inicio. Se reforzó el contraste con fondo morado, borde claro y una flecha blanca más definida.
 
-Navegación móvil: el encabezado conserva la marca y muestra un botón «Menú». El selector Español / English pasa debajo de los enlaces; escritorio no cambia.
+Navegación móvil: el encabezado conserva la marca y muestra solo el icono de menú, con etiqueta accesible. El selector ES / EN queda al pie del menú, con el idioma activo subrayado y sus nombres completos en las etiquetas accesibles; escritorio no cambia.

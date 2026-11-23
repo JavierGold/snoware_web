@@ -89,7 +89,6 @@ export function SiteHeader({ brandRef, text, homeUrl, language, onLanguageChange
           aria-label={menuOpen ? text.closeMenu : text.openMenu}
           onClick={() => { setMenuOpen((open) => !open); setServicesOpen(false); }}
         >
-          <span>{text.menu}</span>
           <span className="menu-toggle-icon" aria-hidden="true"><span /></span>
         </button>
 
