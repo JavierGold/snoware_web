@@ -293,7 +293,7 @@ Experiencia: tarjetas y flechas mantienen su posición al paginar. En escritorio
 
 Experiencia: los 36 planteamientos se actualizaron en español e inglés, con industria concreta en cada ficha. Problemas y soluciones se presentan sin marcas ni afirmaciones de entrega por Snoware.
 
-Experiencia: la galería solo muestra las flechas de paginación; la página actual sigue anunciándose a lectores de pantalla.
+Experiencia: la galería solo muestra las flechas de paginación; la página actual sigue anunciándose a lectores de pantalla. En móvil se muestran dos tarjetas por página y las flechas llevan a la primera tarjeta de cada grupo. Fuera de móvil se mantienen seis tarjetas y no se fuerza el desplazamiento.
 
 ## Contacto
 Ruta bilingüe con formulario responsive y validación local. El menú, el footer y los enlaces de contacto existentes ahora llevan a esta página. El envío sigue pendiente de un servicio y destinatario autorizados; no se transmiten ni guardan datos.

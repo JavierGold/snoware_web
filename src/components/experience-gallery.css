@@ -171,6 +171,8 @@ body:has(.experience-case-dialog[open]) { overflow: hidden; }
 
 @media (width <= 560px) {
   .experience-gallery-caption { height: 5.25rem; }
+  .experience-gallery-card:first-child { scroll-margin-block-start: 1rem; }
+  .experience-gallery-pager { margin-top: .95rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {

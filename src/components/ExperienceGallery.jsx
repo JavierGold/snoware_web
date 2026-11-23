@@ -1,9 +1,16 @@
-import { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useId, useLayoutEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { experienceCases } from '../content/experienceCases.js';
 import { experienceGalleryText } from '../content/experienceGallery.js';
 import './experience-gallery.css';
 
-const PAGE_SIZE = 6;
+const WIDE_PAGE_SIZE = 6;
+const MOBILE_PAGE_SIZE = 2;
+const mobileLayout = window.matchMedia('(width <= 560px)');
+const getMobileLayout = () => mobileLayout.matches;
+function subscribeMobileLayout(listener) {
+  mobileLayout.addEventListener('change', listener);
+  return () => mobileLayout.removeEventListener('change', listener);
+}
 const DIALOG_CLOSE_MS = 200;
 const caseArt = import.meta.glob('../assets/experience/cases/*.webp', {
   query: '?url',
@@ -15,20 +22,40 @@ const imageFor = (id) => caseArt[`../assets/experience/cases/${id}.webp`];
 
 export function ExperienceGallery({ language }) {
   const text = experienceGalleryText[language];
-  const [page, setPage] = useState(0);
+  const mobile = useSyncExternalStore(subscribeMobileLayout, getMobileLayout);
+  const pageSize = mobile ? MOBILE_PAGE_SIZE : WIDE_PAGE_SIZE;
+  const [activeIndex, setActiveIndex] = useState(0);
+  const page = Math.floor(activeIndex / pageSize);
+  const pageStart = page * pageSize;
   const [selected, setSelected] = useState(null);
   const galleryRef = useRef(null);
+  const gridRef = useRef(null);
+  const pendingScrollRef = useRef(null);
   const closeTimer = useRef();
   const dialogRef = useRef(null);
   const openerRef = useRef(null);
   const dialogTitle = useId();
-  const totalPages = Math.ceil(experienceCases.length / PAGE_SIZE);
+  const totalPages = Math.ceil(experienceCases.length / pageSize);
   const activeCase = selected?.[language];
-  const visibleCases = experienceCases.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const visibleCases = experienceCases.slice(pageStart, pageStart + pageSize);
 
-  function changePage(direction) {
-    setPage(current => Math.min(totalPages - 1, Math.max(0, current + direction)));
+  function changePage(direction, event) {
+    const nextPage = Math.min(totalPages - 1, Math.max(0, page + direction));
+    if (nextPage === page) return;
+    const nextIndex = nextPage * pageSize;
+    pendingScrollRef.current = mobile ? { index: nextIndex, moveFocus: event.detail === 0 } : null;
+    setActiveIndex(nextIndex);
   }
+
+  useLayoutEffect(() => {
+    const request = pendingScrollRef.current;
+    pendingScrollRef.current = null;
+    if (!getMobileLayout() || !mobile || request?.index !== activeIndex) return;
+    const firstCard = gridRef.current?.firstElementChild;
+    if (request.moveFocus) firstCard?.querySelector('button')?.focus({ preventScroll: true });
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    firstCard?.scrollIntoView({ block: 'start', inline: 'nearest', behavior: reducedMotion ? 'instant' : 'smooth' });
+  }, [activeIndex, mobile]);
 
   function openCase(item, opener) {
     openerRef.current = opener;
@@ -56,7 +83,7 @@ export function ExperienceGallery({ language }) {
       gallery.dataset.entered = 'true';
       observer.disconnect();
     });
-    observer.observe(gallery.querySelector('.experience-gallery-grid'));
+    observer.observe(gridRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -75,7 +102,9 @@ export function ExperienceGallery({ language }) {
     window.clearTimeout(closeTimer.current);
     dialogRef.current.removeAttribute('data-closing');
     setSelected(null);
-    openerRef.current?.focus({ preventScroll: true });
+    const opener = openerRef.current;
+    const focusTarget = opener?.isConnected ? opener : gridRef.current?.querySelector('button');
+    focusTarget?.focus({ preventScroll: true });
     openerRef.current = null;
   }
 
@@ -88,7 +117,7 @@ export function ExperienceGallery({ language }) {
 
   return (
     <section className="experience-gallery" aria-label={text.gallery} ref={galleryRef}>
-      <ul className="experience-gallery-grid">
+      <ul className="experience-gallery-grid" ref={gridRef}>
         {visibleCases.map((item) => (
           <li key={item.id} className="experience-gallery-card">
             <button type="button" onClick={(event) => openCase(item, event.currentTarget)} aria-haspopup="dialog">
@@ -102,11 +131,11 @@ export function ExperienceGallery({ language }) {
         ))}
       </ul>
       <nav className="experience-gallery-pager" aria-label={text.pages}>
-        <button type="button" onClick={() => changePage(-1)} aria-label={text.previous} aria-disabled={page === 0}>←</button>
+        <button type="button" onClick={(event) => changePage(-1, event)} aria-label={text.previous} aria-disabled={page === 0}>←</button>
         <output className="sr-only" aria-live="polite" aria-atomic="true">
           {text.current(page + 1, totalPages)}
         </output>
-        <button type="button" onClick={() => changePage(1)} aria-label={text.next} aria-disabled={page + 1 === totalPages}>→</button>
+        <button type="button" onClick={(event) => changePage(1, event)} aria-label={text.next} aria-disabled={page + 1 === totalPages}>→</button>
       </nav>
       <dialog className="experience-case-dialog" aria-labelledby={dialogTitle} ref={dialogRef}
         onClose={restoreFocus} onClick={closeOnBackdrop}
