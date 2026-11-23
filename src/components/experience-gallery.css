@@ -82,8 +82,6 @@
 }
 
 .experience-gallery-pager button[aria-disabled='true'] { opacity: .45; cursor: default; }
-.experience-gallery-pager output { font-variant-numeric: tabular-nums; }
-.experience-gallery-pager output [aria-hidden] span { color: #c4c2df; }
 
 .experience-gallery :is(button, a):focus-visible {
   outline: 2px solid #c4ceff;

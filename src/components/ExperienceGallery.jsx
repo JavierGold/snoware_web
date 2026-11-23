@@ -12,7 +12,6 @@ const caseArt = import.meta.glob('../assets/experience/cases/*.webp', {
 });
 
 const imageFor = (id) => caseArt[`../assets/experience/cases/${id}.webp`];
-const pageNumber = (value) => String(value).padStart(2, '0');
 
 export function ExperienceGallery({ language }) {
   const text = experienceGalleryText[language];
@@ -104,9 +103,8 @@ export function ExperienceGallery({ language }) {
       </ul>
       <nav className="experience-gallery-pager" aria-label={text.pages}>
         <button type="button" onClick={() => changePage(-1)} aria-label={text.previous} aria-disabled={page === 0}>←</button>
-        <output aria-live="polite">
-          <span className="sr-only">{text.current(page + 1, totalPages)}</span>
-          <span aria-hidden="true">{pageNumber(page + 1)} <span>/ {pageNumber(totalPages)}</span></span>
+        <output className="sr-only" aria-live="polite" aria-atomic="true">
+          {text.current(page + 1, totalPages)}
         </output>
         <button type="button" onClick={() => changePage(1)} aria-label={text.next} aria-disabled={page + 1 === totalPages}>→</button>
       </nav>
