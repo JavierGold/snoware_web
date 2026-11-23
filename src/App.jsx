@@ -1,4 +1,6 @@
 import { Experience, experienceContent } from './pages/Experience.jsx';
+import { Contact } from './pages/Contact.jsx';
+import { contactContent } from './content/contact.js';
 import { About } from './pages/About.jsx';
 import { aboutContent } from './content/about.js';
 import { useEffect, useState } from 'react';
@@ -34,6 +36,8 @@ export function App() {
   const phaseThree = phaseThreeContent[language];
   const ending = siteEnding[language];
   const homeUrl = localizedUrl('/', language);
+  const contactUrl = localizedUrl('/contacto', language);
+  const contactPage = location.pathname.replace(/\/$/, '') === '/contacto';
   const serviceIndex = serviceRoutes.indexOf(location.pathname.replace(/\/$/, ''));
   const servicePage = serviceIndex >= 0;
   const experiencePage = location.pathname.replace(/\/$/, '') === '/experiencia';
@@ -41,8 +45,8 @@ export function App() {
 
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = experiencePage ? experienceContent[language].pageTitle : aboutPage ? aboutContent[language].pageTitle : servicePage ? `${content.services.items[serviceIndex].title} | Snoware` : "Snoware";
-  }, [language, servicePage, serviceIndex, content, aboutPage, experiencePage]);
+    document.title = contactPage ? contactContent[language].pageTitle : experiencePage ? experienceContent[language].pageTitle : aboutPage ? aboutContent[language].pageTitle : servicePage ? `${content.services.items[serviceIndex].title} | Snoware` : "Snoware";
+  }, [language, servicePage, serviceIndex, content, aboutPage, experiencePage, contactPage]);
 
   function changeLanguage(nextLanguage) {
     const url = new URL(location.href);
@@ -57,18 +61,18 @@ export function App() {
 
   return (
     <>
-      <SiteHeader text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} servicePage={servicePage} aboutPage={aboutPage} experiencePage={experiencePage} activeServiceIndex={serviceIndex} />
+      <SiteHeader text={text} homeUrl={homeUrl} language={language} onLanguageChange={changeLanguage} servicePage={servicePage} aboutPage={aboutPage} experiencePage={experiencePage} contactPage={contactPage} contactUrl={contactUrl} activeServiceIndex={serviceIndex} />
       <main>
-        {experiencePage ? <Experience language={language} /> : aboutPage ? <About language={language} /> : serviceIndex === 0 ? <ServiceModernization language={language} /> : serviceIndex === 1 ? <ServiceAutomation language={language} /> : servicePage ? <ServiceOverview language={language} serviceIndex={serviceIndex} /> : <>
+        {contactPage ? <Contact language={language} /> : experiencePage ? <Experience language={language} /> : aboutPage ? <About language={language} /> : serviceIndex === 0 ? <ServiceModernization language={language} /> : serviceIndex === 1 ? <ServiceAutomation language={language} /> : servicePage ? <ServiceOverview language={language} serviceIndex={serviceIndex} /> : <>
         <Hero headline={text.headline} content={text.hero} />
         <AboutSnoware content={content.about} />
         <Services content={content.services} language={language} />
         <Methodology content={phaseThree.methodology} />
-        <Solutions content={phaseThree.solutions} />
+        <Solutions content={phaseThree.solutions} contactUrl={contactUrl} />
         </>}
-        {!aboutPage && !experiencePage && <ContactCallout content={ending.cta} />}
+        {!aboutPage && !experiencePage && !contactPage && <ContactCallout content={ending.cta} href={contactUrl} />}
       </main>
-      <SiteFooter content={ending.footer} navigation={text} homeUrl={homeUrl} isHome={!servicePage && !aboutPage && !experiencePage} aboutPage={aboutPage} aboutUrl={localizedUrl('/nosotros', language)} />
+      <SiteFooter content={ending.footer} navigation={text} homeUrl={homeUrl} isHome={!servicePage && !aboutPage && !experiencePage && !contactPage} contactPage={contactPage} contactUrl={contactUrl} aboutPage={aboutPage} aboutUrl={localizedUrl('/nosotros', language)} />
     </>
   );
 }

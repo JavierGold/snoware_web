@@ -1,7 +1,8 @@
-export function PendingLink({ children }) {
+export function PendingLink({ children, href }) {
+  const Element = href ? 'a' : 'span';
   return (
-    <span className="phase-two-link inline-flex items-baseline gap-1.5" role="link" aria-disabled="true">
+    <Element className="phase-two-link inline-flex items-baseline gap-1.5" {...(href ? { href } : { role: 'link', 'aria-disabled': 'true' })}>
       {children}<span className="phase-two-link-arrow" aria-hidden="true" />
-    </span>
+    </Element>
   );
 }

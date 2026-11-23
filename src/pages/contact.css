@@ -1,0 +1,112 @@
+.contact-page {
+  padding: clamp(6.5rem, 6.15vw, 9rem) 3.75% clamp(3rem, 4.9vw, 6rem) 5.4%;
+  background: #e0eefc url('../assets/contact/ribbed-blue.webp') right 17% / 205% auto no-repeat;
+  color: #0e0a42;
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+.contact-page-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 31%) minmax(0, 1fr);
+  gap: clamp(.85rem, 1.25vw, 1.5rem);
+  max-width: 111rem;
+  margin-inline: auto;
+}
+
+.contact-page-intro { padding-top: clamp(.55rem, 1.25vw, 1.5rem); }
+.contact-page-intro h1 {
+  margin: 0 0 .65rem;
+  font-size: clamp(1.625rem, 2.58vw, 3.1rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.042em;
+  text-wrap: balance;
+}
+.contact-page-intro p {
+  max-width: 30ch;
+  margin: 0;
+  font-size: clamp(1rem, 1.35vw, 1.6rem);
+  line-height: 1.33;
+}
+
+.contact-page-form {
+  padding: clamp(1.2rem, 1.9vw, 2.5rem);
+  border-radius: clamp(1rem, 1.55vw, 1.8rem);
+  background: #fff;
+  color: #101420;
+}
+.contact-page-required {
+  margin: 0 0 clamp(.95rem, 1.55vw, 1.7rem);
+  color: #0e0a42;
+  font-size: clamp(.875rem, 1.23vw, 1.3rem);
+}
+.contact-page-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.65rem, 1.1vw, 1.25rem); }
+.contact-page-field { position: relative; min-width: 0; }
+
+.contact-page input,
+.contact-page textarea {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: clamp(.4rem, .55vw, .7rem);
+  background: #e5effb;
+  color: #101420;
+  font: inherit;
+  font-size: clamp(1rem, 1.23vw, 1.3rem);
+}
+.contact-page input { min-height: clamp(3rem, 3.32vw, 4rem); padding: .95rem .84rem .2rem; }
+.contact-page-field label {
+  position: absolute;
+  inset-inline-start: .84rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #101420;
+  font-size: clamp(.875rem, 1.23vw, 1.3rem);
+  line-height: 1;
+  cursor: text;
+}
+.contact-page-field input:not(:placeholder-shown) + label,
+.contact-page-field input:focus + label {
+  top: .38rem;
+  transform: none;
+  font-size: .72rem;
+  color: #41476a;
+}
+.contact-page-description { margin-top: clamp(1.05rem, 1.95vw, 2.15rem); }
+.contact-page-description label { display: block; margin: 0 0 .38rem .25rem; font-size: clamp(.875rem, 1.23vw, 1.3rem); }
+.contact-page textarea { min-height: clamp(6rem, 8.9vw, 10.5rem); padding: .7rem .84rem; resize: vertical; }
+
+.contact-page-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .62em;
+  min-height: 44px;
+  margin-top: clamp(1.25rem, 2.45vw, 2.8rem);
+  padding: .65em 1.42em;
+  border-radius: .65rem;
+  background: #5830cb;
+  color: #fff;
+  font-size: clamp(1rem, 1.35vw, 1.55rem);
+  font-weight: 400;
+  cursor: pointer;
+}
+.contact-page-submit:hover { background: #4925b1; }
+.contact-page :is(input, textarea, button):focus-visible { outline: 2px solid #4b2db0; outline-offset: 2px; }
+.contact-page-status { margin: .85rem 0 0; color: #0e0a42; }
+.contact-page-status:empty { margin: 0; }
+
+@media (width <= 950px) {
+  .contact-page {
+    background-size: cover;
+    background-position: right center;
+    padding-inline: clamp(1rem, 4.5vw, 2.5rem);
+  }
+  .contact-page-inner { grid-template-columns: minmax(0, 1fr); gap: 1.35rem; max-width: 46rem; }
+  .contact-page-intro p { max-width: 54ch; }
+}
+@media (width <= 560px) {
+  .contact-page-fields { grid-template-columns: minmax(0, 1fr); }
+}

@@ -22,7 +22,7 @@ function warmFigure(index) {
   image.decode().catch(() => warmedFigures.delete(url));
 }
 
-export function Solutions({ content }) {
+export function Solutions({ content, contactUrl }) {
   const id = useId();
   const [dialog, animate] = useAnimate();
   const reduceMotion = useReducedMotion();
@@ -134,7 +134,7 @@ export function Solutions({ content }) {
           </form>
           <h3 id={`${id}-dialog-title`}>{solution?.title}</h3>
           <p id={`${id}-description`}>{solution?.description}</p>
-          <div className="solution-contact"><PendingLink>{content.contact}</PendingLink></div>
+          <div className="solution-contact"><PendingLink href={contactUrl}>{content.contact}</PendingLink></div>
           {solution && <img ref={figure} key={selected} className="solution-figure" data-ready={figureReady} decoding="async" src={figures[selected]} alt="" width="460" height="460" />}
         </div>
       </dialog>
