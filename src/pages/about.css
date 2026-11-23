@@ -8,9 +8,11 @@
 .site-header[data-about-page='true'] .primary-nav a[aria-current='page'] { text-decoration: underline; text-underline-offset: .45em; text-decoration-thickness: 2px; }
 
 .about-page {
+  --about-section-gap: clamp(.875rem, 1.15vw, 1.3125rem);
+  --about-bottom-gap: clamp(1.5rem, 2.85vw, 3.25rem);
   display: grid;
-  gap: clamp(.875rem, 1.15vw, 1.3125rem);
-  padding-bottom: clamp(1.5rem, 2.85vw, 3.25rem);
+  gap: var(--about-section-gap);
+  padding-bottom: var(--about-bottom-gap);
   background: #e9eef7;
 }
 
@@ -113,6 +115,7 @@
 }
 
 .about-snowy-closing {
+  --snowy-background: #dce7f5;
   display: grid;
   box-sizing: border-box;
   min-width: 0;
@@ -120,7 +123,11 @@
   min-height: clamp(26rem, min(70svh, 64vw), 42rem);
   place-items: center;
   padding: 2.5rem 1.5rem 1.5rem;
-  background: #dce7f5;
+  background: var(--snowy-background);
+  /* Paint the neighboring gutters without shifting Snowy or other sections. */
+  box-shadow:
+    0 calc(-1 * var(--about-section-gap)) var(--snowy-background),
+    0 var(--about-bottom-gap) var(--snowy-background);
 }
 
 .about-snowy-closing img {
