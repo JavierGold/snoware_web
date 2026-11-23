@@ -1,6 +1,12 @@
 .contact-page {
-  padding: clamp(6.5rem, 6.15vw, 9rem) 3.75% clamp(3rem, 4.9vw, 6rem) 5.4%;
-  background: #e0eefc url('../assets/contact/ribbed-blue.webp') right 17% / 205% auto no-repeat;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: clamp(7rem, 8.2vw, 10rem) 4% clamp(3rem, 4.9vw, 6rem) 5.4%;
+  background-color: #e0eefc;
+  background-image: linear-gradient(105deg, rgb(241 247 254 / 32%), rgb(238 244 253 / 12%)), url('../assets/contact/ribbed-blue.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #0e0a42;
   font-family: var(--font-sans);
   font-weight: 400;
@@ -8,8 +14,8 @@
 
 .contact-page-inner {
   display: grid;
-  grid-template-columns: minmax(0, 31%) minmax(0, 1fr);
-  gap: clamp(.85rem, 1.25vw, 1.5rem);
+  grid-template-columns: minmax(0, 30%) minmax(0, 1fr);
+  gap: clamp(2rem, 3.45vw, 4.25rem);
   max-width: 111rem;
   margin-inline: auto;
 }
@@ -17,29 +23,29 @@
 .contact-page-intro { padding-top: clamp(.55rem, 1.25vw, 1.5rem); }
 .contact-page-intro h1 {
   margin: 0 0 .65rem;
-  font-size: clamp(1.625rem, 2.58vw, 3.1rem);
+  font-size: clamp(1.625rem, 2.05vw, 2.5rem);
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: -.042em;
   text-wrap: balance;
 }
 .contact-page-intro p {
-  max-width: 30ch;
+  max-width: 39ch;
   margin: 0;
-  font-size: clamp(1rem, 1.35vw, 1.6rem);
-  line-height: 1.33;
+  font-size: clamp(1rem, 1.05vw, 1.25rem);
+  line-height: 1.45;
 }
 
 .contact-page-form {
   padding: clamp(1.2rem, 1.9vw, 2.5rem);
   border-radius: clamp(1rem, 1.55vw, 1.8rem);
   background: #fff;
-  color: #101420;
+  color: inherit;
 }
 .contact-page-required {
   margin: 0 0 clamp(.95rem, 1.55vw, 1.7rem);
   color: #0e0a42;
-  font-size: clamp(.875rem, 1.23vw, 1.3rem);
+  font-size: clamp(.875rem, .87vw, 1rem);
 }
 .contact-page-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.65rem, 1.1vw, 1.25rem); }
 .contact-page-field { position: relative; min-width: 0; }
@@ -52,9 +58,9 @@
   border: 1px solid transparent;
   border-radius: clamp(.4rem, .55vw, .7rem);
   background: #e5effb;
-  color: #101420;
+  color: inherit;
   font: inherit;
-  font-size: clamp(1rem, 1.23vw, 1.3rem);
+  font-size: 1rem;
 }
 .contact-page input { min-height: clamp(3rem, 3.32vw, 4rem); padding: .95rem .84rem .2rem; }
 .contact-page-field label {
@@ -62,8 +68,8 @@
   inset-inline-start: .84rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #101420;
-  font-size: clamp(.875rem, 1.23vw, 1.3rem);
+  color: inherit;
+  font-size: clamp(.875rem, .87vw, 1rem);
   line-height: 1;
   cursor: text;
 }
@@ -72,10 +78,10 @@
   top: .38rem;
   transform: none;
   font-size: .72rem;
-  color: #41476a;
+  color: inherit;
 }
 .contact-page-description { margin-top: clamp(1.05rem, 1.95vw, 2.15rem); }
-.contact-page-description label { display: block; margin: 0 0 .38rem .25rem; font-size: clamp(.875rem, 1.23vw, 1.3rem); }
+.contact-page-description label { display: block; margin: 0 0 .38rem .25rem; font-size: clamp(.875rem, .87vw, 1rem); }
 .contact-page textarea { min-height: clamp(6rem, 8.9vw, 10.5rem); padding: .7rem .84rem; resize: vertical; }
 
 .contact-page-submit {
@@ -100,8 +106,8 @@
 
 @media (width <= 950px) {
   .contact-page {
-    background-size: cover;
-    background-position: right center;
+    background-position: 30% top;
+    padding-top: clamp(6.5rem, 13vw, 8rem);
     padding-inline: clamp(1rem, 4.5vw, 2.5rem);
   }
   .contact-page-inner { grid-template-columns: minmax(0, 1fr); gap: 1.35rem; max-width: 46rem; }
